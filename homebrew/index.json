@@ -5,5 +5,170 @@
 		"This file contains as an index for other homebrew files, which should be placed in the same directory.",
 		"For example, add \"My Homebrew.json\" to the \"toImport\" array below, and have a valid JSON homebrew file in this (\"homebrew/\") directory."
 	],
-	"toImport": []
+	"toImport": [
+		"classes/artificer-alternate.json",
+		"classes/barbarian-alternate.json",
+		"classes/bard-alternate.json",
+		"classes/blood-hunter.json",
+		"classes/fighter-alternate.json",
+		"classes/magus.json",
+		"classes/monk-alternate.json",
+		"classes/paladin-alternate.json",
+		"classes/psion.json",
+		"classes/ranger-alternate.json",
+		"classes/rogue-alternate.json",
+		"classes/savant.json",
+		"classes/shaman.json",
+		"classes/sorcerer-alternate.json",
+		"classes/vessel.json",
+		"classes/warlock-alternate.json",
+		"classes/warlord.json",
+		"classes/witch.json",
+		"settings/broken-worlds.json",
+		"spells/ll-alternate-spells.json"
+	],
+	"sources": {
+		"artificer-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Artificer.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Artificer",
+					"to": "Artificer, Alternate"
+				}
+			]
+		},
+		"barbarian-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B%20Alternate%20Barbarian.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Barbarian",
+					"to": "Barbarian, Alternate"
+				}
+			]
+		},
+		"bard-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Bard.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Bard",
+					"to": "Bard, Alternate"
+				}
+			]
+		},
+		"blood-hunter": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Blood Hunter.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Blood Hunter",
+					"to": "Blood Hunter"
+				}
+			]
+		},
+		"fighter-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Fighter.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Fighter",
+					"to": "Fighter, Alternate"
+				}
+			]
+		},
+		"magus": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Magus Class.json",
+			"target": "classes"
+		},
+		"monk-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Monk.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Monk",
+					"to": "Monk, Alternate"
+				}
+			]
+		},
+		"paladin-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Paladin.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Paladin",
+					"to": "Paladin, Alternate"
+				}
+			]
+		},
+		"psion": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B The Psion.json",
+			"target": "classes"
+		},
+		"ranger-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Ranger.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Ranger",
+					"to": "Ranger, Alternate"
+				}
+			]
+		},
+		"rogue-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Rogue.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Rogue",
+					"to": "Rogue, Alternate"
+				}
+			]
+		},
+		"savant": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Savant.json",
+			"target": "classes"
+		},
+		"shaman": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B The Shaman.json",
+			"target": "classes"
+		},
+		"sorcerer-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Sorcerer.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Sorcerer",
+					"to": "Sorcerer, Alternate"
+				}
+			]
+		},
+		"vessel": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B The Vessel.json",
+			"target": "classes"
+		},
+		"warlock-alternate": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Alternate Warlock.json",
+			"target": "classes",
+			"renames": [
+				{
+					"from": "Alternate Warlock",
+					"to": "Warlock, Alternate"
+				}
+			]
+		},
+		"warlord": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/LaserLlama%3B Warlord.json",
+			"target": "classes"
+		},
+		"witch": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/class/Worlds Beyond Number%3B The Witch.json",
+			"target": "classes"
+		},
+		"ll-alternate-spells": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/spell/LaserLlama%3B Laserllama's Spell Compendium.json",
+			"target": "spells"
+		}
+	}
 }

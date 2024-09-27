@@ -1,0 +1,982 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "BWCS",
+				"abbreviation": "BWCS",
+				"full": "Broken Worlds Campaign Setting",
+				"authors": [
+					"Alexandre Éthier"
+				],
+				"convertedBy": [
+					"Guyllaume Cardinal"
+				],
+				"version": "1",
+				"color": "e1e1e1"
+			}
+		],
+		"dateAdded": 1593285189,
+		"dateLastModified": 1707891720,
+		"_dateLastModifiedHash": "e976b3e14a"
+	},
+	"item": [
+		{
+			"name": "Angel's Fruit",
+			"source": "BWCS",
+			"type": "OTH",
+			"rarity": "none",
+			"value": 100,
+			"entries": [
+				"Found and only growable in Estellia’s climate, the Angel’s Fruit is akin to the pomgranate, though of a purple color and with a  smell reminding of basil and strawberries. Eating one Angel’s Fruit is enough to fill one’s appetite. It is renowned for its juicy texture and sugary taste."
+			]
+		},
+		{
+			"name": "Aulia Flower",
+			"source": "BWCS",
+			"type": "G",
+			"rarity": "none",
+			"value": 100,
+			"entries": [
+				"Farmed on Estellia, these blue flowers are renowned for their medical use throughout the Realms. When applied on wounds, they automatically stabilise and restores 1d4 hit points. It takes a minute to administer and taking more than three doses a day can lead to overdose, requiring a Constitution saving throw DC 12 + the number of herbs taken above four or take 1 constitution damage."
+			]
+		},
+		{
+			"name": "Devonia",
+			"source": "BWCS",
+			"type": "G",
+			"rarity": "none",
+			"value": 1000,
+			"entries": [
+				"A white plant with a red root that is harvested in Estellia, when mixed in water and ingested it grants advantage on saving throws against ongoing poisons and diseases and for all those made in the next forty-eight hours."
+			]
+		},
+		{
+			"name": "Grey Cactus",
+			"source": "BWCS",
+			"type": "G",
+			"rarity": "none",
+			"value": 100,
+			"poison": true,
+			"poisonTypes": [
+				"injested"
+			],
+			"entries": [
+				"Found in the wastelands of Senya, it is one of the only plants that can survive in the harsh environment.",
+				"Within a mature Grey Cactus, one can find around 500 milliliters of liquid. This liquid is mostly water, but within it are very tiny seeds that when ingested can lead to nausea.",
+				{
+					"type": "entries",
+					"name": "Grey Cactus Juice (Ingested)",
+					"entries": [
+						"A creature drinking the juice from a Grey Cactus must make a DC 13 Constitution saving throw, causing nausea that leads to vomiting and fever within two hours of ingestion on a failed saving throw. The effects lasts for a {@dice 1d4} hours."
+					]
+				}
+			]
+		},
+		{
+			"name": "Lovers’ Wish",
+			"source": "BWCS",
+			"type": "G",
+			"rarity": "none",
+			"value": 500,
+			"entries": [
+				"A pink thistle that can be found on the Aknis continent on Telmeris, this sweet flower is eaten by expecting mothers, as a way to protect their unborn child from evil – which is nothing more than fables and superstition. Due to its price, mostly only noblewomen have access to them.",
+				"However, when burnt, it releases a smoke that, when inhaled has a calming effect on the mind. When used as an incense, it grants an additional 1 hit point per hit dice used when resting for each creature within twenty feet. One single Lovers’ Wish is enough to burn for one hour."
+			]
+		},
+		{
+			"name": "Yellow Star",
+			"source": "BWCS",
+			"type": "G",
+			"rarity": "none",
+			"value": 100,
+			"entries": [
+				"A sort of seaweed found in the Mercian seas, it as the unusual properties of settling the stomach. Though extremely bitter, one dose of Yellow Star is enough to heal the most powerful stomachache.",
+				"Ingesting Yellow Star gives advantage on all saving rolls made against nausea, seasickness and from consuming bad or rotting food. This as no effect against magical effect and lasts one day. These are seen as indispensable in seafaring trips."
+			]
+		},
+		{
+			"name": "Water Extractor",
+			"source": "BWCS",
+			"type": "G",
+			"rarity": "none",
+			"value": 1000,
+			"entries": [
+				"A small kit with all the necessary tools and a device that allows to separate the nauseating grain found in the grey cacti found in the juices residing within them.",
+				"It requires a Water Extractor check DC 12 to adequately separate the grains from the water. Proficiency with this tool adds your Proficiency bonus to this roll."
+			]
+		},
+		{
+			"name": "Revolver",
+			"source": "BWCS",
+			"wondrous": true,
+			"tier": "minor",
+			"rarity": "common",
+			"reqAttune": true,
+			"entries": [
+				"In the hands of anyone able to cast cantrips, revolvers can be attuned and as a ritual that takes one hour, up to two cantrips can be selected and attuned to the revolver. A spellcaster can freely used the attuned cantrips through the revolver in dead magic zones. Revolvers are considered light ranged weapons.",
+				"In the hands of anyone not able to cast cantrips, this is but a piece of metal and attunement is impossible",
+				" ",
+				"Revolvers are mostly seen in the Wasteland of Senya and in the hands of those who travel the seas of Mercia."
+			]
+		},
+		{
+			"name": "White Star, lesser",
+			"source": "BWCS",
+			"wondrous": true,
+			"rarity": "uncommon",
+			"reqAttune": "by a spellcaster",
+			"entries": [
+				"Alara’s divine gift to mortals, the White Stars appear as small transparent, bluish gemstones akin to opals to the touch. These gemstones feel warm to the touch of someone normal, but in the hands of someone with the gift of magic, it feels vibrant with energy and life. These stones, which are extremely rare, are almost exclusively controlled and distributed by the Church of the Eight and give the ability to cast spells in places where magic doesn’t normally reach, such as Senya.",
+				" ",
+				"This small gem allows a spellcaster to use a total of ten levels of spell each day when within a dead magic zone, such as Senya. No spell of a level higher than 3rd may be used with this gem.",
+				"Once its charges used for the day, a spellcaster can still cast 1st level spells, at the cost of 3 hit points each time as it draws its power from the owner."
+			]
+		},
+		{
+			"name": "White Star, intermediate",
+			"source": "BWCS",
+			"wondrous": true,
+			"rarity": "rare",
+			"reqAttune": "by a spellcaster",
+			"entries": [
+				"Alara’s divine gift to mortals, the White Stars appear as small transparent, bluish gemstones akin to opals to the touch. These gemstones feel warm to the touch of someone normal, but in the hands of someone with the gift of magic, it feels vibrant with energy and life. These stones, which are extremely rare, are almost exclusively controlled and distributed by the Church of the Eight and give the ability to cast spells in places where magic doesn’t normally reach, such as Senya.",
+				" ",
+				"This small gem allows a spellcaster to use a total of twenty levels of spell each day when within a dead magic zone, such as Senya. No spell of a level higher than 5th may be used with this gem.",
+				"Once its charges used for the day, a spellcaster can still cast 2nd level spells, at the cost of 3 hit points per spell level each time as it draws its power from the owner."
+			]
+		},
+		{
+			"name": "White Star, greater",
+			"source": "BWCS",
+			"wondrous": true,
+			"rarity": "rare",
+			"reqAttune": "by a spellcaster",
+			"entries": [
+				"Alara’s divine gift to mortals, the White Stars appear as small transparent, bluish gemstones akin to opals to the touch. These gemstones feel warm to the touch of someone normal, but in the hands of someone with the gift of magic, it feels vibrant with energy and life. These stones, which are extremely rare, are almost exclusively controlled and distributed by the Church of the Eight and give the ability to cast spells in places where magic doesn’t normally reach, such as Senya.",
+				" ",
+				"This small gem allows a spellcaster to use a total of thirty levels of spell each day when within a dead magic zone, such as Senya. No spell of a level higher than 7th may be used with this gem.",
+				"Once its charges used for the day, a spellcaster can still cast 4th level spells, at the cost of 3 hit points per spell level each time as it draws its power from the owner."
+			]
+		}
+	],
+	"magicvariant": [
+		{
+			"name": "Oricalcum Armor",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "HA"
+				},
+				{
+					"type": "MA"
+				}
+			],
+			"excludes": {
+				"name": "Hide Armor"
+			},
+			"inherits": {
+				"namePrefix": "Oricalcum ",
+				"source": "BWCS",
+				"tier": "major",
+				"rarity": "unknown",
+				"valueExpression": "[[baseItem.value]] + 50000",
+				"entries": [
+					"This item is considered silvered and magical to overcome resistances and immunities. It has advantage on saving throws against effects that targets it directly."
+				]
+			}
+		},
+		{
+			"name": "Oricalcum Weapon",
+			"type": "GV",
+			"requires": [
+				{
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true
+			},
+			"entries": [
+				"A metal found only in the Miha region of Mercia. It is used exclusively by the Mihavos clan, anyone caught using it facing their wrath, to a point that even the Church of the Eight supports their unilateral use.",
+				"Weapons and armors made of oricalcums have an orange and purplish taint, and it is considered silvered and magical to overcome resistances and immunities. Furthermore, Oricalcum weapons can be remelted and reformed at will, never losing integrity or quality. Oricalcum weapons and armors also grant advantage on saving throws against effects that target them directly."
+			],
+			"inherits": {
+				"namePrefix": "Oricalcum ",
+				"source": "BWCS",
+				"tier": "major",
+				"rarity": "unknown",
+				"valueExpression": "[[baseItem.value]] + 50000",
+				"entries": [
+					"This item is considered silvered and magical to overcome resistances and immunities. It has advantage on saving throws against effects that targets it directly."
+				]
+			}
+		}
+	],
+	"feat": [
+		{
+			"name": "Amateur Gunslinger",
+			"source": "BWCS",
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"dex": 14
+						}
+					],
+					"other": "Proficiency with light ranged weapons"
+				}
+			],
+			"entries": [
+				"You have a knack with revolvers even if you are not adept with magic.",
+				{
+					"type": "list",
+					"items": [
+						"Choose two cantrips in any class’s spell list. You can imbue these cantrips in a revolver as normal but cannot cast them without it.",
+						"You gain access to a revolver. You and/or the Dungeon Master come up o the story as to how or why. This does not stack with another feature that would grant you a revolver. Should you lose the revolver, you can acquire another after a week, the means again, discussed with the Dungeon Master."
+					]
+				}
+			]
+		},
+		{
+			"name": "Gunslinger",
+			"source": "BWCS",
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"dex": 14
+						}
+					],
+					"other": "Ability to cast cantrips"
+				}
+			],
+			"entries": [
+				"You are adept with the magical and technological marvel that is the revolver, making you an ace and master with it.",
+				{
+					"type": "list",
+					"items": [
+						"Increase the amounts of cantrips you can store in a revolver to three.",
+						"Whenever you cast a cantrip through a revolver, you gain a +1 bonus on attack rolls.",
+						"Gains proficiency with revolvers as if having light ranged weapon proficiencies.",
+						"You gain access to a revolver. You and/ or the Dungeon Master come up o the story as to how or why. This doesn’t stack with another feature that would grant you a revolver. Should you lose the revolver, you can acquire another after a week, the means again, discussed with the Dungeon Master."
+					]
+				}
+			]
+		},
+		{
+			"name": "Radiance",
+			"source": "BWCS",
+			"entries": [
+				"Thanks to the grace of the Eight Ascended, one can call on divine light to punish the enemies of all things good.",
+				{
+					"type": "list",
+					"items": [
+						"Increase your Charisma score by 1, to a maximum of 20.",
+						"Each melee atacks you make deals an extra 1d4 damage to all undead and fiends."
+					]
+				}
+			]
+		},
+		{
+			"name": "Survivor",
+			"source": "BWCS",
+			"entries": [
+				"You always endured, had a knack for it. Whether it was though wars, harsh temperatures or the streets you grew up in, surviving was never just an option, it was who you were.",
+				{
+					"type": "list",
+					"items": [
+						"Increase your Constitution score by 1, to a maximum of 20.",
+						"You gain proficiency with Constitution saving throws.",
+						"You require four failed death saving throws to succumb to death instead of three."
+					]
+				}
+			]
+		}
+	],
+	"background": [
+		{
+			"name": "Commoner",
+			"source": "BWCS",
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"animal handling",
+							"athletics",
+							"medicine",
+							"nature",
+							"survival"
+						]
+					}
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						"common clothes|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "Any one among the following: {@skill Animal Handling}, {@skill Medicine}, {@skill Athletics}, {@skill Nature} or {@skill Survival}."
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies:",
+							"entry": "Any two (2)"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Any tool with which you have proficiency, a memento from a family member, a small knife, a set of {@item common clothes|phb}, and a belt {@item pouch|phb} containing 10 gp"
+						}
+					]
+				},
+				"You were born to ordinary people of no means or consequence. Your parents were farmers, miners, cooks, maids or even servants, holding the lowest of professions in society.",
+				"From your parents you learned to keep your head low, to enjoy the simple things and to see those at the bottom.",
+				"You learned your parents’ trade, out of necessity or to aid them.",
+				{
+					"name": "Feature: Family Trade",
+					"type": "entries",
+					"entries": [
+						"You have advantage on all rolls relating on any one of your tool proficiencies."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"You were raised by loving parents who taught you respect. They tend to be respectful of those in the lower echelons, understanding their plight.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I always talk about the family business."
+								],
+								[
+									"2",
+									"I never look down on those poorer than me."
+								],
+								[
+									"3",
+									"I can’t help but admire the sights."
+								],
+								[
+									"4",
+									"I always talk about my little siblings."
+								],
+								[
+									"5",
+									"I always make sure to pray before eating."
+								],
+								[
+									"6",
+									"I never back down when a companion is insulted."
+								],
+								[
+									"7",
+									"I never finish my plate, offering the rest to others"
+								],
+								[
+									"8",
+									"I love nothing more than looking at the stars."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Respect: All people, rich or poor deserve your respect (Good)"
+								],
+								[
+									"2",
+									"Retribution: The rich always looked down on us, so to take what is theirs is only fair (Chaotic)"
+								],
+								[
+									"3",
+									"Order: Without laws, we are nothing but beasts (Lawful)"
+								],
+								[
+									"4",
+									"Adventurous: The call for adventure is what draws me (any) "
+								],
+								[
+									"5",
+									"Power: The mighty always used their strength against the weak, time to return the favour (Evil)"
+								],
+								[
+									"6",
+									"Live as you will: Why care about the ideals of others, as long as they don’t hurt anyone? (Neutral)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"My family is all that matters, I do what I do for them."
+								],
+								[
+									"2",
+									"My friends showed me a new life, so they matter as much as family."
+								],
+								[
+									"3",
+									"No one should be allowed to look down on others."
+								],
+								[
+									"4",
+									"I escape a boring life thanks to a mentor."
+								],
+								[
+									"5",
+									"I stole from my parents to pay for my adventures, something I regret."
+								],
+								[
+									"6",
+									"I owe a debt I can never repay."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I just can’t seem to keep quiet."
+								],
+								[
+									"2",
+									"I never back down from an insult, even if it endangers me."
+								],
+								[
+									"3",
+									"I do everything for a payday, even if its for others"
+								],
+								[
+									"4",
+									"I can’t help but cry after forced into conflict."
+								],
+								[
+									"5",
+									"I still have nightmares about the first person I killed."
+								],
+								[
+									"6",
+									"I can’t help but look down in the presence of nobles."
+								]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mihavios Clansmen",
+			"source": "BWCS",
+			"skillProficiencies": [
+				{
+					"acrobatics": true,
+					"intimidation": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"musical instrument": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						"artisan's tools|phb",
+						{
+							"special": "water extractor",
+							"quantity": 1
+						},
+						"traveler's clothes|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Acrobatics}, {@skill Survival}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies:",
+							"entry": "Tattoo kit and any one musical instrument or smiting tool"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A tattoo kit, a weapon made of oricalcum, a musical instrument or smiting tool, a set of {@item traveler's clothes|phb}, and a belt {@item pouch|phb} containing 10 gp"
+						}
+					]
+				},
+				"You were born or taken in by the Mihavios Clan of Mercia. You’ve held your first blade even before uttering your first wortd, and understand honour better than anyone else.",
+				"You’ve learn that Oricalcum is sacred and that your people come before everything else.",
+				{
+					"name": "Feature: Respected Mercenary",
+					"type": "entries",
+					"entries": [
+						"Once seen by others, you inspire respect and fear, allowing you to secure transport, audiences with low level officials or even lodgings and food wherever you go, as long as you share stories and tales of your exploits. Although these favours are easy to procure, your clan’s reputation still drives you to pay for the services."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"You were raised to never draw your weapon for no reason, to never attack a defenseless enemy or to be the one to start a petty brawl, but to also respond in kind when insulted.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I almost never talk, preferring silence."
+								],
+								[
+									"2",
+									"My love of music makes me play at all occasions."
+								],
+								[
+									"3",
+									"My weapon and skill are the only things I believe in."
+								],
+								[
+									"4",
+									"I don’t do what I do for money or fame, but for the simple pleasure of it."
+								],
+								[
+									"5",
+									"I bear the shame of a tattoo on my back from me running from a fight."
+								],
+								[
+									"6",
+									"I’ve never inked the right side of my chest, never finding any connections worth it."
+								],
+								[
+									"7",
+									"My one true love is the battlefield."
+								],
+								[
+									"8",
+									"My clan are only a part of my past, my companions are my real family."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I will always defeat my enemies to prove I’m the strongest of all (Any)"
+								],
+								[
+									"2",
+									"Wrath. Anyone daring to wield a blade in my presence needs to be reminded that the Clansmen are the best. (Evil)"
+								],
+								[
+									"3",
+									"Independence. Fights I’m not paid to be a part in don’t interest me. (Neutral)"
+								],
+								[
+									"4",
+									"Responsibility. I am an emissary of my people and will always act with that burden (Lawful)"
+								],
+								[
+									"5",
+									"The Good of All. Even if I’m not paid, I will never let an innocent suffer. (Good)"
+								],
+								[
+									"6",
+									"Whatever it Takes. Honour is surviving a battle, whatever the moves you make (Chaotic)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"My clan is all the matters to me."
+								],
+								[
+									"2",
+									"My mentor is more a father to me than my real one."
+								],
+								[
+									"3",
+									"I love my clan, but I will never forget my real family."
+								],
+								[
+									"4",
+									"I ran from my duties and now the clan is looking for me."
+								],
+								[
+									"5",
+									"My only friend is my blade. I don’t trust anyone else."
+								],
+								[
+									"6",
+									"My destiny is to be remembered."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I found love and lost it and I don’t believe in it anymore."
+								],
+								[
+									"2",
+									"I’m sure I will never lose, making me rash."
+								],
+								[
+									"3",
+									"I’m so confident I might goad my foes a little too much."
+								],
+								[
+									"4",
+									"I’m always expecting a fight, never able to sleep easily."
+								],
+								[
+									"5",
+									"Honour dictates that I can never start a fight."
+								],
+								[
+									"6",
+									"I lose patience and tend to act before thinking."
+								]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Waste Born",
+			"source": "BWCS",
+			"skillProficiencies": [
+				{
+					"survival": true,
+					"religion": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"artisan's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						"artisan's tools|phb",
+						{
+							"special": "water extractor",
+							"quantity": 1
+						},
+						"traveler's clothes|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Survival}, {@skill Religion}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies:",
+							"entry": "Any artisan's tool, {@item water extractor|bwcs}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Any artisan's tool, a {@item water extractor|bwcs}, a set of {@item traveler's clothes|phb}, and a belt {@item pouch|phb} containing 10 gp"
+						}
+					]
+				},
+				"You were born and raised in Wastelands of Senya, which makes you hardy and tough. Survival was not always easy, but it became as second nature to you.",
+				{
+					"name": "Feature: Survivor",
+					"type": "entries",
+					"entries": [
+						"You always have advantage on {@skill Survival} rolls to find food, water or shelter in the harsh environment of Senya."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Suggested Characteristics",
+					"type": "entries",
+					"entries": [
+						"You were raised to believe in survival of the fittest,  knowing that the wastelands of Senya are unforgiving and only the toughest make it past their teens, even less without any scars, mental or physical.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I treat water and food as something sacred."
+								],
+								[
+									"2",
+									"To survive, we need to stand up for one another."
+								],
+								[
+									"3",
+									"The Wastes are my home, and wherever I am, they always beacon for me to return."
+								],
+								[
+									"4",
+									"Where I was born doesn’t define who I am."
+								],
+								[
+									"5",
+									"I look at death as just an inevitable part of life."
+								],
+								[
+									"6",
+									"I find it strangely difficult to lay down from a fight."
+								],
+								[
+									"7",
+									"Silence is a language that can speak more than words."
+								],
+								[
+									"8",
+									"Life is meant to be harsh, it’s gives it value."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Dead or Alive. I don’t care how I leave my enemies, as long as they don’t stand in my way. (Neutral)"
+								],
+								[
+									"2",
+									"High Noon. Someone as to uphold the law in a lawless land (Lawful)"
+								],
+								[
+									"3",
+									"The Good. The world is already harsh enough without those who seek to make it worst (Good)"
+								],
+								[
+									"4",
+									"The Bad. The world is for those who do anything they can to survive, no matter the cost to others. (Evil)"
+								],
+								[
+									"5",
+									"The Ugly. Laws of men don’t mean nothing to the laws of the world and the survival of the fittest. (Chaotic)"
+								],
+								[
+									"6",
+									"True Grit. The Wasteland is a land that forces us to do what needs to be done. (Any)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Bond"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I shot the sheriff and now I’m wanted by his deputies."
+								],
+								[
+									"2",
+									"My townsfolk are like my family."
+								],
+								[
+									"3",
+									"An outsider killed one of my most precious friends and now I’m hunting him down."
+								],
+								[
+									"4",
+									"Death is my only companion."
+								],
+								[
+									"5",
+									"A sheriff showed me that I’m more than my past."
+								],
+								[
+									"6",
+									"My family waits for me back home."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"I never share food or water, even with those in need."
+								],
+								[
+									"2",
+									"I have a very bleak outlook on everything."
+								],
+								[
+									"3",
+									"I find it easier to be alone than grow attachments."
+								],
+								[
+									"4",
+									"I have a hard time trusting anyone."
+								],
+								[
+									"5",
+									"I have the bad habit of thinking law enforcers are charlatans."
+								],
+								[
+									"6",
+									"I don’t feel at home anywhere."
+								]
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
