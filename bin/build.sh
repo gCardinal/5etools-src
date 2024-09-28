@@ -5,6 +5,4 @@ else
   git pull
   cd ..
 fi
-ls -la
 npm run build:sw:prod
-ls -la
