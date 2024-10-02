@@ -7862,7 +7862,10 @@ globalThis.ExcludeUtil = {
 		ExcludeUtil.pSave = MiscUtil.throttle(ExcludeUtil._pSave, 50);
 		try {
 			ExcludeUtil._excludes = ExcludeUtil._getValidExcludes(
-				await StorageUtil.pGet(VeCt.STORAGE_EXCLUDES) || [],
+				[
+					...(await StorageUtil.pGet(VeCt.STORAGE_EXCLUDES) || []),
+					...(await DataUtil.loadJSON(`data/blocklist.json`) || [])
+				],
 			);
 		} catch (e) {
 			JqueryUtil.doToast({
