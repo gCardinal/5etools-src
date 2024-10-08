@@ -24,6 +24,9 @@
 		"classes/warlock-alternate.json",
 		"classes/warlord.json",
 		"classes/witch.json",
+		"monsters/monster-manual-expanded.json",
+		"monsters/monster-manual-expanded-2.json",
+		"monsters/monster-manual-expanded-3.json",
 		"settings/broken-worlds.json",
 		"spells/ll-alternate-spells.json"
 	],
@@ -169,6 +172,18 @@
 		"ll-alternate-spells": {
 			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/spell/LaserLlama%3B Laserllama's Spell Compendium.json",
 			"target": "spells"
+		},
+		"monster-manual-expanded": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/creature/Dragonix;%20Monster%20Manual%20Expanded%20(v1).json",
+			"target": "monsters"
+		},
+		"monster-manual-expanded-2": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/creature/Dragonix;%20Monster%20Manual%20Expanded%20II%20(v2).json",
+			"target": "monsters"
+		},
+		"monster-manual-expanded-3": {
+			"json": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/creature/Dragonix;%20Monster%20Manual%20Expanded%20III.json",
+			"target": "monsters"
 		}
 	}
 }
