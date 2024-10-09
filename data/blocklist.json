@@ -1,374 +1,678 @@
-[
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AATM"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AI"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AL"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "ALCurseOfStrahd"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "ALElementalEvil"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "ALRageOfDemons"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AWM"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AZfyT"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AitFR-AVT"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AitFR-DN"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AitFR-FCD"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AitFR-ISF"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "AitFR-THP"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "CoA"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "DoD"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "GotSF"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "HAT-LMI"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "HAT-TG"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "HFStCM"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "HftT"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "IMR"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "LK"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "LLK"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "LR"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "LRDT"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "MCV1SC"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "MCV2DC"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "MCV3MC"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "MCV4EC"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "MFF"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "MGELFT"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "MaBJoV"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "MisMV1"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "NRH-ASS"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "NRH-AT"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "NRH-AVitW"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "NRH-AWoL"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "NRH-CoI"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "NRH-TCMC"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "NRH-TLT"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "OGA"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "OoW"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "PSA"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "PSD"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "PSI"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "PSK"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "PSX"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "PSZ"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "PiP"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "RMBRE"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "RMR"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "RtG"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "SADS"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "SjA"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "TLK"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "TTP"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "UATheMysticClass"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "UtHftLH"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "VD"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "*",
-		"source": "XMtS"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "class",
-		"source": "XPHB"
-	},
-	{
-		"displayName": "*",
-		"hash": "*",
-		"category": "race",
-		"source": "XPHB"
-	}
-]
+{
+	"siteVersion": "2.2.0",
+	"fileType": "content-blocklist",
+	"blocklist": [
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AATM"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AI"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AL"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ALCurseOfStrahd"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ALElementalEvil"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ALRageOfDemons"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AWM"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AZfyT"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-AVT"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-DN"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-FCD"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-ISF"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-THP"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "CoA"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "DoD"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "GotSF"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HAT-LMI"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HAT-TG"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HFStCM"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HftT"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "IMR"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "LK"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "LLK"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "LR"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "LRDT"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MCV1SC"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MCV2DC"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MCV3MC"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MCV4EC"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MFF"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MGELFT"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MaBJoV"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MisMV1"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-ASS"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-AT"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-AVitW"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-AWoL"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-CoI"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-TCMC"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-TLT"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "OGA"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "OoW"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "PSA"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "PSD"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "PSI"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "PSK"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "PSX"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "PSZ"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "PiP"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "RMBRE"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "RMR"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "RtG"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "SADS"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "SjA"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "TLK"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "TTP"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "UATheMysticClass"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "UtHftLH"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "VD"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "XMtS"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "class",
+			"source": "XPHB"
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "race",
+			"source": "XPHB"
+		},
+		{
+			"displayName": "Expert Sidekick",
+			"hash": "expert%20sidekick_tce",
+			"category": "class",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 1: Bonus Proficiencies",
+			"hash": "bonus%20proficiencies_expert%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 1: Helpful",
+			"hash": "helpful_expert%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 1: Sidekick Class",
+			"hash": "sidekick%20class_expert%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 2: Cunning Action",
+			"hash": "cunning%20action_expert%20sidekick_tce_2_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 3: Expertise",
+			"hash": "expertise_expert%20sidekick_tce_3_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 4: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_expert%20sidekick_tce_4_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 6: Coordinated Strike",
+			"hash": "coordinated%20strike_expert%20sidekick_tce_6_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 7: Evasion",
+			"hash": "evasion_expert%20sidekick_tce_7_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 8: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_expert%20sidekick_tce_8_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 10: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_expert%20sidekick_tce_10_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 11: Inspiring Help",
+			"hash": "inspiring%20help_expert%20sidekick_tce_11_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 12: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_expert%20sidekick_tce_12_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 14: Reliable Talent",
+			"hash": "reliable%20talent_expert%20sidekick_tce_14_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 15: Expertise",
+			"hash": "expertise_expert%20sidekick_tce_15_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 16: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_expert%20sidekick_tce_16_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 18: Sharp Mind",
+			"hash": "sharp%20mind_expert%20sidekick_tce_18_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 19: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_expert%20sidekick_tce_19_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Expert Sidekick 20: Inspiring Help Improvement",
+			"hash": "inspiring%20help%20improvement_expert%20sidekick_tce_20_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick",
+			"hash": "spellcaster%20sidekick_tce",
+			"category": "class",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 1: Bonus Proficiencies",
+			"hash": "bonus%20proficiencies_spellcaster%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 1: Sidekick Class",
+			"hash": "sidekick%20class_spellcaster%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 1: Spellcasting",
+			"hash": "spellcasting_spellcaster%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 4: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_spellcaster%20sidekick_tce_4_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 6: Potent Cantrips",
+			"hash": "potent%20cantrips_spellcaster%20sidekick_tce_6_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 8: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_spellcaster%20sidekick_tce_8_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 12: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_spellcaster%20sidekick_tce_12_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 14: Empowered Spells",
+			"hash": "empowered%20spells_spellcaster%20sidekick_tce_14_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 16: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_spellcaster%20sidekick_tce_16_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 18: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_spellcaster%20sidekick_tce_18_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Spellcaster Sidekick 20: Focused Casting",
+			"hash": "focused%20casting_spellcaster%20sidekick_tce_20_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick",
+			"hash": "warrior%20sidekick_tce",
+			"category": "class",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 1: Bonus Proficiencies",
+			"hash": "bonus%20proficiencies_warrior%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 1: Martial Role",
+			"hash": "martial%20role_warrior%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 1: Sidekick Class",
+			"hash": "sidekick%20class_warrior%20sidekick_tce_1_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 2: Second Wind",
+			"hash": "second%20wind_warrior%20sidekick_tce_2_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 3: Improved Critical",
+			"hash": "improved%20critical_warrior%20sidekick_tce_3_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 4: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_warrior%20sidekick_tce_4_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 6: Extra Attack",
+			"hash": "extra%20attack_warrior%20sidekick_tce_6_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 7: Battle Readiness",
+			"hash": "battle%20readiness_warrior%20sidekick_tce_7_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 8: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_warrior%20sidekick_tce_8_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 10: Improved Defense",
+			"hash": "improved%20defense_warrior%20sidekick_tce_10_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 11: Indomitable",
+			"hash": "indomitable_warrior%20sidekick_tce_11_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 12: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_warrior%20sidekick_tce_12_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 14: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_warrior%20sidekick_tce_14_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 15: Extra Attack Improvement",
+			"hash": "extra%20attack%20improvement_warrior%20sidekick_tce_15_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 16: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_warrior%20sidekick_tce_16_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 18: Indomitable Improvement",
+			"hash": "indomitable%20improvement_warrior%20sidekick_tce_18_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 19: Ability Score Improvement",
+			"hash": "ability%20score%20improvement_warrior%20sidekick_tce_19_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		},
+		{
+			"displayName": "Warrior Sidekick 20: Second Wind Improvement",
+			"hash": "second%20wind%20improvement_warrior%20sidekick_tce_20_tce",
+			"category": "classFeature",
+			"source": "TCE"
+		}
+	]
+}
