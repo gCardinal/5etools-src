@@ -37,7 +37,7 @@
       }
     ],
     "dateAdded": 1649140894,
-    "dateLastModified": 1726351753,
+    "dateLastModified": 1729630006,
     "optionalFeatureTypes": {
       "LLAM:T": "Monk, Alternate; Techniques",
       "LLAM:T:B": "Monk, Alternate; Techniques; Boulder",
@@ -67,7 +67,8 @@
         "llspell"
       ]
     },
-    "_dateLastModifiedHash": "1fbbec79d5"
+    "_dateLastModifiedHash": "b7f28067fa",
+    "edition": "classic"
   },
   "class": [
     {
