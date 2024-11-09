@@ -211,11 +211,6 @@ table {
 	border-collapse: collapse;
 }
 
-td,
-th {
-	padding: 0;
-}
-
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
 	*,
@@ -2764,10 +2759,6 @@ caption {
 	text-align: left;
 }
 
-th {
-	text-align: left;
-}
-
 .table {
 	width: 100%;
 	max-width: 100%;
@@ -4191,10 +4182,8 @@ tbody.collapse.in {
 	text-align: left;
 	list-style: none;
 	background-color: #fff;
-	background-clip: padding-box;
 	border: 1px solid #ccc;
 	border: 1px solid rgb(0 0 0 / 15%);
-	border-radius: 4px;
 	box-shadow: 0 6px 12px rgb(0 0 0 / 17.5%);
 }
 

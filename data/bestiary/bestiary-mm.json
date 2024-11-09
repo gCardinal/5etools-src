@@ -457,6 +457,7 @@
 				"path": "bestiary/abominable-yeti.mp3"
 			},
 			"traitTags": [
+				"Camouflage",
 				"Keen Senses"
 			],
 			"senseTags": [
@@ -8075,9 +8076,6 @@
 					"source": "SatO"
 				}
 			],
-			"reprintedAs": [
-				"Ape|XPHB"
-			],
 			"size": [
 				"M"
 			],
@@ -8932,6 +8930,9 @@
 					"source": "QftIS"
 				}
 			],
+			"reprintedAs": [
+				"Awakened Shrub|XMM"
+			],
 			"size": [
 				"S"
 			],
@@ -9044,6 +9045,9 @@
 				{
 					"source": "QftIS"
 				}
+			],
+			"reprintedAs": [
+				"Awakened Tree|XMM"
 			],
 			"size": [
 				"H"
@@ -11845,6 +11849,9 @@
 					"source": "DoDk"
 				}
 			],
+			"reprintedAs": [
+				"Berserker|XMM"
+			],
 			"size": [
 				"M"
 			],
@@ -12456,6 +12463,9 @@
 				{
 					"source": "VEoR"
 				}
+			],
+			"reprintedAs": [
+				"Blink Dog|XMM"
 			],
 			"size": [
 				"M"
@@ -14751,7 +14761,8 @@
 				"spear|phb"
 			],
 			"traitTags": [
-				"Amphibious"
+				"Amphibious",
+				"Camouflage"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -18353,6 +18364,9 @@
 					"source": "QftIS"
 				}
 			],
+			"reprintedAs": [
+				"Cultist|XMM"
+			],
 			"size": [
 				"M"
 			],
@@ -19953,6 +19967,9 @@
 			"attachedItems": [
 				"war pick|phb"
 			],
+			"traitTags": [
+				"Camouflage"
+			],
 			"senseTags": [
 				"SD"
 			],
@@ -21433,6 +21450,7 @@
 				"underwater",
 				"coastal"
 			],
+			"dragonAge": "adult",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/dragon-turtle.mp3"
@@ -26489,6 +26507,9 @@
 					"source": "DoDk"
 				}
 			],
+			"reprintedAs": [
+				"Fire Elemental|XMM"
+			],
 			"size": [
 				"L"
 			],
@@ -28753,6 +28774,9 @@
 					"source": "QftIS"
 				}
 			],
+			"reprintedAs": [
+				"Ghast|XMM"
+			],
 			"size": [
 				"M"
 			],
@@ -29205,6 +29229,9 @@
 				{
 					"source": "QftIS"
 				}
+			],
+			"reprintedAs": [
+				"Ghoul|XMM"
 			],
 			"size": [
 				"M"
@@ -31054,6 +31081,7 @@
 				"path": "bestiary/giant-octopus.mp3"
 			},
 			"traitTags": [
+				"Camouflage",
 				"Hold Breath",
 				"Water Breathing"
 			],
@@ -35105,6 +35133,9 @@
 					"source": "PaBTSO"
 				}
 			],
+			"reprintedAs": [
+				"Gray Ooze|XMM"
+			],
 			"size": [
 				"M"
 			],
@@ -36513,6 +36544,9 @@
 					"source": "PaBTSO"
 				}
 			],
+			"traitTags": [
+				"Camouflage"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -36636,6 +36670,9 @@
 				"type": "internal",
 				"path": "bestiary/grick-alpha.mp3"
 			},
+			"traitTags": [
+				"Camouflage"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -36894,6 +36931,7 @@
 				"path": "bestiary/grimlock.mp3"
 			},
 			"traitTags": [
+				"Camouflage",
 				"Keen Senses"
 			],
 			"senseTags": [
@@ -40726,6 +40764,9 @@
 					"source": "CoA"
 				}
 			],
+			"reprintedAs": [
+				"Incubus|XMM"
+			],
 			"size": [
 				"M"
 			],
@@ -41955,6 +41996,9 @@
 				{
 					"source": "CoA"
 				}
+			],
+			"reprintedAs": [
+				"Knight|XMM"
 			],
 			"size": [
 				"M"
@@ -44725,6 +44769,9 @@
 				{
 					"source": "CoA"
 				}
+			],
+			"reprintedAs": [
+				"Mage|XMM"
 			],
 			"size": [
 				"M"
@@ -48202,6 +48249,9 @@
 					"source": "QftIS"
 				}
 			],
+			"reprintedAs": [
+				"Mummy|XMM"
+			],
 			"size": [
 				"M"
 			],
@@ -50703,6 +50753,7 @@
 				"path": "bestiary/octopus.mp3"
 			},
 			"traitTags": [
+				"Camouflage",
 				"Hold Breath",
 				"Water Breathing"
 			],
@@ -50807,6 +50858,9 @@
 				{
 					"source": "QftIS"
 				}
+			],
+			"reprintedAs": [
+				"Ogre|XMM"
 			],
 			"size": [
 				"L"
@@ -62800,6 +62854,9 @@
 			"attachedItems": [
 				"greatclub|phb"
 			],
+			"traitTags": [
+				"Camouflage"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -62908,6 +62965,9 @@
 				{
 					"source": "CoA"
 				}
+			],
+			"reprintedAs": [
+				"Stone Golem|XMM"
 			],
 			"size": [
 				"L"
@@ -63291,6 +63351,9 @@
 				{
 					"source": "CoA"
 				}
+			],
+			"reprintedAs": [
+				"Succubus|XMM"
 			],
 			"size": [
 				"M"
@@ -71064,6 +71127,9 @@
 					"source": "QftIS"
 				}
 			],
+			"reprintedAs": [
+				"Wight|XMM"
+			],
 			"size": [
 				"M"
 			],
@@ -71659,6 +71725,7 @@
 				"path": "bestiary/winter-wolf.mp3"
 			},
 			"traitTags": [
+				"Camouflage",
 				"Keen Senses",
 				"Pack Tactics"
 			],
@@ -71869,6 +71936,9 @@
 				{
 					"source": "DoDk"
 				}
+			],
+			"reprintedAs": [
+				"Worg|XMM"
 			],
 			"size": [
 				"L"
@@ -72441,6 +72511,9 @@
 				"type": "internal",
 				"path": "bestiary/xorn.mp3"
 			},
+			"traitTags": [
+				"Camouflage"
+			],
 			"senseTags": [
 				"D",
 				"T"
@@ -72580,6 +72653,7 @@
 				"path": "bestiary/yeti.mp3"
 			},
 			"traitTags": [
+				"Camouflage",
 				"Keen Senses"
 			],
 			"senseTags": [

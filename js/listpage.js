@@ -1429,26 +1429,8 @@ class ListPage {
 		$btn = $btn || this._getOrTabRightButton(`link-export`, `magnet`);
 		$btn.addClass("ve-btn-copy-effect")
 			.off("click")
-			.on("click", async evt => {
-				let url = window.location.href;
-
-				if (EventUtil.isCtrlMetaKey(evt)) {
-					await MiscUtil.pCopyTextToClipboard(this._filterBox.getFilterTag({isAddSearchTerm: true}));
-					JqueryUtil.showCopiedEffect($btn);
-					return;
-				}
-
-				const parts = this._filterBox.getSubHashes({isAddSearchTerm: true, isAllowNonExtension: true});
-				parts.unshift(url);
-
-				if (evt.shiftKey && this._sublistManager) {
-					parts.push(await this._sublistManager.pGetHashPartExport());
-				}
-
-				await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
-				JqueryUtil.showCopiedEffect($btn);
-			})
-			.title("Get link to filters (SHIFT adds list; CTRL copies @filter tag)");
+			.on("click", evt => this._pHandleClick_doCopyFilterLink(evt, {$btn, isAllowNonExtension: true}))
+			.title("Copy Link to Filters (SHIFT to add list; CTRL to copy @filter tag)");
 	}
 
 	_bindPopoutButton () {
@@ -1839,6 +1821,11 @@ class ListPage {
 				"Upload Pinned List (SHIFT for Add Only)",
 				evt => this._sublistManager.pHandleClick_upload({isAdditive: evt.shiftKey}),
 			),
+			null,
+			new ContextUtil.Action(
+				"Copy Link to Filters (Extensible)",
+				evt => this._pHandleClick_doCopyFilterLink(evt),
+			),
 		];
 
 		if (opts.sendToBrew) {
@@ -1893,6 +1880,29 @@ class ListPage {
 				evt.preventDefault();
 				await ContextUtil.pOpenMenu(evt, menu);
 			});
+	}
+
+	async _pHandleClick_doCopyFilterLink (evt, {$btn = null, isAllowNonExtension = false} = {}) {
+		const url = new URL(window.location.href);
+		url.hash ||= globalThis.HASH_BLANK;
+
+		if (EventUtil.isCtrlMetaKey(evt)) {
+			await MiscUtil.pCopyTextToClipboard(this._filterBox.getFilterTag({isAddSearchTerm: true}));
+			if ($btn) JqueryUtil.showCopiedEffect($btn);
+			else JqueryUtil.doToast("Copied!");
+			return;
+		}
+
+		const parts = this._filterBox.getSubHashes({isAddSearchTerm: true, isAllowNonExtension});
+		parts.unshift(url.toString());
+
+		if (evt.shiftKey && this._sublistManager) {
+			parts.push(await this._sublistManager.pGetHashPartExport());
+		}
+
+		await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
+		if ($btn) JqueryUtil.showCopiedEffect($btn);
+		else JqueryUtil.doToast("Copied!");
 	}
 
 	async _handleGenericContextMenuClick_pDoMassPopout (evt, ele, selection) {
@@ -2124,6 +2134,15 @@ class ListPage {
 
 	static _OFFSET_WINDOW_EXPORT_AS_IMAGE = 17;
 
+	_pHandleClick_exportAsImage_mutOptions ({$ele, optsDomToImage}) {
+		// See: https://github.com/1904labs/dom-to-image-more/issues/146
+		if (BrowserUtil.isFirefox()) {
+			const bcr = $ele[0].getBoundingClientRect();
+			optsDomToImage.width = bcr.width;
+			optsDomToImage.height = bcr.height;
+		}
+	}
+
 	async _pHandleClick_exportAsImage ({evt, isFast, $eleCopyEffect}) {
 		if (typeof domtoimage === "undefined") await import("../lib/dom-to-image-more.min.js");
 
@@ -2139,14 +2158,9 @@ class ListPage {
 			},
 		};
 
-		// See: https://github.com/1904labs/dom-to-image-more/issues/146
-		if (BrowserUtil.isFirefox()) {
-			const bcr = this._$pgContent[0].getBoundingClientRect();
-			optsDomToImage.width = bcr.width;
-			optsDomToImage.height = bcr.height;
-		}
-
 		if (isFast) {
+			this._pHandleClick_exportAsImage_mutOptions({$ele: this._$pgContent, optsDomToImage});
+
 			let blob;
 			try {
 				this._$pgContent.addClass("lst__is-exporting-image");
@@ -2166,10 +2180,11 @@ class ListPage {
 
 		const $cpy = $(html)
 			.addClass("lst__is-exporting-image");
-		$cpy.find();
 
 		const $btnCpy = $(`<button class="ve-btn ve-btn-default ve-btn-xs" title="SHIFT to Copy and Close">Copy</button>`)
 			.on("click", async evt => {
+				this._pHandleClick_exportAsImage_mutOptions({$ele: $cpy, optsDomToImage});
+
 				const blob = await domtoimage.toBlob($cpy[0], optsDomToImage);
 				const isCopy = await MiscUtil.pCopyBlobToClipboard(blob);
 				if (isCopy) JqueryUtil.showCopiedEffect($btnCpy, "Copied!");
@@ -2179,6 +2194,8 @@ class ListPage {
 
 		const $btnSave = $(`<button class="ve-btn ve-btn-default ve-btn-xs" title="SHIFT to Save and Close">Save</button>`)
 			.on("click", async evt => {
+				this._pHandleClick_exportAsImage_mutOptions({$ele: $cpy, optsDomToImage});
+
 				const dataUrl = await domtoimage.toPng($cpy[0], optsDomToImage);
 				DataUtil.userDownloadDataUrl(`${ent.name}.png`, dataUrl);
 

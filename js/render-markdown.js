@@ -1090,7 +1090,7 @@ ___
 - **Casting Time:** ${Parser.spTimeListToFull(sp.time, sp.meta)}
 - **Range:** ${Parser.spRangeToFull(sp.range)}
 - **Components:** ${Parser.spComponentsToFull(sp.components, sp.level, {isPlainText: true})}
-- **Duration:** ${Parser.spDurationToFull(sp.duration)}
+- **Duration:** ${Parser.spDurationToFull(sp.duration, {isPlainText: true})}
 ---\n`;
 
 		const cacheDepth = meta.depth;
@@ -1118,13 +1118,13 @@ RendererMarkdown.item = class {
 
 		const subStack = [""];
 
-		const [damage, damageType, propertiesTxt] = Renderer.item.getDamageAndPropertiesText(item, {renderer: RendererMarkdown.get()});
+		const [ptDamage, ptProperties] = Renderer.item.getRenderedDamageAndProperties(item, {renderer: RendererMarkdown.get()});
+		const ptMastery = Renderer.item.getRenderedMastery(item, {renderer: RendererMarkdown.get()});
 		const [typeRarityText, subTypeText, tierText] = RendererMarkdown.item.getTypeRarityAndAttunementText(item);
 
 		const typeRarityTierValueWeight = [typeRarityText, subTypeText, tierText, Parser.itemValueToFullMultiCurrency(item), Parser.itemWeightToFull(item)].filter(Boolean).join(", ").uppercaseFirst();
-		const damageProperties = [damage, damageType, propertiesTxt].filter(Boolean).join(" ").uppercaseFirst();
 
-		const ptSubtitle = [typeRarityTierValueWeight, damageProperties].filter(Boolean).join("\n\n");
+		const ptSubtitle = [typeRarityTierValueWeight, ptDamage, ptProperties, ptMastery].filter(Boolean).join("\n\n");
 
 		subStack[0] += `#### ${item._displayName || item.name}${ptSubtitle ? `\n\n${ptSubtitle}` : ""}\n\n${ptSubtitle ? `---\n\n` : ""}`;
 

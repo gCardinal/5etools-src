@@ -457,7 +457,30 @@
 				"dex"
 			],
 			"spellcastingAbility": "wis",
-			"casterProgression": "full",
+			"casterProgression": "artificer",
+			"preparedSpellsProgression": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				6,
+				7,
+				7,
+				9,
+				9,
+				10,
+				10,
+				11,
+				11,
+				12,
+				12,
+				14,
+				14,
+				15,
+				15
+			],
+			"preparedSpellsChange": "restLong",
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -476,6 +499,15 @@
 					],
 					"progression": {
 						"2": 1
+					}
+				},
+				{
+					"name": "Epic Boon",
+					"category": [
+						"EB"
+					],
+					"progression": {
+						"19": 1
 					}
 				}
 			],
@@ -508,9 +540,7 @@
 				]
 			},
 			"startingEquipment": {
-				"entries": [
-					"{@i Choose A or B:} (A) {@item Studded Leather Armor|XPHB}, {@item Scimitar|XPHB}, {@item Shortsword|XPHB}, {@item Longbow|XPHB}, {@item Arrows (20)|XPHB|20 Arrows}, {@item Quiver|XPHB}, {@item Druidic Focus|XPHB} ({@item sprig of mistletoe|XPHB}), {@item Explorer's Pack|XPHB}, and 7 GP; or (B) 150 GP"
-				],
+				"additionalFromBackground": true,
 				"defaultData": [
 					{
 						"A": [
@@ -527,7 +557,7 @@
 								"item": "longbow|xphb"
 							},
 							{
-								"item": "arrows|xphb"
+								"item": "arrows (20)|xphb"
 							},
 							{
 								"item": "quiver|xphb"
@@ -548,6 +578,9 @@
 							}
 						]
 					}
+				],
+				"entries": [
+					"{@i Choose A or B:} (A) {@item Studded Leather Armor|XPHB}, {@item Scimitar|XPHB}, {@item Shortsword|XPHB}, {@item Longbow|XPHB}, {@item Arrows (20)|XPHB|20 Arrows}, {@item Quiver|XPHB}, {@item Druidic Focus|XPHB} ({@item sprig of mistletoe|XPHB}), {@item Explorer's Pack|XPHB}, and 7 GP; or (B) 150 GP"
 				]
 			},
 			"multiclassing": {
@@ -715,7 +748,7 @@
 					]
 				},
 				{
-					"title": "Prepared Spells per Spell Level",
+					"title": "Spell Slots per Spell Level",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=ranger}",
 						"{@filter 2nd|spells|level=2|class=ranger}",
@@ -2074,8 +2107,8 @@
 			"classSource": "XPHB",
 			"level": 1,
 			"entries": [
-				"Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as {@item Longbow|XPHB|Longbows} and {@item Shortsword|XPHB|Shortswords}.",
-				"Whenever you finish a {@variantrule Long Rest|XPHB}, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of {@item Scimitar|XPHB|Scimitars} and {@item Longsword|XPHB|Longswords}."
+				"Your training with weapons allows you to use the {@variantrule weapon mastery properties|XPHB|mastery properties} of two kinds of {@filter weapons|items|type=simple weapon;martial weapon} of your choice with which you have proficiency, such as {@item Longbow|XPHB|Longbows} and {@item Shortsword|XPHB|Shortswords}.",
+				"Whenever you finish a {@variantrule Long Rest|XPHB}, you can change the kinds of weapons you chose. For example, you could switch to using the {@variantrule weapon mastery properties|XPHB|mastery properties} of {@item Scimitar|XPHB|Scimitars} and {@item Longsword|XPHB|Longswords}."
 			]
 		},
 		{
@@ -4089,7 +4122,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Frighten",
+					"name": "Dreadful Strike",
 					"entries": [
 						"When you attack a creature and hit it with a weapon, you can deal an extra {@damage 2d6} Psychic damage. You can use this benefit only once per turn, you can use it a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a {@variantrule Long Rest|XPHB}."
 					]

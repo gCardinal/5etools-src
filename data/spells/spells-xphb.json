@@ -1112,7 +1112,9 @@
 							"Neither good nor bad"
 						]
 					]
-				}
+				},
+				"The spell doesn't account for circumstances, such as other spells, that might change the results.",
+				"If you cast the spell more than once before finishing a {@variantrule Long Rest|XPHB}, there is a cumulative {@chance 25|||Random reading!|Regular reading} chance for each casting after the first that you get no answer."
 			]
 		},
 		{
@@ -1597,6 +1599,7 @@
 			"name": "Befuddlement",
 			"source": "XPHB",
 			"page": 245,
+			"freeRules2024": true,
 			"level": 8,
 			"school": "E",
 			"time": [
@@ -1712,6 +1715,7 @@
 			"name": "Bigby's Hand",
 			"source": "XPHB",
 			"page": 245,
+			"freeRules2024": true,
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -2085,7 +2089,7 @@
 				"type": "point",
 				"distance": {
 					"type": "feet",
-					"amount": 30
+					"amount": 120
 				}
 			},
 			"components": {
@@ -2438,6 +2442,7 @@
 			"name": "Charm Monster",
 			"source": "XPHB",
 			"page": 249,
+			"freeRules2024": true,
 			"level": 4,
 			"school": "E",
 			"time": [
@@ -2607,7 +2612,7 @@
 				"necrotic"
 			],
 			"spellAttack": [
-				"R"
+				"M"
 			],
 			"miscTags": [
 				"SCL"
@@ -2620,6 +2625,7 @@
 			"name": "Chromatic Orb",
 			"source": "XPHB",
 			"page": 249,
+			"freeRules2024": true,
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -3865,7 +3871,7 @@
 				"DFT"
 			],
 			"areaTags": [
-				"R"
+				"S"
 			]
 		},
 		{
@@ -5033,6 +5039,7 @@
 			],
 			"miscTags": [
 				"LGT",
+				"LGTS",
 				"OBJ"
 			],
 			"areaTags": [
@@ -5690,6 +5697,7 @@
 			"name": "Dissonant Whispers",
 			"source": "XPHB",
 			"page": 264,
+			"freeRules2024": true,
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -5795,7 +5803,7 @@
 			"range": {
 				"type": "point",
 				"distance": {
-					"type": "touch"
+					"type": "self"
 				}
 			},
 			"components": {
@@ -5825,8 +5833,9 @@
 			"name": "Divine Smite",
 			"source": "XPHB",
 			"page": 265,
+			"freeRules2024": true,
 			"level": 1,
-			"school": "T",
+			"school": "V",
 			"time": [
 				{
 					"number": 1,
@@ -6134,6 +6143,7 @@
 			"name": "Dragon's Breath",
 			"source": "XPHB",
 			"page": 266,
+			"freeRules2024": true,
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -6194,6 +6204,7 @@
 			"name": "Drawmij's Instant Summons",
 			"source": "XPHB",
 			"page": 266,
+			"freeRules2024": true,
 			"level": 6,
 			"school": "C",
 			"time": [
@@ -6730,6 +6741,7 @@
 			"name": "Ensnaring Strike",
 			"source": "XPHB",
 			"page": 268,
+			"freeRules2024": true,
 			"level": 1,
 			"school": "C",
 			"time": [
@@ -6941,6 +6953,7 @@
 			"name": "Evard's Black Tentacles",
 			"source": "XPHB",
 			"page": 270,
+			"freeRules2024": true,
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -6983,7 +6996,7 @@
 				"restrained"
 			],
 			"savingThrow": [
-				"dexterity"
+				"strength"
 			],
 			"abilityCheck": [
 				"strength"
@@ -8682,7 +8695,7 @@
 				"You give a verbal command to a creature that you can see within range, ordering it to carry out some service or refrain from an action or a course of activity as you decide. The target must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. The target automatically succeeds if it can't understand your command.",
 				"While {@condition Charmed|XPHB}, the creature takes {@damage 5d10} Psychic damage if it acts in a manner directly counter to your command. It takes this damage no more than once each day.",
 				"You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.",
-				"A {@spell Remove Curse|XPHB},{@spell Greater Restoration|XPHB}, or {@spell Wish|XPHB} spell ends this spell."
+				"A {@spell Remove Curse|XPHB}, {@spell Greater Restoration|XPHB}, or {@spell Wish|XPHB} spell ends this spell."
 			],
 			"entriesHigherLevel": [
 				{
@@ -10201,6 +10214,7 @@
 			"name": "Hex",
 			"source": "XPHB",
 			"page": 285,
+			"freeRules2024": true,
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -10308,21 +10322,6 @@
 			],
 			"savingThrow": [
 				"wisdom"
-			],
-			"affectsCreatureType": [
-				"aberration",
-				"beast",
-				"celestial",
-				"construct",
-				"dragon",
-				"elemental",
-				"fey",
-				"fiend",
-				"giant",
-				"humanoid",
-				"monstrosity",
-				"ooze",
-				"plant"
 			],
 			"miscTags": [
 				"SCT",
@@ -11349,6 +11348,7 @@
 			"name": "Leomund's Secret Chest",
 			"source": "XPHB",
 			"page": 290,
+			"freeRules2024": true,
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -11393,6 +11393,7 @@
 			"name": "Leomund's Tiny Hut",
 			"source": "XPHB",
 			"page": 291,
+			"freeRules2024": true,
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -12562,6 +12563,7 @@
 			"name": "Melf's Acid Arrow",
 			"source": "XPHB",
 			"page": 297,
+			"freeRules2024": true,
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -13241,6 +13243,7 @@
 			"name": "Mordenkainen's Faithful Hound",
 			"source": "XPHB",
 			"page": 300,
+			"freeRules2024": true,
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -13290,6 +13293,7 @@
 			"name": "Mordenkainen's Magnificent Mansion",
 			"source": "XPHB",
 			"page": 300,
+			"freeRules2024": true,
 			"level": 7,
 			"school": "C",
 			"time": [
@@ -13338,6 +13342,7 @@
 			"name": "Mordenkainen's Private Sanctum",
 			"source": "XPHB",
 			"page": 301,
+			"freeRules2024": true,
 			"level": 4,
 			"school": "A",
 			"time": [
@@ -13404,6 +13409,7 @@
 			"name": "Mordenkainen's Sword",
 			"source": "XPHB",
 			"page": 302,
+			"freeRules2024": true,
 			"level": 7,
 			"school": "V",
 			"time": [
@@ -13552,6 +13558,7 @@
 			"name": "Nystul's Magic Aura",
 			"source": "XPHB",
 			"page": 302,
+			"freeRules2024": true,
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -13610,6 +13617,7 @@
 			"name": "Otiluke's Freezing Sphere",
 			"source": "XPHB",
 			"page": 302,
+			"freeRules2024": true,
 			"level": 6,
 			"school": "V",
 			"time": [
@@ -13666,6 +13674,7 @@
 			"name": "Otiluke's Resilient Sphere",
 			"source": "XPHB",
 			"page": 303,
+			"freeRules2024": true,
 			"level": 4,
 			"school": "A",
 			"time": [
@@ -13731,6 +13740,7 @@
 			"name": "Otto's Irresistible Dance",
 			"source": "XPHB",
 			"page": 303,
+			"freeRules2024": true,
 			"level": 6,
 			"school": "E",
 			"time": [
@@ -14385,6 +14395,7 @@
 			"name": "Power Word Heal",
 			"source": "XPHB",
 			"page": 306,
+			"freeRules2024": true,
 			"level": 9,
 			"school": "E",
 			"time": [
@@ -14396,7 +14407,8 @@
 			"range": {
 				"type": "point",
 				"distance": {
-					"type": "touch"
+					"type": "feet",
+					"amount": 60
 				}
 			},
 			"components": {
@@ -15258,6 +15270,7 @@
 			"name": "Rary's Telepathic Bond",
 			"source": "XPHB",
 			"page": 311,
+			"freeRules2024": true,
 			"level": 5,
 			"school": "D",
 			"time": [
@@ -15410,6 +15423,7 @@
 			"name": "Ray of Sickness",
 			"source": "XPHB",
 			"page": 311,
+			"freeRules2024": true,
 			"level": 1,
 			"school": "N",
 			"time": [
@@ -16114,7 +16128,10 @@
 							"-10"
 						]
 					]
-				}
+				},
+				"On a successful save, the target isn't affected, and you can't use this spell on it again for 24 hours.",
+				"On a failed save, the spell creates an {@condition Invisible|XPHB}, intangible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 feet of it for the duration. If something can see the sensor, it appears as a luminous orb about the size of your fist.",
+				"Instead of targeting a creature, you can target a location you have seen. When you do so, the sensor appears at that location and doesn't move."
 			],
 			"savingThrow": [
 				"wisdom"
@@ -16125,6 +16142,7 @@
 			"name": "Searing Smite",
 			"source": "XPHB",
 			"page": 314,
+			"freeRules2024": true,
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -16603,6 +16621,7 @@
 			"name": "Shining Smite",
 			"source": "XPHB",
 			"page": 316,
+			"freeRules2024": true,
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -17023,6 +17042,7 @@
 			"name": "Sorcerous Burst",
 			"source": "XPHB",
 			"page": 318,
+			"freeRules2024": true,
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -17077,6 +17097,9 @@
 				"poison",
 				"psychic",
 				"thunder"
+			],
+			"spellAttack": [
+				"R"
 			],
 			"miscTags": [
 				"OBJ",
@@ -17552,6 +17575,7 @@
 			"name": "Starry Wisp",
 			"source": "XPHB",
 			"page": 320,
+			"freeRules2024": true,
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -18163,6 +18187,7 @@
 			"name": "Summon Dragon",
 			"source": "XPHB",
 			"page": 324,
+			"freeRules2024": true,
 			"level": 5,
 			"school": "C",
 			"time": [
@@ -18694,7 +18719,6 @@
 			"savingThrow": [
 				"constitution",
 				"wisdom",
-				"charisma",
 				"intelligence"
 			],
 			"abilityCheck": [
@@ -18799,6 +18823,7 @@
 			"name": "Tasha's Hideous Laughter",
 			"source": "XPHB",
 			"page": 331,
+			"freeRules2024": true,
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -19171,6 +19196,7 @@
 			"name": "Tenser's Floating Disk",
 			"source": "XPHB",
 			"page": 332,
+			"freeRules2024": true,
 			"level": 1,
 			"school": "C",
 			"time": [
@@ -20227,7 +20253,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop bile"
+				"m": "a drop of bile"
 			},
 			"duration": [
 				{
@@ -21260,8 +21286,9 @@
 				"SGT"
 			],
 			"areaTags": [
-				"R"
-			]
+				"S"
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Zone of Truth",

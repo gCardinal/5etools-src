@@ -25,6 +25,10 @@ class TagTestUrlLookup {
 	static _ALL_URLS_SET = new Set();
 	static _ALL_URLS_LIST = [];
 
+	// Versions are distinct, as they are valid UIDs, but not valid URLs
+	static _ALL_URLS_SET__VERSIONS = new Set();
+	static _ALL_URLS_LIST__VERSIONS = [];
+
 	static _CAT_ID_BLOCKLIST = new Set([
 		Parser.CAT_ID_PAGE,
 	]);
@@ -41,11 +45,19 @@ class TagTestUrlLookup {
 	static addEntityItem (ent, page) {
 		const url = `${page.toLowerCase()}#${(UrlUtil.URL_TO_HASH_BUILDER[page](ent)).toLowerCase().trim()}`;
 
+		if (ent._versionBase_isVersion) {
+			this._ALL_URLS_SET__VERSIONS.add(url);
+			this._ALL_URLS_LIST__VERSIONS.push(url);
+			return;
+		}
+
 		this._ALL_URLS_SET.add(url);
 		this._ALL_URLS_LIST.push(url);
 	}
 
 	static hasUrl (url) { return this._ALL_URLS_SET.has(url); }
+
+	static hasVersionUrl (url) { return this._ALL_URLS_SET__VERSIONS.has(url); }
 
 	static getSimilarUrls (url) {
 		const mSimilar = /^\w+\.html#\w+/.exec(url);
@@ -77,6 +89,10 @@ class TagTestUtil {
 
 		(await DataLoader.pCacheAndGetAllSite("itemProperty"))
 			.forEach(ent => TagTestUrlLookup.addEntityItem(ent, "itemProperty"));
+
+		(await DataLoader.pCacheAndGetAllSite("feat"))
+			.filter(ent => ent._versionBase_isVersion)
+			.forEach(ent => TagTestUrlLookup.addEntityItem(ent, UrlUtil.PG_FEATS));
 	}
 
 	static async _pInit_pPopulateClassSubclassIndex () {
@@ -221,9 +237,11 @@ class GenericDataCheck extends DataTesterBase {
 					if (["any", "anyFromCategory"].includes(k)) return;
 
 					const url = getEncoded(k, "feat");
-					if (!TagTestUrlLookup.hasUrl(url)) {
-						this._addMessage(`Missing link: ${url} in file ${file} (evaluates to "${url}") in "feats"\n${TagTestUtil.getLogPtSimilarUrls({url})}`);
-					}
+
+					if (TagTestUrlLookup.hasUrl(url)) return;
+					if (TagTestUrlLookup.hasVersionUrl(url)) return;
+
+					this._addMessage(`Missing link: ${url} in file ${file} (evaluates to "${url}") in "feats"\n${TagTestUtil.getLogPtSimilarUrls({url})}`);
 				});
 		});
 	}
@@ -246,6 +264,30 @@ class GenericDataCheck extends DataTesterBase {
 				if (TagTestUrlLookup.hasUrl(url)) return;
 
 				this._addMessage(`Missing link: ${url} in file ${file} (evaluates to "${url}") in "${_tag}"\n${TagTestUtil.getLogPtSimilarUrls({url})}`);
+			});
+	}
+
+	static _testStartingEquipment (file, obj, {propDotPath = "startingEquipment"} = {}) {
+		const propPath = propDotPath.split(".");
+		const equi = MiscUtil.get(obj, ...propPath);
+
+		if (!equi) return;
+
+		equi
+			.forEach(group => {
+				Object.entries(group)
+					.forEach(([k, arr]) => {
+						arr
+							.forEach(meta => {
+								if (!meta.item) return;
+
+								const url = getEncoded(meta.item, "item");
+
+								if (TagTestUrlLookup.hasUrl(url)) return;
+
+								this._addMessage(`Missing link: ${meta.item} in file ${file} (evaluates to "${url}") in "${propDotPath}"\n${TagTestUtil.getLogPtSimilarUrls({url})}`);
+							});
+					});
 			});
 	}
 }
@@ -833,6 +875,7 @@ class ClassDataCheck extends GenericDataCheck {
 
 		this._testAdditionalSpells(file, cls);
 		this._testReprintedAs(file, cls, "class");
+		this._testStartingEquipment(file, cls, {propDotPath: "startingEquipment.defaultData"});
 	}
 
 	static _doCheckSubclass (file, data, subclassFeatureLookup, sc) {
@@ -930,6 +973,7 @@ class BackgroundDataCheck extends GenericDataCheck {
 		this._testAdditionalSpells(file, bg);
 		this._testAdditionalFeats(file, bg);
 		this._testReprintedAs(file, bg, "background");
+		this._testStartingEquipment(file, bg);
 	}
 
 	static pRun () {
@@ -957,6 +1001,14 @@ class BestiaryDataCheck extends GenericDataCheck {
 			mon.attachedItems.forEach(s => {
 				const url = getEncoded(s, "item");
 				if (!TagTestUrlLookup.hasUrl(url)) this._addMessage(`Missing link: ${s} in file ${file} (evaluates to "${url}") in "attachedItems"\n${TagTestUtil.getLogPtSimilarUrls({url})}`);
+			});
+		}
+
+		if (mon.gear) {
+			mon.gear.forEach(ref => {
+				const uid = ref.item || ref;
+				const url = getEncoded(uid, "item");
+				if (!TagTestUrlLookup.hasUrl(url)) this._addMessage(`Missing link: ${uid} in file ${file} (evaluates to "${url}") in "gear"\n${TagTestUtil.getLogPtSimilarUrls({url})}`);
 			});
 		}
 	}

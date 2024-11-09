@@ -1019,9 +1019,12 @@ class ListUiUtil {
 	}
 
 	static bindPreviewAllButton ($btnAll, list) {
-		$btnAll
-			.click(async () => {
-				const nxtHtml = $btnAll.html() === ListUiUtil.HTML_GLYPHICON_EXPAND
+		const btnAll = $btnAll?.[0];
+		if (!btnAll) return;
+
+		btnAll
+			.addEventListener("click", async () => {
+				const nxtHtml = btnAll.innerHTML === ListUiUtil.HTML_GLYPHICON_EXPAND
 					? ListUiUtil.HTML_GLYPHICON_CONTRACT
 					: ListUiUtil.HTML_GLYPHICON_EXPAND;
 
@@ -1033,12 +1036,17 @@ class ListUiUtil {
 					if (!isSure) return;
 				}
 
-				$btnAll.html(nxtHtml);
+				btnAll.innerHTML = nxtHtml;
 
 				list.visibleItems.forEach(listItem => {
 					if (listItem.data.btnShowHidePreview.innerHTML !== nxtHtml) listItem.data.btnShowHidePreview.click();
 				});
 			});
+
+		list.on("updated", () => {
+			const isShowExpand = list.visibleItems.every(listItem => listItem.data.btnShowHidePreview.innerHTML === ListUiUtil.HTML_GLYPHICON_EXPAND);
+			btnAll.innerHTML = isShowExpand ? ListUiUtil.HTML_GLYPHICON_EXPAND : ListUiUtil.HTML_GLYPHICON_CONTRACT;
+		});
 	}
 
 	// ==================
@@ -3399,6 +3407,12 @@ class InputUiUtil {
 					const out = [];
 					const errs = [];
 
+					const msgExpectedTypes = expectedFileTypes != null
+						? expectedFileTypes.length
+							? `the expected file type was &quot;${expectedFileTypes.join("/")}&quot;`
+							: `no file type was expected`
+						: null;
+
 					reader.onload = async () => {
 						const name = input.files[readIndex - 1].name;
 						const text = reader.result;
@@ -3413,7 +3427,7 @@ class InputUiUtil {
 									textYes: "Yes",
 									textNo: "Cancel",
 									title: "File Type Mismatch",
-									htmlDescription: `The file "${name}" has the type "${json.fileType}" when the expected file type was "${expectedFileTypes.join("/")}".<br>Are you sure you want to upload this file?`,
+									htmlDescription: `The file "${name}" has the type "${json.fileType}" when ${msgExpectedTypes}.<br>Are you sure you want to upload this file?`,
 								}));
 
 							if (!isSkipFile) {
@@ -4074,26 +4088,19 @@ function MixinBaseComponent (Cls) {
 		getSaveableState () { return {...this.getBaseSaveableState()}; }
 		setStateFrom (toLoad, isOverwrite = false) { this.setBaseSaveableStateFrom(toLoad, isOverwrite); }
 
-		async _pLock (lockName) {
-			while (this.__locks[lockName]) await this.__locks[lockName].lock;
-			let unlock = null;
-			const lock = new Promise(resolve => unlock = resolve);
-			this.__locks[lockName] = {
-				lock,
-				unlock,
-			};
+		async _pLock (lockName, {lockToken = null, isDbg = false} = {}) {
+			this.__locks[lockName] ||= new VeLock({name: lockName, isDbg});
+			return this.__locks[lockName].pLock({token: lockToken});
 		}
 
 		async _pGate (lockName) {
-			while (this.__locks[lockName]) await this.__locks[lockName].lock;
+			await this._pLock(lockName);
+			this._unlock(lockName);
 		}
 
 		_unlock (lockName) {
-			const lockMeta = this.__locks[lockName];
-			if (lockMeta) {
-				delete this.__locks[lockName];
-				lockMeta.unlock();
-			}
+			if (!this.__locks[lockName]) return;
+			this.__locks[lockName].unlock();
 		}
 
 		async _pDoProxySetBase (prop, value) { return this._pDoProxySet("state", this.__state, prop, value); }
@@ -6427,7 +6434,7 @@ class ComponentUiUtil {
 		// Always return this as a "meta" object
 		const unhook = () => rowMetas.forEach(it => it.unhook());
 		return {
-			$ele: $$`<div class="ve-flex-col w-100 ve-overflow-y-auto">${$eles}</div>`,
+			$ele: $$`<div class="ve-flex-col w-100 ve-overflow-y-auto min-h-40p">${$eles}</div>`,
 			$iptSearch,
 			rowMetas, // Return this to allow for creating custom UI
 			propIsAcceptable,

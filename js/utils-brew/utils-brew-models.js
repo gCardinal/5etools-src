@@ -5,6 +5,7 @@ export class _BrewDocContentMigrator {
 		this._mutMakeCompatible_monster(json);
 		this._mutMakeCompatible_object(json);
 		this._mutMakeCompatible_subclass(json);
+		this._mutMakeCompatible_spell(json);
 	}
 
 	/* ----- */
@@ -82,6 +83,7 @@ export class _BrewDocContentMigrator {
 
 		const outSubclasses = [];
 		const outSubclassFeatures = [];
+		const depsSubclass = new Set();
 
 		json.subclass
 			.filter(sc => sc.source !== Parser.SRC_XPHB && sc.classSource === Parser.SRC_PHB)
@@ -137,6 +139,15 @@ export class _BrewDocContentMigrator {
 							const uid = scfRef.subclassFeature || scfRef;
 							const unpacked = DataUtil.class.unpackUidSubclassFeature(uid);
 
+							// When copying a site subclass feature re-used in a homebrew subclass,
+							//   include the site class as a dependency.
+							// Note that we do not do this for e.g. homebrew depending on homebrew,
+							//   as we assume the brew already defines this relationship.
+							const sourceJson = Parser.sourceJsonToJson(unpacked.source);
+							if (SourceUtil.isSiteSource(sourceJson)) {
+								depsSubclass.add(unpacked.className.toLowerCase());
+							}
+
 							const scfNxt = {
 								classSource: Parser.SRC_XPHB,
 								level: this._MIN_SUBCLASS_FEATURE_LEVEL,
@@ -172,7 +183,44 @@ export class _BrewDocContentMigrator {
 
 		if (outSubclassFeatures.length && !internalCopies.includes("subclassFeature")) internalCopies.push("subclassFeature");
 
+		if (depsSubclass.size) {
+			const tgt = MiscUtil.getOrSet(json, "_meta", "dependencies", "subclass", []);
+			depsSubclass.forEach(dep => {
+				if (!tgt.includes(dep)) tgt.push(dep);
+			});
+		}
+
 		return true;
+	}
+
+	/* ----- */
+
+	/**
+	 * @since 2024-10-06
+	 * As a temporary measure, for spells which have `classes.fromClassList`, make XPHB copies of PHB class entries.
+	 * @deprecated TODO(Future) remove/rework when moving to a better solution for homebrew spell sources
+	 */
+	static _mutMakeCompatible_spell (json) {
+		if (!json.spell) return false;
+
+		json.spell
+			.forEach(ent => {
+				if (!ent?.classes?.fromClassList?.length) return;
+
+				const phbNames = {};
+				const xphbNames = {};
+
+				ent.classes.fromClassList
+					.forEach(classMeta => {
+						if (classMeta.source === Parser.SRC_PHB) phbNames[classMeta.name] = classMeta;
+						if (classMeta.source === Parser.SRC_XPHB) xphbNames[classMeta.name] = true;
+					});
+
+				Object.keys(xphbNames).forEach(name => delete xphbNames[name]);
+
+				Object.values(phbNames)
+					.forEach(classMeta => ent.classes.fromClassList.push({...classMeta, source: Parser.SRC_XPHB}));
+			});
 	}
 }
 

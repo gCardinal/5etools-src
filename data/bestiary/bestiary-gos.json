@@ -243,7 +243,8 @@
 				"spear|phb"
 			],
 			"traitTags": [
-				"Amphibious"
+				"Amphibious",
+				"Camouflage"
 			],
 			"languageTags": [
 				"OTH"
@@ -389,7 +390,8 @@
 			],
 			"traitTags": [
 				"Amphibious",
-				"Brute"
+				"Brute",
+				"Camouflage"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -3729,6 +3731,9 @@
 			"name": "Pirate Captain",
 			"source": "GoS",
 			"page": 247,
+			"reprintedAs": [
+				"Pirate Captain|XMM"
+			],
 			"size": [
 				"M"
 			],
