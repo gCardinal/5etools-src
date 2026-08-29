@@ -1,0 +1,94 @@
+{
+	"alternate_barbarian": {
+		"lastUpdated": "2026-08-29T00:00:00.000Z",
+		"source": "gm_binder"
+	},
+	"witch": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_artificer": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_bard": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_blood_hunter": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_cleric": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_druid": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_fighter": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_monk": {
+		"lastUpdated": "2026-08-27T11:56:06Z",
+		"source": "git"
+	},
+	"alternate_paladin": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_ranger": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_rogue": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_sorcerer": {
+		"lastUpdated": "2026-06-08T21:14:29Z",
+		"source": "git"
+	},
+	"alternate_warlock": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"alternate_wizard": {
+		"lastUpdated": "2026-06-14T21:20:50Z",
+		"source": "git"
+	},
+	"magus": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"savant": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"shaman": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"vessel": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"warlord": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"laserllama_exploit_compendium": {
+		"lastUpdated": "2026-06-08T21:14:29Z",
+		"source": "git"
+	},
+	"laserllama_laserllama_s_compendium_of_spells": {
+		"lastUpdated": "2026-06-08T21:14:29Z",
+		"source": "git"
+	},
+	"laserllama_compendium_of_beasts": {
+		"lastUpdated": "2026-07-12T13:16:10Z",
+		"source": "git"
+	}
+}

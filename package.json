@@ -9,6 +9,8 @@
 	"scripts": {
 		"version-bump": "npm version -m \"chore(version): bump\"",
 		"gen": "node node/generate-all.js",
+		"gen:homebrew-import": "node --experimental-strip-types node/homebrew-import.js",
+		"test:json:brew": "node node_modules/5etools-utils/bin/test-json-brew.js --dir homebrew",
 		"gen:search-index": "node node/generate-search-index.js",
 		"gen:pages": "node node/generate-pages.js",
 		"clean-jsons": "node node/clean-jsons.js",

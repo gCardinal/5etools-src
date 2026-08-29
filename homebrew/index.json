@@ -5,5 +5,28 @@
 		"This file contains as an index for other homebrew files, which should be placed in the same directory.",
 		"For example, add \"My Homebrew.json\" to the \"toImport\" array below, and have a valid JSON homebrew file in this (\"homebrew/\") directory."
 	],
-	"toImport": []
+	"toImport": [
+		"witch.json",
+		"alternate_artificer.json",
+		"alternate_bard.json",
+		"alternate_blood_hunter.json",
+		"alternate_cleric.json",
+		"alternate_druid.json",
+		"alternate_fighter.json",
+		"alternate_monk.json",
+		"alternate_paladin.json",
+		"alternate_ranger.json",
+		"alternate_rogue.json",
+		"alternate_sorcerer.json",
+		"alternate_warlock.json",
+		"alternate_wizard.json",
+		"magus.json",
+		"savant.json",
+		"shaman.json",
+		"vessel.json",
+		"warlord.json",
+		"laserllama_exploit_compendium.json",
+		"laserllama_laserllama_s_compendium_of_spells.json",
+		"laserllama_compendium_of_beasts.json"
+	]
 }
