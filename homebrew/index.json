@@ -27,6 +27,9 @@
 		"warlord.json",
 		"laserllama_exploit_compendium.json",
 		"laserllama_laserllama_s_compendium_of_spells.json",
-		"laserllama_compendium_of_beasts.json"
+		"laserllama_compendium_of_beasts.json",
+		"alternate_barbarian.json",
+		"shifter.json",
+		"psion.json"
 	]
 }

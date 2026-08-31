@@ -1,8 +1,4 @@
 {
-	"alternate_barbarian": {
-		"lastUpdated": "2026-08-29T00:00:00.000Z",
-		"source": "gm_binder"
-	},
 	"witch": {
 		"lastUpdated": "2026-08-02T22:36:50Z",
 		"source": "git"
@@ -89,6 +85,18 @@
 	},
 	"laserllama_compendium_of_beasts": {
 		"lastUpdated": "2026-07-12T13:16:10Z",
+		"source": "git"
+	},
+	"alternate_barbarian": {
+		"lastUpdated": "2026-08-05T19:09:20Z",
+		"source": "git"
+	},
+	"shifter": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
+		"source": "git"
+	},
+	"psion": {
+		"lastUpdated": "2026-08-02T22:36:50Z",
 		"source": "git"
 	}
 }
