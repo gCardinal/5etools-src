@@ -50,7 +50,8 @@
 		"spellcheck:check-data:fast": "node node/spellcheck.js --fast",
 		"spellcheck:trust-data": "node node/spellcheck.js --trust",
 		"spellcheck:trust-data:fast": "node node/spellcheck.js --fast --trust",
-		"prettier:css": "prettier scss/**/*.scss --log-level warn"
+		"prettier:css": "prettier scss/**/*.scss --log-level warn",
+		"update:upstream": "git fetch upstream && git merge upstream/main"
 	},
 	"repository": {
 		"type": "git",
