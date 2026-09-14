@@ -1,0 +1,593 @@
+{
+	"fileType": "content-blocklist",
+	"blocklist": [
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "24GriffonsSaddlebag1",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AATM",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AWM",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AZfyT",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-AVT",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-DN",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-FCD",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-ISF",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "AitFR-THP",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "BQGT",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "BookOfEbonTides",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "BoundByBlood",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "CoA",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "CrookedMoon14",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "CrookedMoon24",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "CthulhuTorchlight",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "DnDBeyondDrops",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "DoD",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "DoDkSearchSmugglersSecrets",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "DungeonsDrakkenheim",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ExploringEberron24",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "FleeMortals",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "FoEQuickstone",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "GotSF",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "GriffonsSaddlebag2",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "GrimHollowCG24",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "GrimHollowLairsEtharis",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "GrimHollowPG24",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "GrimHollowPlayerPack",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HAT-LMI",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HAT-TG",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HBTD",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HFStCM",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HelianasGuidetoMonsterHunting",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HumblewoodCampaignSetting",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "HumblewoodTales",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "IMR",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "IllriggerRevised",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "LK",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "LLK",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "LR",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MCV3MC",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MCV4EC",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MFF",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MGELFT",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MaBJoV",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MaladyOfMinarrh",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MisMV1",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "MonstersOfDrakkenheim",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-ASS",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-AT",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-AVitW",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-AWoL",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-CoI",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-TCMC",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NRH-TLT",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NorthlandsSagas",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "NorthlandsWorldbook",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "OGA",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "OneShotWonders10Forest",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "OneShotWondersHolidayPack",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "PiP",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "Pugilist2024",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "RtG",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "RuinsOfSymbaroumSettingHandbook",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "SADS",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "SGEHPP",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ScoEE",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "SjA",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "TLK",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "TLotRR",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "TTP",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "TalDoreiCampaignSettingReborn",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "TalesFromTheShadows",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ToB1-2023",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "UtHftLH",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "VD",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ValdaGunslinger",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ValdaPlayerPack",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "ValdaPlayerPack2",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "WhereEvilLives",
+			"isAuto": false
+		},
+		{
+			"displayName": "*",
+			"hash": "*",
+			"category": "*",
+			"source": "XMtS",
+			"isAuto": false
+		}
+	]
+}

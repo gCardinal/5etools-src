@@ -9213,7 +9213,7 @@ globalThis.ExcludeUtil = class {
 		ExcludeUtil.pSave = MiscUtil.throttle(ExcludeUtil._pSave, 50);
 		try {
 			ExcludeUtil._excludes = ExcludeUtil._getValidExcludes(
-				await StorageUtil.pGet(VeCt.STORAGE_EXCLUDES) || [],
+				await StorageUtil.pGet(VeCt.STORAGE_EXCLUDES) ?? await ExcludeUtil._pGetDefaultExcludes(),
 			);
 			this._doBuildCache();
 		} catch (e) {
@@ -9231,6 +9231,16 @@ globalThis.ExcludeUtil = class {
 			setTimeout(() => { throw e; });
 		}
 		ExcludeUtil.isInitialised = true;
+	}
+
+	/** Self-host default blocklist, seeded on first load (i.e. when the user has no stored blocklist). */
+	static async _pGetDefaultExcludes () {
+		try {
+			const json = await DataUtil.loadJSON(`${globalThis.Renderer?.get?.()?.baseUrl || ""}data/blocklist-default.json`);
+			return json.blocklist || [];
+		} catch (e) {
+			return [];
+		}
 	}
 
 	static _getValidExcludes (excludes) {
