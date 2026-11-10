@@ -4,7 +4,7 @@
 		"source": "git"
 	},
 	"alternate_artificer": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"alternate_bard": {
@@ -24,11 +24,11 @@
 		"source": "git"
 	},
 	"alternate_fighter": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"alternate_monk": {
-		"lastUpdated": "2026-08-27T11:56:06Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"alternate_paladin": {
@@ -36,11 +36,11 @@
 		"source": "git"
 	},
 	"alternate_ranger": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"alternate_rogue": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"alternate_sorcerer": {
@@ -48,7 +48,7 @@
 		"source": "git"
 	},
 	"alternate_warlock": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-11-08T15:59:03Z",
 		"source": "git"
 	},
 	"alternate_wizard": {
@@ -56,15 +56,15 @@
 		"source": "git"
 	},
 	"magus": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"savant": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"shaman": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"vessel": {
@@ -72,7 +72,7 @@
 		"source": "git"
 	},
 	"warlord": {
-		"lastUpdated": "2026-08-02T22:36:50Z",
+		"lastUpdated": "2026-09-20T21:23:57Z",
 		"source": "git"
 	},
 	"laserllama_exploit_compendium": {
@@ -84,7 +84,7 @@
 		"source": "git"
 	},
 	"laserllama_compendium_of_beasts": {
-		"lastUpdated": "2026-07-12T13:16:10Z",
+		"lastUpdated": "2026-10-09T20:06:15Z",
 		"source": "git"
 	},
 	"alternate_barbarian": {
