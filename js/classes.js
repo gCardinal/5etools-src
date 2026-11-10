@@ -604,13 +604,13 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				ixToLoad = -1;
 				if (link && await this.pHandleUnknownHash(link, sub)) return;
 			} else {
-				const toLoad = listItem.ix;
+				const toLoad = listItem.getId();
 				if (toLoad == null) ixToLoad = -1;
-				else ixToLoad = listItem.ix;
+				else ixToLoad = listItem.getId();
 			}
 		}
 
-		if (!~ixToLoad && this._list.visibleItems.length) ixToLoad = this._list.visibleItems[0].ix;
+		if (!~ixToLoad && this._list.visibleItems.length) ixToLoad = this._list.visibleItems[0].getId();
 
 		if (~ixToLoad) {
 			const target = isInitialLoad ? this.__classId : this._classId;
@@ -648,8 +648,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		const scUnknownHashSources = {};
 
-		// Track any incoming sources we need to filter to enable in order to display the desired subclasses
-		const requiredSources = new Set();
+		const scHashesRequired = new Set();
 
 		const seenKeys = new Set();
 		subs.forEach(sub => {
@@ -663,7 +662,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				if (k.startsWith("sub")) { // subclass selection state keys
 					if (validScLookup[k]) {
 						if (target[k] !== v) target[k] = v;
-						requiredSources.add(validScLookup[k].source);
+						if (v) scHashesRequired.add(k);
 						seenKeys.add(k);
 						return;
 					}
@@ -719,19 +718,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			if (!seenKeys.has(k) && v !== target[k]) target[k] = v;
 		});
 
-		if (requiredSources.size) {
-			const sourceFilterValues = this._pageFilter.sourceFilter.getValues().Source;
-			if (sourceFilterValues._isActive) {
-				// If the filter includes "blue" values, set our sources to be included
-				if (sourceFilterValues._totals.yes > 0) {
-					requiredSources.forEach(source => this._pageFilter.sourceFilter.setValue(source, 1));
-				} else { // if there are only "red"s active, disable them for our sources
-					requiredSources.forEach(source => {
-						if (sourceFilterValues[source] !== 0) this._pageFilter.sourceFilter.setValue(source, 0);
-					});
-				}
-			}
-		}
+		this._pageFilter.doSetSubclassesVisible([...scHashesRequired].map(hash => validScLookup[hash]));
 
 		Object.keys(validScLookup).forEach(k => {
 			if (!seenKeys.has(k) && target[k]) target[k] = false;
@@ -921,20 +908,20 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		const lnk = veT`<a href="#${hash}" class="ve-lst__row-border ve-lst__row-inner">
 			<span class="ve-bold ve-col-8 ve-pl-0 ve-pr-1">${cls.name}</span>
-			<span class="ve-col-4 ve-pl-0 ve-pr-1 ve-text-center ${Parser.sourceJsonToSourceClassname(cls.source)} ve-pr-0" title="${Parser.sourceJsonToFull(cls.source)}">${source}</span>
+			<span class="ve-col-4 ve-pl-0 ve-pr-1 ve-text-center ${Parser.sourceJsonToSourceClassname(cls.source)} ve-pr-0" title="${Parser.sourceJsonToFull(cls.source).qq()}">${source.qq()}</span>
 		</a>`;
 
 		const ele = veT`<li class="ve-lst__row ve-flex-col ${isExcluded ? "ve-lst__row--blocklisted" : ""}">${lnk}</li>`;
 
-		return new ListItem(
-			clsI,
+		return new ListItem({
+			id: clsI,
 			ele,
-			cls.name,
-			{
+			name: cls.name,
+			values: {
 				source,
 				...ListItem.getCommonValues(cls),
 			},
-			{
+			data: {
 				hash,
 				page: cls.page,
 				lnk,
@@ -942,7 +929,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				entity: cls,
 				isExcluded,
 			},
-		);
+		});
 	}
 
 	_doGenerateFilteredActiveClassData () {
@@ -971,7 +958,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			});
 		});
 
-		// Ensure the correct filter values are used, and reset badly-copied `FilterItem`s
+		// Re-populate filter values after copying and filtering class data
 		this._pageFilter.constructor.mutateForFilters(cpyCls);
 
 		this._activeClassDataFiltered = cpyCls;
@@ -1574,17 +1561,17 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		});
 
 		const dispCount = veT`<div class="ve-muted ve-m-1 cls-tabs__sc-not-shown ve-flex-vh-center"></div>`;
-		this._listSubclass.addItem(new ListItem(
-			-1,
-			dispCount,
-			null,
-			{isAlwaysVisible: true},
-		));
+		this._listSubclass.addItem(new ListItem({
+			id: -1,
+			ele: dispCount,
+			name: "",
+			values: {isAlwaysVisible: true},
+		}));
 
 		this._listSubclass.on("updated", () => {
 			dispCount.vee.off("click");
 
-			if (this._listSubclass.visibleItems.length) {
+			if (this._listSubclass.visibleItems.some(it => !it.values.isAlwaysVisible)) {
 				const cntNotShown = this._listSubclass.items.length - this._listSubclass.visibleItems.length;
 				dispCount
 					.vee.html(cntNotShown ? `<i class="ve-clickable" title="Adjust your filters to see more.">(${cntNotShown} more not shown)</i>` : "")
@@ -1623,7 +1610,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		const doSetSourceFilter = () => {
 			filterValuesNxt[this._pageFilter.sourceFilter.header] = this.activeClass.subclasses
 				.reduce((accum, sc) => {
-					[sc._fSources || []].flat().forEach(src => accum[src] = 1);
+					[sc._fSources || []].flat().forEach(src => accum[src.item || src] = 1);
 					return accum;
 				}, {});
 		};
@@ -1712,6 +1699,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		const filterSets = [
 			{name: "View Default", subHashes: [], isClearSources: false},
 			{name: "View Standard Plus Partnered", subHashes: [], isClearSources: false, sourceCategories: [SourceUtil.FILTER_GROUP_STANDARD, SourceUtil.FILTER_GROUP_PARTNERED]},
+			{name: "View Standard Plus Universes Beyond", subHashes: [], isClearSources: false, sourceCategories: [SourceUtil.FILTER_GROUP_STANDARD, SourceUtil.FILTER_GROUP_UNIVERSES_BEYOND]},
 			{name: "View Standard Plus Homebrew", subHashes: [], isClearSources: false, sourceCategories: [SourceUtil.FILTER_GROUP_STANDARD, SourceUtil.FILTER_GROUP_HOMEBREW]},
 			{name: "View Most Recent", subHashes: [], isClearSources: true},
 			{name: "View All", subHashes: ["flstmiscellaneous:reprinted=0"], isClearSources: true},
@@ -1728,6 +1716,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				const toExclude = [
 					SourceUtil.FILTER_GROUP_STANDARD,
 					SourceUtil.FILTER_GROUP_PARTNERED,
+					SourceUtil.FILTER_GROUP_UNIVERSES_BEYOND,
 					SourceUtil.FILTER_GROUP_NON_STANDARD,
 					SourceUtil.FILTER_GROUP_PRERELEASE,
 					SourceUtil.FILTER_GROUP_HOMEBREW,
@@ -1830,8 +1819,8 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		if (this._state[stateKey] == null) this._state[stateKey] = false;
 
-		const dispName = veT`<div title="${ClassesPage.getBtnTitleSubclass(sc)}"></div>`;
-		const dispSource = veT`<div class="ve-ml-1" title="${Parser.sourceJsonToFull(sc.source)}">(${Parser.sourceJsonToAbv(sc.source)})</div>`;
+		const dispName = veT`<div title="${ClassesPage.getBtnTitleSubclass(sc).qq()}"></div>`;
+		const dispSource = veT`<div class="ve-ml-1" title="${Parser.sourceJsonToFull(sc.source).qq()}">(${Parser.sourceJsonToAbv(sc.source).qq()})</div>`;
 		const hkSourcesVisible = () => {
 			dispName.vee.txt(this._state.isShowScSources ? ClassesPage.getBaseShortName(sc) : sc.shortName);
 			dispSource.vee.toggle(!!this._state.isShowScSources);
@@ -1868,23 +1857,23 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		this._addHookBase(stateKey, hkVisible);
 		MiscUtil.pDefer(hkVisible);
 
-		return new ListItem(
-			ix,
-			btn,
-			sc.name,
-			{
+		return new ListItem({
+			id: ix,
+			ele: btn,
+			name: sc.name,
+			values: {
 				source: sc.source,
 				...ListItem.getCommonValues(sc),
 				shortName: sc.shortName,
 				stateKey,
 				displayType,
 			},
-			{
+			data: {
 				page: sc.page,
 				isExcluded,
 				entity: sc,
 			},
-		);
+		});
 	}
 
 	_trackOutlineFluffData (depthData) { this._outlineData.fluff = depthData; }
@@ -2618,7 +2607,7 @@ ClassesPage.SubclassComparisonBookView = class extends BookModeViewBase {
 		const {stg, fnCleanup} = this._getSelectSubclassesMeta();
 		this._fnsCleanup.push(fnCleanup);
 
-		return veT`<div class="ve-h-100 ve-w-100 ve-flex-vh-center ve-no-shrink no-print">
+		return veT`<div class="ve-h-100 ve-w-100 ve-flex-vh-center ve-no-shrink ve-print__hidden">
 			${stg}
 		</div>`;
 	}
@@ -2785,7 +2774,7 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 		const styleHint = VetoolsConfig.get("styleSwitcher", "style");
 
 		// Top bar
-		const pnlMenu = veT`<div class="cls-bkmv__wrp-tabs ve-flex-h-center no-print"></div>`.vee.appendTo(wrpContent);
+		const pnlMenu = veT`<div class="cls-bkmv__wrp-tabs ve-flex-h-center ve-print__hidden"></div>`.vee.appendTo(wrpContent);
 
 		// Main panel
 		const tblBook = veT`<table class="ve-w-100 ve-stats ve-stats--book ve-stats--book-large ve-stats--bkmv"></div>`;
@@ -2885,7 +2874,7 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 				const activeClassName = UtilClassesPage.getSubclassDisplayClassButton({displayType: UtilClassesPage.getSubclassDisplayType(cls, sc)});
 				const stateKey = UrlUtil.getStateKeySubclass(sc);
 
-				const btnToggleSc = veT`<span class="cls-bkmv__btn-tab ${sc.isReprinted ? "cls__btn-sc--reprinted" : ""}" title="${ClassesPage.getBtnTitleSubclass(sc)}">${name}</span>`
+				const btnToggleSc = veT`<span class="cls-bkmv__btn-tab ${sc.isReprinted ? "cls__btn-sc--reprinted" : ""}" title="${ClassesPage.getBtnTitleSubclass(sc).qq()}">${name.qq()}</span>`
 					.vee.onn("click", () => this._parent.set(stateKey, !this._parent.get(stateKey)));
 				const isVisible = this._pageFilter.isSubclassVisible(filterValues, cls, sc);
 				if (!isVisible) btnToggleSc.vee.hide();

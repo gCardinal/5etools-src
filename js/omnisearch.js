@@ -189,13 +189,13 @@ class OmnisearchUi {
 
 	static _render_doBindElementListeners ({rdState}) {
 		rdState.dispSearchOutput
-			.vee.onClick(evt => {
+			.vee.onn("click", evt => {
 				evt.stopPropagation();
 				Renderer.hover.cleanTempWindows();
 			});
 
 		rdState.iptSearch
-			.vee.onKeydown((evt) => {
+			.vee.onn("keydown", (evt) => {
 				evt.stopPropagation();
 				Renderer.hover.cleanTempWindows();
 				switch (evt.key) {
@@ -235,16 +235,16 @@ class OmnisearchUi {
 
 		let typeTimer;
 		rdState.iptSearch
-			.vee.onKeyup((evt) => {
+			.vee.onn("keyup", (evt) => {
 				if (evt.key !== "Enter") rdState.clickFirst = false;
 				if (this._IPT_SEARCH_SPECIAL_KEYS.has(evt.key)) return;
 				clearTimeout(typeTimer);
 				typeTimer = setTimeout(() => this._handleClick_pSubmit({rdState}), this._TYPE_TIMEOUT_MS);
 			});
 		rdState.iptSearch
-			.vee.onKeydown(() => clearTimeout(typeTimer));
+			.vee.onn("keydown", () => clearTimeout(typeTimer));
 		rdState.iptSearch
-			.vee.onClick(evt => {
+			.vee.onn("click", evt => {
 				evt.stopPropagation();
 				Renderer.hover.cleanTempWindows();
 				if (rdState.iptSearch.vee.val()?.trim().length) this._handleClick_pSubmit({rdState}).then(null);
@@ -375,6 +375,17 @@ class OmnisearchUi {
 		}
 	}
 
+	static _handleFocus_link ({evt, lnk, resultDoc}) {
+		if (!resultDoc.h) return;
+		if (!Renderer.hover.isMinLargeScreen(evt)) return;
+
+		const {left, top} = lnk.getBoundingClientRect();
+		Renderer.hover.pHandleLinkFocus(evt, lnk, {
+			position: Renderer.hover.getWindowPositionExactRight(left, top, {evt, offsetX: -9}),
+		})
+			.then(null);
+	}
+
 	static _doCleanup ({rdState}) {
 		rdState.lastRender = null;
 		rdState.wrpSearchOutput.vee.hide();
@@ -429,7 +440,9 @@ class OmnisearchUi {
 				const resultDoc = result.doc;
 
 				const lnk = OmnisearchUtilsUi.getResultLink(resultDoc)
-					.vee.onn("keydown", evt => this._handleKeydown_link({rdState, evt, results, ixPage, rowMetas, ixInPage}));
+					.vee.onn("keydown", evt => this._handleKeydown_link({rdState, evt, results, ixPage, rowMetas, ixInPage}))
+					.vee.onn("focus", evt => this._handleFocus_link({evt, lnk, resultDoc}))
+					.vee.onn("blur", evt => Renderer.hover.handleLinkBlur(evt, lnk));
 
 				const {
 					source,

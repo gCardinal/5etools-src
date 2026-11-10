@@ -44,8 +44,12 @@
 				],
 				"lootTables": [
 					"Magic Item Table B"
+				],
+				"miscTags": [
+					"CNS"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+1 Ammunition",
@@ -77,8 +81,12 @@
 				"lootTables": [
 					"Armaments - Uncommon|XDMG",
 					"Implements - Uncommon|XDMG"
+				],
+				"miscTags": [
+					"CNS"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+1 Armor",
@@ -109,7 +117,8 @@
 				"entries": [
 					"You have a {=bonusAc} bonus to AC while wearing this armor."
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+1 Armor",
@@ -143,7 +152,8 @@
 					"Armaments - Rare|XDMG",
 					"Relics - Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+1 Shield (*)",
@@ -175,7 +185,8 @@
 				"entries": [
 					"While holding this shield, you have a {=bonusAc} bonus to AC. This bonus is in addition to the shield's normal bonus to AC."
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+1 Shield (*)",
@@ -206,7 +217,8 @@
 				"lootTables": [
 					"Armaments - Uncommon|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+1 Weapon",
@@ -250,7 +262,8 @@
 				"lootTables": [
 					"Magic Item Table F"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+1 Weapon",
@@ -277,7 +290,8 @@
 				"lootTables": [
 					"Armaments - Uncommon|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+1 Weapon (no damage)",
@@ -334,8 +348,12 @@
 				],
 				"lootTables": [
 					"Magic Item Table C"
+				],
+				"miscTags": [
+					"CNS"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+2 Ammunition",
@@ -367,8 +385,12 @@
 				"lootTables": [
 					"Armaments - Rare|XDMG",
 					"Implements - Rare|XDMG"
+				],
+				"miscTags": [
+					"CNS"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+2 Armor",
@@ -398,7 +420,8 @@
 				"entries": [
 					"You have a {=bonusAc} bonus to AC while wearing this armor."
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+2 Armor",
@@ -432,7 +455,8 @@
 					"Armaments - Very Rare|XDMG",
 					"Relics - Very Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+2 Shield (*)",
@@ -464,7 +488,8 @@
 				"entries": [
 					"While holding this shield, you have a {=bonusAc} bonus to AC. This bonus is in addition to the shield's normal bonus to AC."
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+2 Shield (*)",
@@ -495,7 +520,8 @@
 				"lootTables": [
 					"Armaments - Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+2 Weapon",
@@ -531,7 +557,8 @@
 				"lootTables": [
 					"Magic Item Table G"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+2 Weapon",
@@ -558,7 +585,8 @@
 				"lootTables": [
 					"Armaments - Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+2 Weapon (no damage)",
@@ -615,8 +643,12 @@
 				],
 				"lootTables": [
 					"Magic Item Table D"
+				],
+				"miscTags": [
+					"CNS"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+3 Ammunition",
@@ -648,8 +680,12 @@
 				"lootTables": [
 					"Armaments - Very Rare|XDMG",
 					"Implements - Very Rare|XDMG"
+				],
+				"miscTags": [
+					"CNS"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+3 Armor",
@@ -738,7 +774,8 @@
 				"entries": [
 					"While holding this shield, you have a {=bonusAc} bonus to AC. This bonus is in addition to the shield's normal bonus to AC."
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+3 Shield (*)",
@@ -766,7 +803,8 @@
 				"lootTables": [
 					"Armaments - Very Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+3 Weapon",
@@ -798,7 +836,8 @@
 				"lootTables": [
 					"Magic Item Table H"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+3 Weapon",
@@ -822,7 +861,8 @@
 				"lootTables": [
 					"Armaments - Very Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "+3 Weapon (no damage)",
@@ -948,7 +988,8 @@
 				"entries": [
 					"This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit."
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Adamantine Armor",
@@ -977,7 +1018,8 @@
 				"lootTables": [
 					"Armaments - Uncommon|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Adamantine Weapon",
@@ -1035,7 +1077,8 @@
 				"lootTables": [
 					"Armaments - Uncommon|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "All-Seeing Blade of the Guardian",
@@ -1050,7 +1093,7 @@
 							"type": "entries",
 							"name": "All-Seeing",
 							"entries": [
-								"The DM decides the weapon evolves one final time, becoming Legendary and gaining the All-Seeing property. The DM decides this represents the Paladin becoming a paragon of watchful protection."
+								"The DM decides the weapon evolves one final time, becoming Legendary and gaining the {@table Magic Item Property Tables; Legendary Magic Item Properties|AU|All-Seeing} property. The DM decides this represents the Paladin becoming a paragon of watchful protection."
 							]
 						}
 					},
@@ -1062,6 +1105,9 @@
 						"mode": "setProp",
 						"value": "legendary"
 					}
+				},
+				"_preserve": {
+					"page": true
 				}
 			}
 		},
@@ -1089,13 +1135,13 @@
 					"After dealing its extra damage to a creature, the ammunition becomes nonmagical.",
 					{
 						"type": "table",
-						"colStyles": [
-							"col-2 text-center",
-							"col-10"
-						],
 						"colLabels": [
 							"1d100",
 							"Creature Type"
+						],
+						"colStyles": [
+							"col-2 text-center",
+							"col-10"
 						],
 						"rows": [
 							[
@@ -1159,6 +1205,9 @@
 				],
 				"lootTables": [
 					"Armaments - Very Rare|XDMG"
+				],
+				"miscTags": [
+					"CNS"
 				]
 			},
 			"hasFluffImages": true
@@ -1629,7 +1678,8 @@
 				"lootTables": [
 					"Armaments - Common|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Armor of Lightning Resistance",
@@ -2268,6 +2318,9 @@
 				"entries": [
 					"{=baseName/at} {=baseName/l} of slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both {@i {=baseName/l}s of dragon slaying} and {@i {=baseName/l}s of blue dragon slaying}. If a creature belonging to the type, race, or group associated with {=baseName/a} {=baseName/l} of slaying takes damage from the {=baseName/l}, the creature must make a {@dc 17} Constitution saving throw, taking an extra {@damage 6d10} piercing damage on a failed save, or half as much extra damage on a successful one.",
 					"Once {=baseName/a} {=baseName/l} of slaying deals its extra damage to a creature, it becomes a nonmagical {=baseName/l}."
+				],
+				"miscTags": [
+					"CNS"
 				]
 			},
 			"hasFluffImages": true
@@ -2563,8 +2616,8 @@
 					"When you attack a creature with this magic weapon and roll a 20 on the attack roll, the creature must make a {@dc 15} Constitution saving throw in addition to suffering the attack's normal effects. On a failed save, the creature is restrained and must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this effect three times, the effect ends. If it fails its saves three times, it is turned to stone and subjected to the {@condition petrified} condition for 1 hour.",
 					"A creature is immune to this effect if it is immune to damage of the weapon's type, does not have a body made of flesh, or has legendary actions.",
 					{
-						"name": "Curse",
 						"type": "entries",
+						"name": "Curse",
 						"entries": [
 							"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a {@spell remove curse} spell or similar magic, you are unwilling to part with the weapon. Whenever you attack a creature with this weapon and roll a 1 on the attack roll, you must succeed on a {@dc 15} Constitution saving throw or be {@condition restrained} and forced to make additional saves against being {@condition petrified}, as above."
 						]
@@ -2732,7 +2785,8 @@
 				"lootTables": [
 					"Armaments - Common|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Clockwork Armor",
@@ -3098,6 +3152,9 @@
 				"rarity": "uncommon",
 				"entries": [
 					"When a target takes damage from this magical piece of ammunition, any ongoing spell of level 3 or lower on the target ends. Once it deals damage to a target, the ammunition is no longer magical."
+				],
+				"miscTags": [
+					"CNS"
 				]
 			}
 		},
@@ -3248,6 +3305,9 @@
 				"rarity": "uncommon",
 				"entries": [
 					"This leech has been dried and imbued with a mote of animating magic. If you hit a creature with a ranged attack roll using this ammunition, the leech springs to life and sinks its teeth into the target, dealing {@damage 1d4} piercing damage at the start of each of the target's turns. If the leech deals at least 10 damage or the target dies, the leech falls off. A creature, including the target, can use its action to detach the leech. Once a leech is no longer attached to its target, the leech dies and is no longer magical."
+				],
+				"miscTags": [
+					"CNS"
 				]
 			}
 		},
@@ -3537,7 +3597,8 @@
 				"lootTables": [
 					"Armaments - Very Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Enspelled Armor (Cantrip)",
@@ -4086,7 +4147,8 @@
 				"lootTables": [
 					"Armaments - Very Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Feywrought Armor",
@@ -4389,8 +4451,8 @@
 				"entries": [
 					"Choose a magical bonus of +1 to +3. This sword gains that bonus to its attack and damage rolls. For each point of bonus you choose for the sword, you take a corresponding penalty (\u22121 to \u22123) to your death saving throws. You can change this magical bonus each day at dawn.",
 					{
-						"name": "Curse",
 						"type": "entries",
+						"name": "Curse",
 						"entries": [
 							"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a {@spell remove curse} spell or similar magic, you are unwilling to part with the weapon."
 						]
@@ -4555,6 +4617,9 @@
 				"rarity": "uncommon",
 				"entries": [
 					"If this piece of magic ammunition hits a creature and deals damage, the target makes a {@dc 13} Charisma saving throw. On a failed save, the target can't take {@variantrule Reaction|XPHB|Reactions} until the start of its next turn, as it sputters and rages impotently. Once it hits a target, the ammunition is no longer magical."
+				],
+				"miscTags": [
+					"CNS"
 				]
 			}
 		},
@@ -5020,6 +5085,7 @@
 			"inherits": {
 				"namePrefix": "Life-Sapping ",
 				"source": "AUD",
+				"page": 118,
 				"rarity": "rare",
 				"reqAttune": true,
 				"bonusWeapon": "+1",
@@ -5397,7 +5463,8 @@
 				"lootTables": [
 					"Magic Item Table B"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Mithral Armor",
@@ -5423,6 +5490,8 @@
 				"srd52": true,
 				"basicRules2024": true,
 				"rarity": "uncommon",
+				"strength": null,
+				"stealth": false,
 				"entries": [
 					"Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes.",
 					"If the armor normally imposes disadvantage on Dexterity ({@skill Stealth|XPHB}) checks or has a Strength requirement, the mithral version of the armor doesn't."
@@ -5431,7 +5500,8 @@
 					"Arcana - Uncommon|XDMG",
 					"Armaments - Uncommon|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Mizzium Armor",
@@ -5616,13 +5686,13 @@
 					{
 						"type": "table",
 						"caption": "Moonblade Properties",
-						"colStyles": [
-							"col-2 text-center",
-							"col-10"
-						],
 						"colLabels": [
 							"1d100",
 							"Property"
+						],
+						"colStyles": [
+							"col-2 text-center",
+							"col-10"
 						],
 						"rows": [
 							[
@@ -6069,7 +6139,8 @@
 				"lootTables": [
 					"Armaments - Legendary|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Polymorph Blade",
@@ -6184,8 +6255,8 @@
 					},
 					"A creature is immune to this effect if it is immune to damage of the weapon's type, is a shapechanger, or has legendary actions.",
 					{
-						"name": "Curse",
 						"type": "entries",
+						"name": "Curse",
 						"entries": [
 							"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a {@spell remove curse} spell or similar magic, you are unwilling to part with the weapon. Whenever you attack a creature with this weapon and roll a 1 on the attack roll, you suffer the effect of a {@spell polymorph} spell for 1 hour, rolling on the table to determine your new form."
 						]
@@ -6207,7 +6278,7 @@
 							"type": "entries",
 							"name": "Regal",
 							"entries": [
-								"When the characters travel to an ancient battlefield, the DM decides the armor evolves, becoming Very Rare and gaining the Regal property. As the characters explore, they uncover iconography matching that on the armor."
+								"When the characters travel to an ancient battlefield, the DM decides the armor evolves, becoming Very Rare and gaining the {@table Magic Item Property Tables; Very Rare Magic Item Properties|AU|Regal} property. As the characters explore, they uncover iconography matching that on the armor."
 							]
 						}
 					},
@@ -6287,7 +6358,7 @@
 							"type": "entries",
 							"name": "Resistant",
 							"entries": [
-								"When the Paladin defends her companions against infernal forces, the DM decides the weapon evolves again, becoming Very Rare and gaining the Resistant property. The DM chooses Fire as the damage type it grants {@variantrule Resistance|XPHB} to, since that's thematically appropriate."
+								"When the Paladin defends her companions against infernal forces, the DM decides the weapon evolves again, becoming Very Rare and gaining the {@table Magic Item Property Tables; Very Rare Magic Item Properties|AU|Resistant} property. The DM chooses Fire as the damage type it grants {@variantrule Resistance|XPHB} to, since that's thematically appropriate."
 							]
 						}
 					},
@@ -6303,6 +6374,9 @@
 						"mode": "appendIfNotExistsArr",
 						"items": "fire"
 					}
+				},
+				"_preserve": {
+					"page": true
 				}
 			}
 		},
@@ -6535,7 +6609,8 @@
 				"lootTables": [
 					"Armaments - Common|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Slumbering Dragon's Wrath Weapon",
@@ -6606,7 +6681,8 @@
 					"Armaments - Common|XDMG",
 					"Relics - Common|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sniper's Bracelet",
@@ -6640,6 +6716,7 @@
 			"inherits": {
 				"namePrefix": "Sniper's Bracelet ",
 				"source": "AUD",
+				"page": 119,
 				"rarity": "common",
 				"reqAttune": true,
 				"entries": [
@@ -6665,6 +6742,7 @@
 			"inherits": {
 				"namePrefix": "Spell-Fueling ",
 				"source": "AUD",
+				"page": 119,
 				"rarity": "very rare",
 				"reqAttune": "by a Spellcaster",
 				"reqAttuneTags": [
@@ -6783,7 +6861,7 @@
 							"type": "entries",
 							"name": "Studious",
 							"entries": [
-								"The DM decides the weapon evolves to a Rare item and gives it the Studious property, since the Paladin has improved her investigative skills to better understand potential threats."
+								"The DM decides the weapon evolves to a Rare item and gives it the {@table Magic Item Property Tables; Rare Magic Item Properties|AU|Studious} property, since the Paladin has improved her investigative skills to better understand potential threats."
 							]
 						}
 					},
@@ -6813,6 +6891,9 @@
 						"value": "AU"
 					},
 					"inherits.srd52": "remove"
+				},
+				"_preserve": {
+					"page": true
 				}
 			},
 			"requires": [
@@ -6873,7 +6954,7 @@
 							"type": "entries",
 							"name": "Subjugating",
 							"entries": [
-								"The characters' investigation leads them to an old castle, where they face an ancient, brutal tyrant wearing a tabard with iconography matching this armor. The characters defeat the tyrant thanks to the Fighter's heroics. The DM decides the armor evolves, becoming Legendary and gaining the Subjugating property."
+								"The characters' investigation leads them to an old castle, where they face an ancient, brutal tyrant wearing a tabard with iconography matching this armor. The characters defeat the tyrant thanks to the Fighter's heroics. The DM decides the armor evolves, becoming Legendary and gaining the {@table Magic Item Property Tables; Legendary Magic Item Properties|AU|Subjugating} property."
 							]
 						}
 					},
@@ -6885,6 +6966,9 @@
 						"mode": "setProp",
 						"value": "legendary"
 					}
+				},
+				"_preserve": {
+					"page": true
 				}
 			}
 		},
@@ -7139,8 +7223,8 @@
 				"entries": [
 					"You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
 					{
-						"name": "Curse",
 						"type": "entries",
+						"name": "Curse",
 						"entries": [
 							"This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.",
 							"In addition, while the sword is on your person, you must succeed on a {@dc 15} Wisdom saving throw whenever you take damage in combat. On a failed save you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it.",
@@ -7151,7 +7235,8 @@
 				"lootTables": [
 					"Magic Item Table F"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sword of Vengeance",
@@ -7205,7 +7290,8 @@
 				"lootTables": [
 					"Armaments - Uncommon|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sword of Wounding",
@@ -7234,7 +7320,8 @@
 				"lootTables": [
 					"Magic Item Table G"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sword of Wounding",
@@ -7279,7 +7366,8 @@
 				"lootTables": [
 					"Armaments - Rare|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Sylvan Talon",
@@ -7360,6 +7448,7 @@
 			"inherits": {
 				"namePrefix": "Thayan ",
 				"source": "AUD",
+				"page": 121,
 				"rarity": "rare",
 				"reqAttune": true,
 				"bonusWeapon": "+1",
@@ -7459,19 +7548,20 @@
 			"inherits": {
 				"namePrefix": "Trick ",
 				"source": "AUD",
+				"page": 121,
 				"rarity": "common",
 				"entries": [
 					"As a {@action Magic|XPHB} action while touching this weapon, you can transform it into a mundane item or back into its weapon form. It can't be used to make attacks while transformed into a mundane item.",
 					"Different Trick Weapons transform into different items. The DM chooses the mundane item or determines it randomly by rolling on the following table.",
 					{
 						"type": "table",
-						"colStyles": [
-							"col-2 text-center",
-							"col-10"
-						],
 						"colLabels": [
 							"{@dice 1d10}",
 							"The Weapon Transforms into a..."
+						],
+						"colStyles": [
+							"col-2 text-center",
+							"col-10"
 						],
 						"rows": [
 							[
@@ -7768,7 +7858,8 @@
 					"Armaments - Common|XDMG",
 					"Implements - Common|XDMG"
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Weapon of Agonizing Paralysis",

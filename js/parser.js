@@ -485,6 +485,7 @@ Parser.skillToShort = function (skill) {
 
 Parser.LANGUAGES_STANDARD = [
 	"Common",
+	"Common Sign Language",
 	"Dwarvish",
 	"Elvish",
 	"Giant",
@@ -1807,6 +1808,8 @@ Parser.SP_MISC_TAG_TO_FULL = {
 	"ADV": "Grants Advantage",
 	"PIR": "Permanent If Repeated",
 	"BO": "Burns Objects",
+	"WLT": "Targets Willing Creatures",
+	"ALT": "Targets Allies",
 };
 Parser.spMiscTagToFull = function (type) {
 	return Parser._parse_aToB(Parser.SP_MISC_TAG_TO_FULL, type);
@@ -2126,6 +2129,9 @@ Parser.ENVIRONMENT__PLANAR_LIMBO = "planar, limbo";
 Parser.ENVIRONMENT__PLANAR_MECHANUS = "planar, mechanus";
 Parser.ENVIRONMENT__PLANAR_OUTLANDS = "planar, outlands";
 
+Parser.ENVIRONMENT__PLANAR_EMERALD_DREAM = "planar, emerald dream";
+Parser.ENVIRONMENT__PLANAR_TWISTING_NETHER = "planar, twisting nether";
+
 Parser.ENVIRONMENT__GROUP_PLANAR = "planar";
 Parser.ENVIRONMENT__GROUP_PLANAR_TRANSITIVE = "planar, transitive";
 Parser.ENVIRONMENT__GROUP_PLANAR_ELEMENTAL = "planar, elemental";
@@ -2230,6 +2236,9 @@ Parser.ENVIRONMENT_DISPLAY_NAMES = {
 	[Parser.ENVIRONMENT__PLANAR_MECHANUS]: "Planar (Mechanus)",
 
 	[Parser.ENVIRONMENT__PLANAR_OUTLANDS]: "Planar (Outlands)",
+
+	[Parser.ENVIRONMENT__PLANAR_EMERALD_DREAM]: "Planar (Emerald Dream)",
+	[Parser.ENVIRONMENT__PLANAR_TWISTING_NETHER]: "Planar (Twisting Nether)",
 
 	[Parser.ENVIRONMENT__GROUP_PLANAR_TRANSITIVE]: "Planar (Transitive Planes)",
 	[Parser.ENVIRONMENT__GROUP_PLANAR_ELEMENTAL]: "Planar (Elemental Planes)",
@@ -2976,7 +2985,10 @@ Parser.TP_MONSTROSITY = "monstrosity";
 Parser.TP_OOZE = "ooze";
 Parser.TP_PLANT = "plant";
 Parser.TP_UNDEAD = "undead";
-Parser.MON_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD];
+Parser.TP_VEHICLE = "vehicle";
+Parser.TP_SPECIAL = "special";
+Parser.MON_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD, Parser.TP_VEHICLE, Parser.TP_SPECIAL];
+Parser.MON_TYPES_STANDARD = Parser.MON_TYPES.filter(it => ![Parser.TP_VEHICLE, Parser.TP_SPECIAL].includes(it));
 Parser.MON_TYPE_TO_PLURAL = {};
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_ABERRATION] = "aberrations";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_BEAST] = "beasts";
@@ -2992,6 +3004,8 @@ Parser.MON_TYPE_TO_PLURAL[Parser.TP_MONSTROSITY] = "monstrosities";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_OOZE] = "oozes";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_PLANT] = "plants";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_UNDEAD] = "undead";
+Parser.MON_TYPE_TO_PLURAL[Parser.TP_VEHICLE] = "vehicles";
+Parser.MON_TYPE_TO_PLURAL[Parser.TP_SPECIAL] = "special";
 
 Parser.SZ_FINE = "F";
 Parser.SZ_DIMINUTIVE = "D";
@@ -3317,6 +3331,8 @@ Parser.SRC_FFotR = "FFotR";
 Parser.SRC_RHW = "RHW";
 Parser.SRC_AU = "AU";
 Parser.SRC_AUD = "AUD";
+Parser.SRC_WoW = "WoW";
+Parser.SRC_ICC = "ICC";
 
 Parser.SRC_TD = "TD";
 Parser.SRC_SCREEN = "Screen";
@@ -3330,6 +3346,7 @@ Parser.SRC_HFFotM = "HFFotM";
 Parser.SRC_HFStCM = "HFStCM";
 Parser.SRC_PaF = "PaF";
 Parser.SRC_HFDoMM = "HFDoMM";
+Parser.SRC_HFLotT = "HFLotT";
 Parser.SRC_CM = "CM";
 Parser.SRC_NRH = "NRH";
 Parser.SRC_NRH_TCMC = "NRH-TCMC";
@@ -3357,6 +3374,10 @@ Parser.SRC_HBTD = "HBTD";
 Parser.SRC_BQGT = "BQGT";
 Parser.SRC_CaBoMP = "CaBoMP";
 Parser.SRC_BQDD = "BQDD";
+Parser.SRC_SoS = "SoS";
+Parser.SRC_RWG = "RWG";
+Parser.SRC_PL = "PL";
+Parser.SRC_DDE = "DDE";
 
 Parser.SRC_PS_PREFIX = "PS";
 
@@ -3525,6 +3546,9 @@ Parser.SOURCE_JSON_TO_FULL[Parser.SRC_FFotR] = "Fated Flight of the Recluse";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_RHW] = "Ravenloft: The Horrors Within";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_AU] = "Arcana Unleashed";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_AUD] = "Arcana Unleashed: Deadfall";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_WoW] = "D&D: World of Warcraft";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_ICC] = "World of Warcraft: Icecrown Citadel";
+
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_TD] = "Tarot Deck";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCREEN] = "Dungeon Master's Screen";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCREEN_WILDERNESS_KIT] = "Dungeon Master's Screen: Wilderness Kit";
@@ -3537,6 +3561,7 @@ Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFFotM] = "Heroes' Feast: Flavors of the M
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFStCM] = "Heroes' Feast: Saving the Children's Menu";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_PaF] = "Puncheons and Flagons";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFDoMM] = "Heroes' Feast: The Deck of Many Morsels";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFLotT] = "Heroes' Feast: Legends of the Table";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_CM] = "Candlekeep Mysteries";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_NRH] = Parser.NRH_NAME;
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_NRH_TCMC] = `${Parser.NRH_NAME}: The Candy Mountain Caper`;
@@ -3578,6 +3603,10 @@ Parser.SOURCE_JSON_TO_FULL[Parser.SRC_MisMV1] = `${Parser.MisMVX_PREFIX}1`;
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_AATM] = `${Parser.AA_PREFIX}The Mortuary`;
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_CaBoMP] = "Crochet: A Book of Many Patterns";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_BQDD] = "Borderlands Quest: Dagger Danger!";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SoS] = "Shadows of Sithicus";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_RWG] = "Red Wizards' Gambit";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_PL] = "Project_Lamordia";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_DDE] = "World of Warcraft: Deadmines Dungeon";
 
 Parser.SOURCE_JSON_TO_ABV = {};
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_PHB] = "PHB'14";
@@ -3710,6 +3739,9 @@ Parser.SOURCE_JSON_TO_ABV[Parser.SRC_FFotR] = "FFotR";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_RHW] = "RHW";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_AU] = "AU";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_AUD] = "AUD";
+Parser.SOURCE_JSON_TO_ABV[Parser.SRC_WoW] = "WoW";
+Parser.SOURCE_JSON_TO_ABV[Parser.SRC_ICC] = "ICC";
+
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_TD] = "TD";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_SCREEN] = "Scr'14";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_SCREEN_WILDERNESS_KIT] = "ScrWild";
@@ -3722,6 +3754,7 @@ Parser.SOURCE_JSON_TO_ABV[Parser.SRC_HFFotM] = "HFFotM";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_HFStCM] = "HFStCM";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_PaF] = "PaF";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_HFDoMM] = "HFDoMM";
+Parser.SOURCE_JSON_TO_ABV[Parser.SRC_HFLotT] = "HFLotT";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_CM] = "CM";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_NRH] = "NRH";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_NRH_TCMC] = "NRH-TCMC";
@@ -3763,6 +3796,10 @@ Parser.SOURCE_JSON_TO_ABV[Parser.SRC_MisMV1] = "MisMV1";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_AATM] = "AATM";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_CaBoMP] = "CaBoMP";
 Parser.SOURCE_JSON_TO_ABV[Parser.SRC_BQDD] = "BQDD";
+Parser.SOURCE_JSON_TO_ABV[Parser.SRC_SoS] = "SoS";
+Parser.SOURCE_JSON_TO_ABV[Parser.SRC_RWG] = "RWG";
+Parser.SOURCE_JSON_TO_ABV[Parser.SRC_PL] = "PL";
+Parser.SOURCE_JSON_TO_ABV[Parser.SRC_DDE] = "DDE";
 
 Parser.SOURCE_JSON_TO_DATE = {};
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_PHB] = "2014-08-19";
@@ -3894,6 +3931,9 @@ Parser.SOURCE_JSON_TO_DATE[Parser.SRC_FFotR] = "2025-12-09";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_RHW] = "2026-06-16";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_AU] = "2026-09-15";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_AUD] = "2026-09-15";
+Parser.SOURCE_JSON_TO_DATE[Parser.SRC_WoW] = "2026-11-17";
+Parser.SOURCE_JSON_TO_DATE[Parser.SRC_ICC] = "2026-11-17";
+
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_TD] = "2022-05-24";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_SCREEN] = "2015-01-20";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_SCREEN_WILDERNESS_KIT] = "2020-11-17";
@@ -3906,6 +3946,7 @@ Parser.SOURCE_JSON_TO_DATE[Parser.SRC_HFFotM] = "2023-11-07";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_HFStCM] = "2023-11-21";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_PaF] = "2024-08-27";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_HFDoMM] = "2024-10-01";
+Parser.SOURCE_JSON_TO_DATE[Parser.SRC_HFDoMM] = "2026-09-15";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_CM] = "2021-03-16";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_NRH] = "2021-09-01";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_NRH_TCMC] = "2021-09-01";
@@ -3947,6 +3988,10 @@ Parser.SOURCE_JSON_TO_DATE[Parser.SRC_MisMV1] = "2023-05-03";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_AATM] = "2023-10-17";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_CaBoMP] = "2026-03-31";
 Parser.SOURCE_JSON_TO_DATE[Parser.SRC_BQDD] = "2026-05-28";
+Parser.SOURCE_JSON_TO_DATE[Parser.SRC_SoS] = "2026-05-29";
+Parser.SOURCE_JSON_TO_DATE[Parser.SRC_RWG] = "2026-09-15";
+Parser.SOURCE_JSON_TO_DATE[Parser.SRC_PL] = "2026-10-13";
+Parser.SOURCE_JSON_TO_DATE[Parser.SRC_DDE] = "2026-11-03";
 
 // region Source categories
 Parser.SOURCES_ADVENTURES = new Set([
@@ -4051,6 +4096,11 @@ Parser.SOURCES_ADVENTURES = new Set([
 	Parser.SRC_FFotR,
 	Parser.SRC_AUD,
 	Parser.SRC_AWM,
+	Parser.SRC_SoS,
+	Parser.SRC_RWG,
+	Parser.SRC_PL,
+	Parser.SRC_DDE,
+	Parser.SRC_ICC,
 ]);
 Parser.SOURCES_CORE_SUPPLEMENTS = new Set(Object.keys(Parser.SOURCE_JSON_TO_FULL).filter(it => !Parser.SOURCES_ADVENTURES.has(it)));
 Parser.SOURCES_NON_STANDARD_WOTC = new Set([
@@ -4100,6 +4150,10 @@ Parser.SOURCES_NON_STANDARD_WOTC = new Set([
 	Parser.SRC_ScoEE,
 	Parser.SRC_HBTD,
 	Parser.SRC_BQGT,
+	Parser.SRC_SoS,
+	Parser.SRC_RWG,
+	Parser.SRC_PL,
+	Parser.SRC_DDE,
 ]);
 Parser.SOURCES_PARTNERED_WOTC = new Set([
 	/*
@@ -4240,6 +4294,14 @@ Parser.SOURCES_NON_FR = new Set([
 	Parser.SRC_LFL,
 	Parser.SRC_EFA,
 	Parser.SRC_FFotR,
+	Parser.SRC_PL,
+	Parser.SRC_WoW,
+	Parser.SRC_ICC,
+]);
+
+Parser.SOURCES_UNIVERSES_BEYOND = new Set([
+	Parser.SRC_WoW,
+	Parser.SRC_ICC,
 ]);
 
 // endregion
@@ -4281,6 +4343,7 @@ Parser.SOURCES_AVAILABLE_DOCS_BOOK = {};
 	Parser.SRC_HF,
 	Parser.SRC_HFFotM,
 	Parser.SRC_PaF,
+	Parser.SRC_HFLotT,
 	Parser.SRC_BMT,
 	Parser.SRC_DMTCRG,
 	Parser.SRC_XPHB,
@@ -4298,6 +4361,8 @@ Parser.SOURCES_AVAILABLE_DOCS_BOOK = {};
 	Parser.SRC_RHW,
 	Parser.SRC_XSCREEN_RHW,
 	Parser.SRC_AU,
+	Parser.SRC_PL,
+	Parser.SRC_WoW,
 ].forEach(src => {
 	Parser.SOURCES_AVAILABLE_DOCS_BOOK[src] = src;
 	Parser.SOURCES_AVAILABLE_DOCS_BOOK[src.toLowerCase()] = src;
@@ -4413,6 +4478,10 @@ Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE = {};
 	Parser.SRC_FFotR,
 	Parser.SRC_BQDD,
 	Parser.SRC_AUD,
+	Parser.SRC_RWG,
+	Parser.SRC_SoS,
+	Parser.SRC_DDE,
+	Parser.SRC_ICC,
 ].forEach(src => {
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src] = src;
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src.toLowerCase()] = src;
@@ -4452,6 +4521,7 @@ Parser.TAG_TO_PROPS = {
 	"table": ["table", "tableGroup"],
 	"vehupgrade": ["vehicleUpgrade"],
 	"item": ["item", "baseitem", "itemGroup", "magicvariant"],
+	"legroup": ["legendaryGroup"],
 };
 Parser.getTagProps = function (tag) {
 	if (Parser.TAG_TO_PROPS[tag]) return Parser.TAG_TO_PROPS[tag];
@@ -4459,6 +4529,7 @@ Parser.getTagProps = function (tag) {
 };
 
 Parser.PROP_TO_DISPLAY_NAME = {
+	"monster": "Creature",
 	"variantrule": "Rule",
 	"optionalfeature": "Option/Feature",
 	"magicvariant": "Magic Item Variant",
@@ -4472,6 +4543,7 @@ Parser.PROP_TO_DISPLAY_NAME = {
 	"charoption": "Other Character Creation Option",
 	"encounterShape": "Encounter Shape",
 	"crochetPattern": "Crochet Pattern",
+	"renderdemo": "Renderer Sample",
 
 	"bonus": "Bonus Action",
 	"legendary": "Legendary Action",

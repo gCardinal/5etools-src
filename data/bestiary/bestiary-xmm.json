@@ -5,7 +5,8 @@
 			"source": "XMM",
 			"page": 10,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"RWG"
 			],
 			"size": [
 				"M"
@@ -223,7 +224,8 @@
 			"referenceSources": [
 				"EFA",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -375,7 +377,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -544,6 +547,9 @@
 			"conditionInflict": [
 				"charmed",
 				"grappled"
+			],
+			"conditionInflictLegendary": [
+				"poisoned"
 			],
 			"savingThrowForced": [
 				"constitution",
@@ -877,6 +883,9 @@
 			"miscTags": [
 				"MA",
 				"RCH"
+			],
+			"conditionInflictLegendary": [
+				"poisoned"
 			],
 			"conditionInflictSpell": [
 				"frightened"
@@ -1719,6 +1728,9 @@
 				"MA",
 				"RCH"
 			],
+			"conditionInflictLegendary": [
+				"incapacitated"
+			],
 			"savingThrowForced": [
 				"charisma",
 				"constitution",
@@ -2152,6 +2164,9 @@
 				"MA",
 				"RCH"
 			],
+			"conditionInflictLegendary": [
+				"poisoned"
+			],
 			"conditionInflictSpell": [
 				"charmed"
 			],
@@ -2352,6 +2367,9 @@
 			"miscTags": [
 				"MA",
 				"RCH"
+			],
+			"conditionInflictLegendary": [
+				"poisoned"
 			],
 			"conditionInflictSpell": [
 				"prone"
@@ -2791,7 +2809,9 @@
 				"EFA",
 				"FFotR",
 				"FRAiF",
-				"FRHoF"
+				"FRHoF",
+				"RWG",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -2923,7 +2943,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -3186,6 +3207,9 @@
 			"miscTags": [
 				"MA",
 				"RCH"
+			],
+			"conditionInflictLegendary": [
+				"poisoned"
 			],
 			"conditionInflictSpell": [
 				"frightened"
@@ -4032,6 +4056,9 @@
 				"MA",
 				"RCH"
 			],
+			"conditionInflictLegendary": [
+				"incapacitated"
+			],
 			"savingThrowForced": [
 				"charisma",
 				"constitution",
@@ -4465,6 +4492,9 @@
 				"MA",
 				"RCH"
 			],
+			"conditionInflictLegendary": [
+				"poisoned"
+			],
 			"conditionInflictSpell": [
 				"charmed",
 				"incapacitated"
@@ -4667,6 +4697,9 @@
 			"miscTags": [
 				"MA",
 				"RCH"
+			],
+			"conditionInflictLegendary": [
+				"poisoned"
 			],
 			"conditionInflictSpell": [
 				"prone"
@@ -5467,10 +5500,13 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
+				"DDE",
 				"EFA",
 				"FRAiF",
 				"LFL",
-				"RHW"
+				"RHW",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -5655,7 +5691,8 @@
 				"BQDD",
 				"EFA",
 				"HotB",
-				"RHW"
+				"RHW",
+				"RWG"
 			],
 			"size": [
 				"S"
@@ -5810,6 +5847,11 @@
 			],
 			"miscTags": [
 				"MA"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"restrained"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -6562,7 +6604,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"H"
@@ -6649,8 +6692,11 @@
 				"AUD",
 				"EFA",
 				"FRAiF",
+				"ICC",
 				"NF",
-				"RHW"
+				"RHW",
+				"RWG",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -6860,8 +6906,10 @@
 				"DrDe-TFV",
 				"EFA",
 				"FRAiF",
+				"ICC",
 				"NF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -7036,7 +7084,8 @@
 				"EFA",
 				"FRAiF",
 				"LFL",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -7314,7 +7363,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRHoF"
+				"FRHoF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -7373,7 +7423,8 @@
 			"source": "XMM",
 			"page": 25,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"SoS"
 			],
 			"size": [
 				"M"
@@ -7949,13 +8000,15 @@
 				"ABH",
 				"AUD",
 				"BQGT",
+				"DDE",
 				"DrDe",
 				"DrDe-BD",
 				"DrDe-DotSC",
 				"EFA",
 				"FRAiF",
 				"HotB",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -8044,7 +8097,9 @@
 				"ABH",
 				"EFA",
 				"FFotR",
-				"FRAiF"
+				"FRAiF",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -9323,6 +9378,7 @@
 				"RCH"
 			],
 			"conditionInflict": [
+				"blinded",
 				"grappled",
 				"prone",
 				"restrained"
@@ -9576,6 +9632,9 @@
 				"restrained",
 				"unconscious"
 			],
+			"conditionInflictLegendary": [
+				"prone"
+			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity",
@@ -9768,8 +9827,11 @@
 				"EFA",
 				"FRAiF",
 				"FRHoF",
+				"ICC",
 				"RHW",
-				"ScoEE"
+				"RWG",
+				"ScoEE",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -9851,7 +9913,8 @@
 			"page": 37,
 			"referenceSources": [
 				"AUD",
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -9979,6 +10042,9 @@
 					"source": "XPHB",
 					"page": 346
 				}
+			],
+			"referenceSources": [
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -10578,6 +10644,9 @@
 			"page": 350,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"S"
 			],
@@ -11635,7 +11704,8 @@
 				}
 			],
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -11728,7 +11798,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -12414,7 +12485,8 @@
 			"source": "XMM",
 			"page": 65,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"RWG"
 			],
 			"size": [
 				"M"
@@ -12575,7 +12647,8 @@
 			],
 			"referenceSources": [
 				"FRAiF",
-				"HBTD"
+				"HBTD",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -13511,7 +13584,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -14454,6 +14528,7 @@
 				"ABH",
 				"AUD",
 				"BQDD",
+				"DDE",
 				"DrDe",
 				"DrDe-ACfaS",
 				"DrDe-BD",
@@ -14465,7 +14540,9 @@
 				"HotB",
 				"LFL",
 				"NF",
-				"RHW"
+				"RHW",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -15195,7 +15272,8 @@
 				"FRAiF",
 				"FRHoF",
 				"HotB",
-				"ScoEE"
+				"ScoEE",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -15283,8 +15361,11 @@
 				"DrDe-TWoO",
 				"FRAiF",
 				"FRHoF",
+				"ICC",
 				"RHW",
-				"ScoEE"
+				"ScoEE",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -15416,7 +15497,8 @@
 			"referenceSources": [
 				"AUD",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -16059,7 +16141,10 @@
 				"AUD",
 				"EFA",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"RWG",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -16290,6 +16375,7 @@
 				"DrDe-TWoO",
 				"FRAiF",
 				"FRHoF",
+				"ICC",
 				"RHW"
 			],
 			"size": [
@@ -16502,7 +16588,9 @@
 			"referenceSources": [
 				"AUD",
 				"FRAiF",
-				"RHW"
+				"ICC",
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -16670,6 +16758,9 @@
 			"name": "Death Slaad",
 			"source": "XMM",
 			"page": 287,
+			"referenceSources": [
+				"ICC"
+			],
 			"size": [
 				"M"
 			],
@@ -16821,6 +16912,12 @@
 			"miscTags": [
 				"MA",
 				"RCH"
+			],
+			"conditionInflict": [
+				"charmed",
+				"frightened",
+				"incapacitated",
+				"poisoned"
 			],
 			"conditionInflictSpell": [
 				"invisible"
@@ -17544,7 +17641,8 @@
 			],
 			"referenceSources": [
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -17626,7 +17724,8 @@
 			"source": "XMM",
 			"page": 335,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"H"
@@ -18420,6 +18519,9 @@
 					"page": 349
 				}
 			],
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"L"
 			],
@@ -18876,7 +18978,9 @@
 				"DrDe-TFV",
 				"EFA",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -19321,6 +19425,9 @@
 			"page": 353,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"S"
 			],
@@ -19388,7 +19495,8 @@
 			"referenceSources": [
 				"DrDe",
 				"DrDe-FWtVC",
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -19689,6 +19797,9 @@
 			],
 			"source": "XMM",
 			"page": 111,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"G"
 			],
@@ -19904,6 +20015,8 @@
 				"RCH"
 			],
 			"conditionInflict": [
+				"blinded",
+				"deafened",
 				"prone",
 				"restrained"
 			],
@@ -19922,7 +20035,8 @@
 			"page": 87,
 			"referenceSources": [
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -20141,7 +20255,8 @@
 				}
 			],
 			"referenceSources": [
-				"FRHoF"
+				"FRHoF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -20215,7 +20330,8 @@
 			"source": "XMM",
 			"page": 113,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"H"
@@ -20871,7 +20987,8 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"FRAiF",
-				"NF"
+				"NF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -21427,7 +21544,8 @@
 				"DrDe",
 				"DrDe-TFV",
 				"FRAiF",
-				"ScoEE"
+				"ScoEE",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -21833,7 +21951,8 @@
 				"DrDe",
 				"DrDe-TFV",
 				"DrDe-TWoO",
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -22385,6 +22504,9 @@
 				"MLW",
 				"RCH"
 			],
+			"conditionInflict": [
+				"exhaustion"
+			],
 			"savingThrowForced": [
 				"wisdom"
 			],
@@ -22493,7 +22615,8 @@
 			"referenceSources": [
 				"DrDe",
 				"DrDe-SD",
-				"FRAiF"
+				"FRAiF",
+				"ICC"
 			],
 			"size": [
 				"H"
@@ -22709,7 +22832,9 @@
 				"DrDe",
 				"DrDe-DotSC",
 				"FRAiF",
-				"RHW"
+				"ICC",
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -23025,7 +23150,8 @@
 				"DrDe",
 				"DrDe-TWoO",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"SoS"
 			],
 			"size": [
 				"M"
@@ -23141,7 +23267,8 @@
 				"DrDe",
 				"DrDe-TWoO",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -23465,10 +23592,14 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
+				"DDE",
 				"DrDe",
 				"DrDe-TWoO",
 				"FRAiF",
-				"RHW"
+				"ICC",
+				"RHW",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -23832,6 +23963,9 @@
 			"page": 355,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"L"
 			],
@@ -24146,7 +24280,8 @@
 			],
 			"referenceSources": [
 				"EFA",
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -24626,7 +24761,7 @@
 			"cha": 3,
 			"skill": {
 				"perception": "+2",
-				"stealth": "+4"
+				"stealth": "+3"
 			},
 			"senses": [
 				"Darkvision 30 ft."
@@ -24687,7 +24822,9 @@
 				"MA"
 			],
 			"conditionInflict": [
+				"blinded",
 				"grappled",
+				"prone",
 				"restrained"
 			],
 			"hasToken": true,
@@ -24707,7 +24844,8 @@
 				}
 			],
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -24784,7 +24922,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -24862,6 +25001,9 @@
 			"page": 358,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"L"
 			],
@@ -24943,6 +25085,9 @@
 			"page": 358,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"DDE"
+			],
 			"size": [
 				"L"
 			],
@@ -25342,6 +25487,9 @@
 					"page": 350
 				}
 			],
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"L"
 			],
@@ -25417,7 +25565,8 @@
 			"referenceSources": [
 				"FRAiF",
 				"FRHoF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"H"
@@ -25814,7 +25963,10 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"grappled"
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -25899,6 +26051,9 @@
 			"page": 361,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"RWG"
+			],
 			"size": [
 				"L"
 			],
@@ -27066,6 +27221,10 @@
 				"MA",
 				"RA"
 			],
+			"conditionInflict": [
+				"charmed",
+				"prone"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -27421,7 +27580,9 @@
 			"referenceSources": [
 				"AUD",
 				"EFA",
-				"FRAiF"
+				"FRAiF",
+				"RWG",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -27658,7 +27819,8 @@
 			"source": "XMM",
 			"page": 141,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -27891,7 +28053,8 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"FRAiF",
-				"HotB"
+				"HotB",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -27988,7 +28151,8 @@
 			],
 			"referenceSources": [
 				"DrDe",
-				"DrDe-TDoN"
+				"DrDe-TDoN",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -28067,8 +28231,10 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
+				"DDE",
 				"FRAiF",
-				"HotB"
+				"HotB",
+				"WoW"
 			],
 			"size": [
 				"S"
@@ -28201,6 +28367,7 @@
 			"source": "XMM",
 			"page": 143,
 			"referenceSources": [
+				"DDE",
 				"FRAiF",
 				"RHW"
 			],
@@ -28346,6 +28513,10 @@
 			"page": 142,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"DDE",
+				"WoW"
+			],
 			"size": [
 				"S"
 			],
@@ -28456,7 +28627,8 @@
 				"DrDe-BD",
 				"FRAiF",
 				"HotB",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S"
@@ -28969,7 +29141,8 @@
 			"source": "XMM",
 			"page": 260,
 			"referenceSources": [
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"H"
@@ -29349,6 +29522,12 @@
 			"miscTags": [
 				"MA",
 				"RCH"
+			],
+			"conditionInflict": [
+				"charmed",
+				"frightened",
+				"incapacitated",
+				"poisoned"
 			],
 			"conditionInflictSpell": [
 				"invisible"
@@ -29824,6 +30003,12 @@
 				"RA",
 				"RCH"
 			],
+			"conditionInflict": [
+				"charmed",
+				"frightened",
+				"incapacitated",
+				"poisoned"
+			],
 			"conditionInflictSpell": [
 				"invisible"
 			],
@@ -30156,8 +30341,10 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
+				"DDE",
 				"EFA",
-				"NF"
+				"NF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -30316,6 +30503,7 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"AUD",
+				"DDE",
 				"DrDe",
 				"DrDe-DaS",
 				"DrDe-TFV",
@@ -30324,7 +30512,9 @@
 				"FRHoF",
 				"HotB",
 				"NF",
-				"RHW"
+				"RHW",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -30411,7 +30601,9 @@
 				"HotB",
 				"LFL",
 				"NF",
-				"RHW"
+				"RHW",
+				"RWG",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -30936,7 +31128,8 @@
 			"referenceSources": [
 				"EFA",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"SoS"
 			],
 			"size": [
 				"M"
@@ -31163,7 +31356,8 @@
 				}
 			],
 			"referenceSources": [
-				"FRHoF"
+				"FRHoF",
+				"WoW"
 			],
 			"size": [
 				"T"
@@ -31635,7 +31829,8 @@
 				"DrDe",
 				"DrDe-ACfaS",
 				"DrDe-TFV",
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"H"
@@ -31731,6 +31926,9 @@
 			"page": 169,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"L"
 			],
@@ -31899,7 +32097,8 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"EFA",
-				"FRAiF"
+				"FRAiF",
+				"SoS"
 			],
 			"size": [
 				"M"
@@ -32824,6 +33023,9 @@
 			"page": 363,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"M"
 			],
@@ -33369,7 +33571,8 @@
 				"FRAiF",
 				"FRHoF",
 				"RHW",
-				"ScoEE"
+				"ScoEE",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -34483,7 +34686,8 @@
 				"FRHoF",
 				"HBTD",
 				"HotB",
-				"ScoEE"
+				"ScoEE",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -34891,9 +35095,14 @@
 				"RCH"
 			],
 			"conditionInflict": [
+				"blinded",
 				"grappled",
+				"poisoned",
 				"prone",
 				"restrained"
+			],
+			"conditionInflictLegendary": [
+				"charmed"
 			],
 			"savingThrowForced": [
 				"constitution",
@@ -35687,6 +35896,10 @@
 			"miscTags": [
 				"MA"
 			],
+			"conditionInflict": [
+				"charmed",
+				"poisoned"
+			],
 			"conditionInflictSpell": [
 				"charmed"
 			],
@@ -35877,8 +36090,10 @@
 				"DrDe",
 				"DrDe-TWoO",
 				"FRAiF",
+				"ICC",
 				"NF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -36595,7 +36810,8 @@
 				"LFL",
 				"NF",
 				"RHW",
-				"UtHftLH"
+				"UtHftLH",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -36772,7 +36988,10 @@
 				"AUD",
 				"EFA",
 				"FRAiF",
-				"NF"
+				"NF",
+				"RWG",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -37000,6 +37219,9 @@
 			"page": 200,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"S"
 			],
@@ -37402,7 +37624,8 @@
 			"referenceSources": [
 				"DrDe",
 				"DrDe-TFV",
-				"FRAiF"
+				"FRAiF",
+				"RWG"
 			],
 			"size": [
 				"L"
@@ -37502,7 +37725,8 @@
 			"referenceSources": [
 				"DrDe",
 				"DrDe-TFV",
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -37884,7 +38108,8 @@
 				"DrDe",
 				"DrDe-DaS",
 				"FRAiF",
-				"FRHoF"
+				"FRHoF",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -38726,7 +38951,8 @@
 				"DrDe",
 				"DrDe-TFV",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -41266,7 +41492,8 @@
 				"HotB",
 				"LFL",
 				"NF",
-				"RHW"
+				"RHW",
+				"SoS"
 			],
 			"size": [
 				"S",
@@ -41966,12 +42193,14 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
+				"DDE",
 				"DrDe",
 				"DrDe-BD",
 				"EFA",
 				"FRAiF",
 				"HotB",
-				"ScoEE"
+				"ScoEE",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -42076,7 +42305,8 @@
 				"DrDe-TWoO",
 				"HBTD",
 				"HotB",
-				"RHW"
+				"RHW",
+				"SoS"
 			],
 			"size": [
 				"L"
@@ -42271,7 +42501,8 @@
 			"referenceSources": [
 				"DrDe",
 				"DrDe-TDoN",
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -42744,7 +42975,8 @@
 			],
 			"referenceSources": [
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -43123,7 +43355,8 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"charmed"
+				"charmed",
+				"frightened"
 			],
 			"savingThrowForced": [
 				"wisdom"
@@ -43279,7 +43512,8 @@
 			"referenceSources": [
 				"EFA",
 				"FRAiF",
-				"FRHoF"
+				"FRHoF",
+				"SoS"
 			],
 			"size": [
 				"M"
@@ -43386,7 +43620,8 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"FRAiF",
-				"FRHoF"
+				"FRHoF",
+				"SoS"
 			],
 			"size": [
 				"L"
@@ -43681,12 +43916,14 @@
 			"referenceSources": [
 				"ABH",
 				"AUD",
+				"DDE",
 				"DrDe",
 				"DrDe-BtS",
 				"EFA",
 				"FRAiF",
 				"RHW",
-				"ScoEE"
+				"ScoEE",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -43789,7 +44026,8 @@
 			"source": "XMM",
 			"page": 242,
 			"referenceSources": [
-				"AUD"
+				"AUD",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -44367,6 +44605,10 @@
 				"MA",
 				"RA"
 			],
+			"conditionInflict": [
+				"charmed",
+				"poisoned"
+			],
 			"conditionInflictSpell": [
 				"incapacitated",
 				"invisible",
@@ -44514,6 +44756,10 @@
 			"miscTags": [
 				"MA",
 				"RA"
+			],
+			"conditionInflict": [
+				"charmed",
+				"poisoned"
 			],
 			"conditionInflictSpell": [
 				"incapacitated",
@@ -45041,6 +45287,9 @@
 				"MA",
 				"RA"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"savingThrowForced": [
 				"strength"
 			],
@@ -45128,7 +45377,8 @@
 				"FRAiF",
 				"FRHoF",
 				"LFL",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -45285,7 +45535,8 @@
 				"DrDe",
 				"DrDe-ACfaS",
 				"DrDe-DaS",
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -45413,7 +45664,8 @@
 			"page": 234,
 			"referenceSources": [
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"H"
@@ -45524,6 +45776,9 @@
 					"source": "XPHB",
 					"page": 354
 				}
+			],
+			"referenceSources": [
+				"WoW"
 			],
 			"size": [
 				"T"
@@ -45644,7 +45899,6 @@
 			"name": "Psychic Gray Ooze",
 			"source": "XMM",
 			"page": 151,
-			"srd52": true,
 			"size": [
 				"M"
 			],
@@ -45756,7 +46010,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -45945,6 +46200,7 @@
 				"RCH"
 			],
 			"conditionInflict": [
+				"blinded",
 				"grappled",
 				"prone",
 				"restrained"
@@ -46055,6 +46311,9 @@
 			"name": "Quaggoth Thonot",
 			"source": "XMM",
 			"page": 251,
+			"referenceSources": [
+				"RWG"
+			],
 			"size": [
 				"M"
 			],
@@ -46357,7 +46616,9 @@
 			"referenceSources": [
 				"AUD",
 				"FRAiF",
-				"RHW"
+				"ICC",
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -46651,6 +46912,10 @@
 				"CUR",
 				"MA"
 			],
+			"conditionInflict": [
+				"frightened",
+				"incapacitated"
+			],
 			"conditionInflictSpell": [
 				"invisible"
 			],
@@ -46765,7 +47030,8 @@
 			],
 			"referenceSources": [
 				"DrDe",
-				"DrDe-BtS"
+				"DrDe-BtS",
+				"WoW"
 			],
 			"size": [
 				"T"
@@ -47264,6 +47530,7 @@
 				"RCH"
 			],
 			"conditionInflict": [
+				"blinded",
 				"grappled",
 				"prone",
 				"restrained"
@@ -47282,7 +47549,8 @@
 			"page": 259,
 			"referenceSources": [
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -47497,7 +47765,8 @@
 				}
 			],
 			"referenceSources": [
-				"FRHoF"
+				"FRHoF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -48406,7 +48675,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -48728,6 +48998,9 @@
 				"RA",
 				"THW"
 			],
+			"conditionInflict": [
+				"exhaustion"
+			],
 			"savingThrowForced": [
 				"dexterity"
 			],
@@ -48744,7 +49017,8 @@
 			"referenceSources": [
 				"FRAiF",
 				"FRHoF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -48979,7 +49253,8 @@
 			"referenceSources": [
 				"EFA",
 				"LFL",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -49153,12 +49428,15 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
+				"DDE",
 				"DrDe",
 				"DrDe-DaS",
 				"DrDe-TDoN",
 				"FRAiF",
 				"FRHoF",
-				"HBTD"
+				"HBTD",
+				"RWG",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -49257,9 +49535,11 @@
 			"page": 270,
 			"referenceSources": [
 				"AUD",
+				"DDE",
 				"EFA",
 				"FRAiF",
-				"LFL"
+				"LFL",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -49603,7 +49883,8 @@
 				"FRAiF",
 				"FRHoF",
 				"HBTD",
-				"RHW"
+				"RHW",
+				"SoS"
 			],
 			"size": [
 				"M"
@@ -50149,7 +50430,9 @@
 				"RCH"
 			],
 			"conditionInflict": [
-				"grappled"
+				"blinded",
+				"grappled",
+				"restrained"
 			],
 			"savingThrowForced": [
 				"strength"
@@ -50170,7 +50453,8 @@
 				"EFA",
 				"FRAiF",
 				"FRHoF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -50504,7 +50788,8 @@
 				"FRAiF",
 				"HBTD",
 				"HotB",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -51212,7 +51497,9 @@
 				"DrDe-TWoO",
 				"FRAiF",
 				"HBTD",
-				"RHW"
+				"RHW",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -51511,6 +51798,7 @@
 				"MA"
 			],
 			"conditionInflict": [
+				"exhaustion",
 				"incapacitated"
 			],
 			"savingThrowForced": [
@@ -51880,6 +52168,7 @@
 				"MA"
 			],
 			"conditionInflict": [
+				"exhaustion",
 				"frightened",
 				"paralyzed",
 				"prone"
@@ -52530,9 +52819,12 @@
 				"EFA",
 				"FRAiF",
 				"FRHoF",
+				"ICC",
 				"LFL",
 				"NF",
-				"RHW"
+				"RHW",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -52639,8 +52931,10 @@
 				"AUD",
 				"EFA",
 				"FRAiF",
+				"ICC",
 				"LFL",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -53394,6 +53688,10 @@
 				"RA",
 				"RCH"
 			],
+			"conditionInflict": [
+				"blinded",
+				"deafened"
+			],
 			"savingThrowForced": [
 				"dexterity"
 			],
@@ -53411,7 +53709,8 @@
 				"FRAiF",
 				"FRHoF",
 				"RHW",
-				"ScoEE"
+				"ScoEE",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -54305,7 +54604,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -54501,7 +54801,8 @@
 			"source": "XMM",
 			"page": 299,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"SoS"
 			],
 			"size": [
 				"M"
@@ -54871,6 +55172,9 @@
 				"RCH"
 			],
 			"conditionInflict": [
+				"blinded",
+				"deafened",
+				"frightened",
 				"grappled",
 				"prone",
 				"restrained"
@@ -55127,6 +55431,9 @@
 					"page": 358
 				}
 			],
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"L"
 			],
@@ -55207,11 +55514,15 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"ABH",
+				"DDE",
 				"DrDe",
 				"DrDe-BD",
 				"DrDe-BtS",
 				"EFA",
-				"FRAiF"
+				"FRAiF",
+				"RWG",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -55303,12 +55614,14 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"ABH",
+				"DDE",
 				"DrDe",
 				"DrDe-TFV",
 				"EFA",
 				"FRAiF",
 				"NF",
 				"RHW",
+				"RWG",
 				"ScoEE"
 			],
 			"size": [
@@ -55420,7 +55733,8 @@
 				"FRAiF",
 				"FRHoF",
 				"LFL",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"H"
@@ -55928,6 +56242,9 @@
 				"MA",
 				"RCH"
 			],
+			"conditionInflict": [
+				"exhaustion"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -56118,7 +56435,8 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"SoS"
 			],
 			"size": [
 				"H"
@@ -56992,7 +57310,11 @@
 			],
 			"conditionInflict": [
 				"charmed",
-				"grappled"
+				"grappled",
+				"paralyzed"
+			],
+			"conditionInflictLegendary": [
+				"charmed"
 			],
 			"conditionInflictSpell": [
 				"charmed",
@@ -57019,7 +57341,8 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"EFA",
-				"RHW"
+				"RHW",
+				"SoS"
 			],
 			"size": [
 				"S",
@@ -57157,6 +57480,7 @@
 			"referenceSources": [
 				"ABH",
 				"FRAiF",
+				"ICC",
 				"RHW"
 			],
 			"size": [
@@ -57294,6 +57618,7 @@
 				"ABH",
 				"AUD",
 				"FRAiF",
+				"ICC",
 				"RHW"
 			],
 			"size": [
@@ -57466,6 +57791,7 @@
 			"page": 318,
 			"referenceSources": [
 				"AUD",
+				"ICC",
 				"RHW"
 			],
 			"size": [
@@ -57700,7 +58026,11 @@
 				"RA"
 			],
 			"conditionInflict": [
+				"paralyzed",
 				"poisoned"
+			],
+			"conditionInflictLegendary": [
+				"charmed"
 			],
 			"conditionInflictSpell": [
 				"blinded",
@@ -57804,7 +58134,8 @@
 				"DrDe",
 				"DrDe-DaS",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -57996,7 +58327,8 @@
 				"DrDe",
 				"DrDe-BtS",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -58111,7 +58443,8 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
-				"FRAiF"
+				"FRAiF",
+				"RWG"
 			],
 			"size": [
 				"L"
@@ -58341,7 +58674,8 @@
 			],
 			"referenceSources": [
 				"FRAiF",
-				"UtHftLH"
+				"UtHftLH",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -58404,6 +58738,9 @@
 			"source": "XMM",
 			"page": 282,
 			"srd52": true,
+			"referenceSources": [
+				"WoW"
+			],
 			"size": [
 				"L"
 			],
@@ -58484,7 +58821,9 @@
 				"AUD",
 				"EFA",
 				"FRAiF",
-				"RHW"
+				"ICC",
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -58626,7 +58965,8 @@
 			"referenceSources": [
 				"FRAiF",
 				"FRHoF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -58714,7 +59054,8 @@
 				"DrDe-ACfaS",
 				"FFotR",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -58823,7 +59164,8 @@
 				"DrDe",
 				"DrDe-FWtVC",
 				"FRAiF",
-				"FRHoF"
+				"FRHoF",
+				"WoW"
 			],
 			"size": [
 				"L"
@@ -59713,7 +60055,8 @@
 			"basicRules2024": true,
 			"referenceSources": [
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -59863,6 +60206,9 @@
 			"page": 328,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"ICC"
+			],
 			"size": [
 				"M"
 			],
@@ -59989,8 +60335,11 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"referenceSources": [
+				"DDE",
 				"FRAiF",
-				"RHW"
+				"RHW",
+				"SoS",
+				"WoW"
 			],
 			"size": [
 				"M"
@@ -60264,6 +60613,9 @@
 				"AOE",
 				"MA"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"savingThrowForced": [
 				"constitution"
 			],
@@ -60502,7 +60854,8 @@
 			"referenceSources": [
 				"FRAiF",
 				"FRHoF",
-				"RHW"
+				"RHW",
+				"SoS"
 			],
 			"size": [
 				"M"
@@ -60674,7 +61027,8 @@
 				"FRAiF",
 				"FRHoF",
 				"HBTD",
-				"RHW"
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"S",
@@ -60898,6 +61252,9 @@
 			"page": 338,
 			"srd52": true,
 			"basicRules2024": true,
+			"referenceSources": [
+				"RWG"
+			],
 			"size": [
 				"M"
 			],
@@ -63600,7 +63957,9 @@
 				"FRAiF",
 				"HBTD",
 				"HotB",
-				"RHW"
+				"ICC",
+				"RHW",
+				"WoW"
 			],
 			"size": [
 				"M"

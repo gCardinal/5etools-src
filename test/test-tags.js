@@ -38,6 +38,8 @@ import {EntityFileHandlerSpellList} from "./test-tags/entity-file/test-tags-enti
 import {EntityFileHandlerHomeCrafts} from "./test-tags/entity-file/test-tags-entity-file-homecraft.js";
 import {PATH_DEFAULT_HOMEBREW_DIR, PATH_DEFAULT_PRERELEASE_DIR} from "./util-test.js";
 import {getInvalidCorpusHeaderUidMessage, TagTestCorpusHeaderUidMap} from "./test-tags/test-tags-utils-corpus.js";
+import {FoundryUuidCheck} from "./test-tags/test-tags-foundry-uuid.js";
+import {FoundryActivityReferenceInlineCheck} from "./test-tags/test-tags-foundry-activity-reference-inline.js";
 
 const program = new Command()
 	.option("--log-similar", `If, when logging a missing link, a list of potentially-similar links should additionally be logged.`)
@@ -439,7 +441,7 @@ class AreaCheck extends DataTesterBase {
 
 		if (!this._fileMatcherValid.test(file) && !isNonSiteData) return this._handleObject_areaNotSupported({file, obj: contents, reason: "not a corpus data file"});
 
-		const propsValid = new Set(isNonSiteData ? ["adventureData", "bookData"] : ["data"]);
+		const propsValid = new Set(["adventureData", "bookData"]);
 
 		if (!contents || typeof contents !== "object") return this._handleObject_areaNotSupported({file, obj: contents, reason: "root was not an object"});
 		if (contents instanceof Array) return this._handleObject_areaNotSupported({file, obj: contents, reason: "root was not an object"});
@@ -447,7 +449,6 @@ class AreaCheck extends DataTesterBase {
 		Object.entries(contents)
 			.forEach(([prop, val]) => {
 				if (propsValid.has(prop)) {
-					if (prop === "data") return this._handleArray_areaSupported({file, obj: val, corpusPath: prop});
 					return val
 						.forEach((subVal, i) => this._handleArray_areaSupported({file, obj: subVal.data, corpusPath: `${prop}[${i}]`}));
 				}
@@ -807,6 +808,10 @@ class HasFluffCheck extends DataTesterBase {
 	}
 
 	_getHashesAlt ({page, ent}) {
+		// e.g. `_subclassFluff`
+		const fluffRef = ent.fluff?.[`_${ent.__prop}Fluff`];
+		if (fluffRef) return [UrlUtil.URL_TO_HASH_BUILDER[page](fluffRef)];
+
 		if (ent.__prop === "item" && ent._variantName) return [UrlUtil.URL_TO_HASH_BUILDER[page]({name: ent._variantName, source: ent.source})];
 		return [];
 	}
@@ -969,6 +974,9 @@ async function main () {
 		new RefTagCheck(),
 		new TestCopyCheck(),
 		new HasFluffCheck(),
+
+		new FoundryUuidCheck({tagTestUrlLookup}),
+		new FoundryActivityReferenceInlineCheck(),
 
 		new EntityFileHandlerAction(sharedParamsEntityTypeTester),
 		new EntityFileHandlerAdventureBook(sharedParamsEntityTypeTester),

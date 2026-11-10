@@ -23,9 +23,7 @@ class DataTypeLoader {
 	}
 
 	static _getAsRawPrefixed (json, {propsRaw}) {
-		return {
-			...propsRaw.mergeMap(prop => ({[`raw_${prop}`]: json[prop]})),
-		};
+		return propsRaw.mergeMap(prop => ({[`${DataLoaderConst.PROP_RAW_PREFIX}${prop}`]: json[prop]}));
 	}
 
 	/* -------------------------------------------- */
@@ -39,6 +37,9 @@ class DataTypeLoader {
 	phase2CachePropAllowlist;
 
 	hasPhase2Cache = false;
+
+	/** Raw props are (generally) fully cached in phase 1; avoid re-caching in phase 2 for performance. */
+	isSkipPhase2CacheForRaw = false;
 
 	_cache_pSiteData = {};
 	_cache_pPostCaches = {};
@@ -403,6 +404,13 @@ class DataTypeLoaderTrapHazardFluff extends DataTypeLoaderSingleSource {
 	_filename = "fluff-trapshazards.json";
 }
 
+class DataTypeLoaderRenderDemo extends DataTypeLoaderSingleSource {
+	static PROPS = ["renderdemo"];
+	static PAGE = UrlUtil.PG_DEMO_RENDER;
+
+	_filename = "renderdemo.json";
+}
+
 class DataTypeLoaderPredefined extends DataTypeLoader {
 	_loader;
 	_loadJsonArgs = null;
@@ -568,6 +576,7 @@ class DataTypeLoaderCustomRawable extends DataTypeLoader {
 	static _PROPS_RAWABLE;
 
 	hasPhase2Cache = true;
+	isSkipPhase2CacheForRaw = true;
 
 	_getSiteIdent ({pageClean, sourceClean}) { return `${pageClean}__${this.constructor.name}`; }
 
@@ -610,8 +619,16 @@ class DataTypeLoaderCustomClassesSubclass extends DataTypeLoaderCustomRawable {
 
 		const out = {};
 
-		if (obj.raw_class?.length) out.class = await obj.raw_class.pSerialAwaitMap(cls => this.constructor._pGetDereferencedClassData(cls, {lockToken2}));
-		if (obj.raw_subclass?.length) out.subclass = await obj.raw_subclass.pSerialAwaitMap(sc => this.constructor._pGetDereferencedSubclassData(sc, {lockToken2}));
+		if (obj.raw_class?.length) {
+			out.class = await obj.raw_class
+				.flatMap(cls => [cls, ...DataUtil.proxy.getVersions("class", cls)])
+				.pSerialAwaitMap(cls => this.constructor._pGetDereferencedClassData(cls, {lockToken2}));
+		}
+		if (obj.raw_subclass?.length) {
+			out.subclass = await obj.raw_subclass
+				.flatMap(sc => [sc, ...DataUtil.proxy.getVersions("subclass", sc)])
+				.pSerialAwaitMap(sc => this.constructor._pGetDereferencedSubclassData(sc, {lockToken2}));
+		}
 
 		return out;
 	}
@@ -628,10 +645,12 @@ class DataTypeLoaderCustomClassesSubclass extends DataTypeLoaderCustomRawable {
 	}
 
 	static async _pGetDereferencedClassData (cls, {lockToken2}) {
+		cls = MiscUtil.copyFast(cls);
+
+		delete cls._versions;
+
 		// Gracefully handle legacy class data
 		if (cls.classFeatures && cls.classFeatures.every(it => typeof it !== "string" && !it.classFeature)) return cls;
-
-		cls = MiscUtil.copyFast(cls);
 
 		const byLevel = await this._pGetDereferencedClassSubclassData(
 			cls,
@@ -651,10 +670,12 @@ class DataTypeLoaderCustomClassesSubclass extends DataTypeLoaderCustomRawable {
 	}
 
 	static async _pGetDereferencedSubclassData (sc, {lockToken2}) {
+		sc = MiscUtil.copyFast(sc);
+
+		delete sc._versions;
+
 		// Gracefully handle legacy class data
 		if (sc.subclassFeatures && sc.subclassFeatures.every(it => typeof it !== "string" && !it.subclassFeature)) return sc;
-
-		sc = MiscUtil.copyFast(sc);
 
 		const byLevel = await this._pGetDereferencedClassSubclassData(
 			sc,
@@ -750,6 +771,7 @@ class DataTypeLoaderCustomClassSubclassFeature extends DataTypeLoader {
 	static _PROPS_RAWABLE = ["classFeature", "subclassFeature"];
 
 	hasPhase2Cache = true;
+	isSkipPhase2CacheForRaw = true;
 
 	_getSiteIdent ({pageClean, sourceClean}) { return `${pageClean}__${this.constructor.name}`; }
 
@@ -973,7 +995,7 @@ class DataTypeLoaderMergedFluffBase extends DataTypeLoaderCustomRawable {
 		const out = {};
 
 		for (const propRawable of this.constructor._PROPS_RAWABLE) {
-			const propRaw = `raw_${propRawable}`;
+			const propRaw = `${DataLoaderConst.PROP_RAW_PREFIX}${propRawable}`;
 
 			if (obj[propRaw]?.length) out[propRawable] = await obj[propRaw].pSerialAwaitMap(ent => this._pGetDereferencedRawData(ent, {lockToken2}));
 		}
@@ -1088,13 +1110,13 @@ class DataTypeLoaderCustomAdventureBook extends DataTypeLoader {
 		const [prop, propData] = this.constructor.PROPS;
 
 		// Get only the ids that exist in both data + contents
-		const dataIds = (obj[propData] || []).filter(it => it.id).map(it => it.id);
-		const contentsIds = new Set((obj[prop] || []).filter(it => it.id).map(it => it.id));
+		const dataIds = (obj[propData] || []).filter(corpusData => corpusData.id).map(corpusData => corpusData.id);
+		const contentsIds = new Set((obj[prop] || []).filter(corpusContents => corpusContents.id).map(corpusContents => corpusContents.id));
 		const matchingIds = dataIds.filter(id => contentsIds.has(id));
 
 		matchingIds.forEach(id => {
-			const data = (obj[propData] || []).find(it => it.id === id);
-			const contents = (obj[prop] || []).find(it => it.id === id);
+			const data = (obj[propData] || []).find(corpusData => corpusData.id === id);
+			const contents = (obj[prop] || []).find(corpusContents => corpusContents.id === id);
 
 			const hash = UrlUtil.URL_TO_HASH_BUILDER[this.constructor.PAGE](contents);
 			this._addImageBackReferences(data, this.constructor.PAGE, contents.source, hash);
@@ -1128,13 +1150,7 @@ class DataTypeLoaderCustomAdventureBook extends DataTypeLoader {
 
 		return {
 			[prop]: [contents],
-			[propData]: [
-				{
-					source: contents.source,
-					id: contents.id,
-					...json,
-				},
-			],
+			[propData]: json[propData],
 		};
 	}
 
@@ -1230,6 +1246,7 @@ export class DataLoader {
 		"adventureData": UrlUtil.PG_ADVENTURE,
 		"book": UrlUtil.PG_BOOK,
 		"bookData": UrlUtil.PG_BOOK,
+		"renderdemo": UrlUtil.PG_DEMO_RENDER,
 	};
 
 	static getPropPage (prop) { return this._PROP_TO_HASH_PAGE[prop]; }
@@ -1322,6 +1339,7 @@ export class DataLoader {
 		DataTypeLoaderItemMastery.register({fnRegister});
 		DataTypeLoaderEncounterShape.register({fnRegister});
 		DataTypeLoaderBestiaryTemplate.register({fnRegister});
+		DataTypeLoaderRenderDemo.register({fnRegister});
 		// endregion
 
 		// region Fluff
@@ -1437,7 +1455,7 @@ export class DataLoader {
 		await dataLoader.pLoadDependencies({lockToken2, loadspace: DataLoaderConst.LOADSPACE_SITE});
 
 		const {siteData} = await this._pCacheAndGet_getCacheMeta({pageClean, sourceClean: DataLoaderConst.SOURCE_SITE_ALL, dataLoader});
-		await this._pCacheAndGet_processCacheMeta({dataLoader, siteData, lockToken2});
+		await this._pCacheAndGet_processCacheMeta({pageClean, dataLoader, siteData, lockToken2});
 
 		return this._CACHE.getAllSite(pageClean);
 	}
@@ -1475,7 +1493,7 @@ export class DataLoader {
 			await dataLoader.pLoadDependencies({lockToken2, loadspace});
 
 			const cacheMeta = await parent._pCacheAndGet_getCacheMeta({pageClean, sourceClean: this._SOURCE_ALL, dataLoader});
-			await parent._pCacheAndGet_processCacheMeta({dataLoader, [this._PROP_DATA]: cacheMeta[this._PROP_DATA], lockToken2});
+			await parent._pCacheAndGet_processCacheMeta({pageClean, dataLoader, [this._PROP_DATA]: cacheMeta[this._PROP_DATA], lockToken2});
 
 			return this._getAllCached({parent, pageClean});
 		}
@@ -1547,7 +1565,7 @@ export class DataLoader {
 		await dataLoader.pLoadDependencies({lockToken2});
 
 		const {siteData = null, prereleaseData = null, brewData = null} = await this._pCacheAndGet_getCacheMeta({pageClean, sourceClean, dataLoader});
-		await this._pCacheAndGet_processCacheMeta({dataLoader, siteData, prereleaseData, brewData, lockToken2});
+		await this._pCacheAndGet_processCacheMeta({pageClean, dataLoader, siteData, prereleaseData, brewData, lockToken2});
 
 		return this.getFromCache(page, source, hash, {isCopy, isRequired, _isInsertSentinelOnMiss: true});
 	}
@@ -1718,8 +1736,10 @@ export class DataLoader {
 		return out;
 	}
 
-	static async _pCacheAndGet_processCacheMeta ({dataLoader, siteData = null, prereleaseData = null, brewData = null, lockToken2 = null}) {
+	static async _pCacheAndGet_processCacheMeta ({pageClean, dataLoader, siteData = null, prereleaseData = null, brewData = null, lockToken2 = null}) {
 		if (!dataLoader.hasPhase2Cache) return;
+
+		if (dataLoader.isSkipPhase2CacheForRaw && pageClean.startsWith(DataLoaderConst.PROP_RAW_PREFIX)) return;
 
 		try {
 			lockToken2 = await this._LOCK_2.pLock({token: lockToken2});
@@ -1765,16 +1785,18 @@ export class DataLoader {
 				const hashBuilder = UrlUtil.URL_TO_HASH_BUILDER[prop];
 				if (!hashBuilder) return;
 
+				const propOriginal = prop.replace(DataLoaderConst.RE_PROP_RAW_PREFIX, "");
+
 				arr.forEach(ent => {
-					this._pCache_addEntityToCache({prop, hashBuilder, ent});
+					this._pCache_addEntityToCache({prop, propOriginal, hashBuilder, ent});
 					DataUtil.proxy.getVersions(prop, ent)
-						.forEach(entVer => this._pCache_addEntityToCache({prop, hashBuilder, ent: entVer}));
+						.forEach(entVer => this._pCache_addEntityToCache({prop, propOriginal, hashBuilder, ent: entVer}));
 				});
 			});
 	}
 
-	static _pCache_addEntityToCache ({prop, hashBuilder, ent}) {
-		ent.__prop = ent.__prop || prop;
+	static _pCache_addEntityToCache ({prop, propOriginal, hashBuilder, ent}) {
+		ent.__prop = ent.__prop || propOriginal;
 
 		const page = this._PROP_TO_HASH_PAGE[prop];
 		const source = SourceUtil.getEntitySource(ent); //

@@ -3,6 +3,7 @@ import {BuilderUi} from "./makebrew-builderui.js";
 import {AttachedItemTag, CreatureSavingThrowTagger, DamageTypeTag, DragonAgeTag, LanguageTag, MiscTag, RechargeConvert, SenseFilterTag, SpellcastingTraitConvert, SpellcastingTypeTag, TagCreatureSubEntryInto, TagDc, TagHit, TagImmResVulnConditional, TraitActionTag} from "../converter/converterutils-creature.js";
 import {DiceConvert, TagCondition} from "../converter/converterutils-tags.js";
 import {RenderBestiary} from "../render-bestiary.js";
+import {SITE_STYLE__CLASSIC} from "../consts.js";
 
 /**
  * @abstract
@@ -58,8 +59,8 @@ class _CreatureBuilder_SpellMetaInputRendererFrequency extends _CreatureBuilder_
 		out.ele = veT`<div class="ve-flex mkbru_mon__spell-header-wrp ve-mr-4">
 		${iptFreq}
 		${this._getPtChargesItem({out})}
-		<span class="ve-mr-2 ve-italic">${this._meta.rowFreqUnit}</span>
-		<label class="ve-flex-v-baseline ve-muted small ve-ml-auto"><span class="ve-mr-1">(Each? </span>${cbEach}<span>)</span></label>
+		<span class="ve-mr-2">${this._meta.rowFreqUnit}</span>
+		<label class="ve-flex-v-baseline">${cbEach}<span class="ve-ml-1">Each</span></label>
 		</div>`;
 
 		out.getKeyPath = () => [this._meta.type, `${UiUtil.strToInt(iptFreq.vee.val(), 1, {fallbackOnNaN: 1, min: 1, max: VeCt.SPELL_USES_MAX})}${cbEach.vee.prop("checked") ? "e" : ""}`];
@@ -126,7 +127,7 @@ class _CreatureBuilder_SpellMetaInputRendererLevel extends _CreatureBuilder_Spel
 		<div class="ve-italic">${Parser.spLevelToFull(this._meta.level)}-level Spells</div>
 		<div class="ve-flex-v-center ve-muted small ve-ml-auto"><span>(</span>${iptSlots}<span class="ve-mr-2">Slots</span></div>
 		<div class="mkbru_mon__spell-header-divider ve-mr-2"></div>
-		<label class="ve-flex-v-center ve-muted small"><span class="ve-mr-1">Warlock?</span>${cbWarlock}<span>)</span></label>
+		<label class="ve-flex-v-center ve-muted small">${cbWarlock}<span class="ve-ml-1">Warlock?</span><span>)</span></label>
 		</div>`;
 		out.getKeyPath = () => ["spells", `${this._meta.level}`, "spells"];
 		out.getAdditionalData = () => {
@@ -457,7 +458,7 @@ export class CreatureBuilder extends BuilderBase {
 			this.addField("n");
 			this.setRef("id");
 		});
-		SearchUtil.removeStemmer(this._indexedTraits);
+		SearchUtil.initSearchIndex(this._indexedTraits);
 		this._jsonCreatureTraits.forEach((it, i) => this._indexedTraits.addDoc({
 			n: it.name,
 			id: i,
@@ -485,6 +486,7 @@ export class CreatureBuilder extends BuilderBase {
 
 						return {
 							name,
+							_nameAction: item.name,
 							entries: [
 								`{@atk ${ptAtk}} {@hit <$to_hit__${abil}$>} to hit, ${ptRange}, one target. {@h}<$damage_avg__(size_mult*${dmgAvg})+${abil}$> ({@damage <$size_mult__${mDice.groups.count}$>d${mDice.groups.face}<$damage_mod__${abil}$>}) ${Parser.dmgTypeToFull(item.dmgType)} damage.`,
 							],
@@ -501,11 +503,12 @@ export class CreatureBuilder extends BuilderBase {
 
 					return {
 						name,
+						_nameAction: item.name,
 						entries: [
-							`{@atkr ${ptAtk}} {@hit <$to_hit__${abil}$>}, ${ptRange}, one target. {@h}<$damage_avg__(size_mult*${dmgAvg})+${abil}$> ({@damage <$size_mult__${mDice.groups.count}$>d${mDice.groups.face}<$damage_mod__${abil}$>}) ${Parser.dmgTypeToFull(item.dmgType).toTitleCase()} damage.`,
+							`{@atkr ${ptAtk}} {@hit <$to_hit__${abil}$>}, ${ptRange}. {@h}<$damage_avg__(size_mult*${dmgAvg})+${abil}$> ({@damage <$size_mult__${mDice.groups.count}$>d${mDice.groups.face}<$damage_mod__${abil}$>}) ${Parser.dmgTypeToFull(item.dmgType).toTitleCase()} damage.`,
 						],
 						entriesFinesse: isFinesse ? [
-							`{@atkr ${ptAtk}} {@hit <$to_hit__dex$>}, ${ptRange}, one target. {@h}<$damage_avg__(size_mult*${dmgAvg})+dex$> ({@damage <$size_mult__${mDice.groups.count}$>d${mDice.groups.face}<$damage_mod__${abil}$>}) ${Parser.dmgTypeToFull(item.dmgType).toTitleCase()} damage.`,
+							`{@atkr ${ptAtk}} {@hit <$to_hit__dex$>}, ${ptRange}. {@h}<$damage_avg__(size_mult*${dmgAvg})+dex$> ({@damage <$size_mult__${mDice.groups.count}$>d${mDice.groups.face}<$damage_mod__${abil}$>}) ${Parser.dmgTypeToFull(item.dmgType).toTitleCase()} damage.`,
 						] : null,
 					};
 				})
@@ -518,7 +521,7 @@ export class CreatureBuilder extends BuilderBase {
 			this.addField("n");
 			this.setRef("id");
 		});
-		SearchUtil.removeStemmer(this._indexedActions);
+		SearchUtil.initSearchIndex(this._indexedActions);
 		this._jsonCreatureActions.forEach((it, i) => this._indexedActions.addDoc({
 			n: it.name,
 			id: i,
@@ -748,6 +751,7 @@ export class CreatureBuilder extends BuilderBase {
 		// CORE
 		this.__getAbilityScoreInput(cb).vee.appendTo(coreTab.wrpTab);
 		this.__getSaveInput(cb).vee.appendTo(coreTab.wrpTab);
+		this.__getInitiativeInput(cb).vee.appendTo(coreTab.wrpTab);
 		this.__getSkillInput(cb).vee.appendTo(coreTab.wrpTab);
 		this.__getPassivePerceptionInput(cb).vee.appendTo(coreTab.wrpTab);
 
@@ -1084,8 +1088,8 @@ export class CreatureBuilder extends BuilderBase {
 			${selType}
 			${iptTypeCustom}
 			<label class="ve-flex-v-center ve-mr-2">
-				<span class="ve-mr-2">Custom</span>
 				${cbIsCustomType}
+				<span class="ve-ml-2">Custom</span>
 			</label>
 			${btnRemove}
 		</div>`;
@@ -1185,7 +1189,7 @@ export class CreatureBuilder extends BuilderBase {
 		const cbFullName = veT`<input type="checkbox">`
 			.vee.onn("change", () => setState(1))
 			.vee.prop("checked", this._state.shortName === true);
-		const stageMatchesName = veT`<label class="ve-flex-v-center"><div class="ve-mr-2">Enabled</div>${cbFullName}</label>`
+		const stageMatchesName = veT`<label class="ve-flex-v-center">${cbFullName}<div class="ve-ml-2">Enabled</div></label>`
 			.vee.toggle(initialMode === "1")
 			.vee.appendTo(rowInner);
 
@@ -1988,6 +1992,106 @@ export class CreatureBuilder extends BuilderBase {
 
 		Object.keys(Parser.SKILL_TO_ATB_ABV).sort(SortUtil.ascSort).forEach(skill => getRow(skill.toTitleCase(), skill).vee.appendTo(rowInner));
 
+		return row;
+	}
+
+	__getInitiativeInput (cb) {
+		const [row, rowInner] = BuilderUi.getLabelledRowTuple("Initiative", {isMarked: true});
+
+		const initInitialObj = typeof this._state.initiative === "number"
+			? {initiative: this._state.initiative}
+			: (this._state.initiative || {});
+		const comp = BaseComponent.fromObject({
+			mode: this._state.initiative == null
+				? "implicit"
+				: initInitialObj.initiative != null
+					? "custom"
+					: "basic",
+			proficiency: initInitialObj.proficiency ?? null,
+			initiative: initInitialObj.initiative ?? null,
+			advantageMode: initInitialObj.advantageMode ?? null,
+		});
+
+		const doUpdateState = () => {
+			if (comp._state.mode === "implicit") {
+				delete this._state.initiative;
+				cb();
+				return;
+			}
+
+			const out = {};
+			if (comp._state.mode === "basic") {
+				if (comp._state.proficiency != null) out.proficiency = comp._state.proficiency;
+			} else if (comp._state.initiative != null) {
+				out.initiative = comp._state.initiative;
+			}
+
+			if (comp._state.advantageMode != null) out.advantageMode = comp._state.advantageMode;
+
+			if (comp._state.mode === "custom" && out.initiative != null && Object.keys(out).length === 1) this._state.initiative = out.initiative;
+			else if (Object.keys(out).length) this._state.initiative = out;
+			else delete this._state.initiative;
+
+			cb();
+		};
+
+		const selMode = ComponentUiUtil.getSelEnum(
+			comp,
+			"mode",
+			{
+				values: ["implicit", "basic", "custom"],
+				fnDisplay: it => ({
+					implicit: "Implicit",
+					basic: "Basic Initiative",
+					custom: "Custom Initiative",
+				})[it],
+			},
+		);
+		const selProficiency = ComponentUiUtil.getSelEnum(
+			comp,
+			"proficiency",
+			{
+				values: [1, 2],
+				isAllowNull: true,
+				displayNullAs: "None",
+				fnDisplay: it => it === 1 ? "Proficient" : "Expertise",
+			},
+		);
+
+		const getSelAdvantageMode = () => ComponentUiUtil.getSelEnum(
+			comp,
+			"advantageMode",
+			{
+				values: ["adv", "dis"],
+				isAllowNull: true,
+				displayNullAs: "None",
+				fnDisplay: it => it === "adv" ? "Advantage" : "Disadvantage",
+			},
+		);
+
+		const selAdvantageModeBasic = getSelAdvantageMode();
+		const selAdvantageModeCustom = getSelAdvantageMode();
+
+		const stgBasic = veT`<div class="ve-flex-col ve-mt-2">
+			<div class="ve-flex-v-center ve-mb-2"><span class="ve-mr-2 mkbru__sub-name--33">Proficiency</span>${selProficiency}</div>
+			<div class="ve-flex-v-center"><span class="ve-mr-2 mkbru__sub-name--33">Advantage Mode</span>${selAdvantageModeBasic}</div>
+		</div>`
+			.vee.toggle(comp._state.mode === "basic");
+
+		const iptInitiative = ComponentUiUtil.getIptInt(comp, "initiative", 0, {isAllowNull: true});
+		const stgCustom = veT`<div class="ve-flex-col ve-mt-2">
+			<div class="ve-flex-v-center ve-mb-2"><span class="ve-mr-2 mkbru__sub-name--33">Initiative</span>${iptInitiative}</div>
+			<div class="ve-flex-v-center"><span class="ve-mr-2 mkbru__sub-name--33">Advantage Mode</span>${selAdvantageModeCustom}</div>
+		</div>`
+			.vee.toggle(comp._state.mode === "custom");
+
+		comp._addHookAll("state", () => {
+			stgBasic.vee.toggle(comp._state.mode === "basic");
+			stgCustom.vee.toggle(comp._state.mode === "custom");
+			doUpdateState();
+		});
+
+		veT`<div>${selMode}${stgBasic}${stgCustom}</div>`.vee.appendTo(rowInner);
 		return row;
 	}
 
@@ -3082,13 +3186,18 @@ export class CreatureBuilder extends BuilderBase {
 									const pb = this._getProfBonus();
 									const isDex = cbFinesse.vee.prop("checked") || (cbRanged.vee.prop("checked") && !cbMelee.vee.prop("checked"));
 									const abilMod = Parser.getAbilityModNumber(Renderer.monster.getSafeAbilityScore(this._state, isDex ? "dex" : "str", {defaultScore: 10}));
-									const [melee, ranged] = [cbMelee.vee.prop("checked") ? "mw" : false, cbRanged.vee.prop("checked") ? "rw" : false];
+									const isMelee = cbMelee.vee.prop("checked");
+									const isRanged = cbRanged.vee.prop("checked");
 
-									const ptAtk = `{@atk ${[melee ? "mw" : null, ranged ? "rw" : null].filter(Boolean).join(",")}}`;
-									const ptHit = `{@hit ${pb + abilMod}} to hit`;
+									const ptAtk = this._meta.styleHint === SITE_STYLE__CLASSIC
+										? `{@atk ${[isMelee ? "mw" : null, isRanged ? "rw" : null].filter(Boolean).join(",")}}`
+										: `{@atkr ${[isMelee ? "m" : null, isRanged ? "r" : null].filter(Boolean).join(",")}}`;
+									const ptHit = this._meta.styleHint === SITE_STYLE__CLASSIC
+										? `{@hit ${pb + abilMod}} to hit`
+										: `{@hit ${pb + abilMod}}`;
 									const ptRange = [
-										melee ? `reach ${UiUtil.strToInt(iptMeleeRange.vee.val(), 5, {fallbackOnNaN: 5})} ft.` : null,
-										ranged ? (() => {
+										isMelee ? `reach ${UiUtil.strToInt(iptMeleeRange.vee.val(), 5, {fallbackOnNaN: 5})} ft.` : null,
+										isRanged ? (() => {
 											const vShort = UiUtil.strToInt(iptRangedShort.vee.val(), null, {fallbackOnNaN: null});
 											const vLong = UiUtil.strToInt(iptRangedLong.vee.val(), null, {fallbackOnNaN: null});
 											if (!vShort && !vLong) return `unlimited range`;
@@ -3097,6 +3206,9 @@ export class CreatureBuilder extends BuilderBase {
 											return `range ${vShort}/${vLong} ft.`;
 										})() : null,
 									].filter(Boolean).join(" or ");
+									const ptTarget = this._meta.styleHint === SITE_STYLE__CLASSIC
+										? `, one target`
+										: "";
 
 									const getDamageDicePt = (iptNum, iptFaces, iptBonus, isSkipAbilMod) => {
 										const num = UiUtil.strToInt(iptNum.vee.val(), 1, {fallbackOnNaN: 1});
@@ -3105,7 +3217,13 @@ export class CreatureBuilder extends BuilderBase {
 										const totalBonus = (isSkipAbilMod ? 0 : abilMod) + bonusVal;
 										return `${Math.floor(num * ((faces + 1) / 2)) + (totalBonus || 0)} ({@damage ${num}d${faces}${totalBonus ? ` ${UiUtil.intToBonus(totalBonus).replace(/([-+])/g, "$1 ")}` : ``}})`;
 									};
-									const getDamageTypePt = (ipDamType) => ipDamType.vee.val().trim() ? ` ${ipDamType.vee.val().trim()}` : "";
+									const getDamageTypePt = (ipDamType) => {
+										const val = ipDamType.vee.val().trim();
+										if (!val) return "";
+										return this._meta.styleHint === SITE_STYLE__CLASSIC
+											? ` ${val}`
+											: ` ${val.toTitleCase()}`;
+									};
 									const ptDamage = [
 										cbMelee.vee.prop("checked") ? `${getDamageDicePt(iptMeleeDamDiceCount, iptMeleeDamDiceNum, iptMeleeDamBonus)}${getDamageTypePt(iptMeleeDamType)} damage${cbRanged.vee.prop("checked") ? ` in melee` : ""}` : null,
 										cbRanged.vee.prop("checked") ? `${getDamageDicePt(iptRangedDamDiceCount, iptRangedDamDiceNum, iptRangedDamBonus)}${getDamageTypePt(iptRangedDamType)} damage${cbMelee.vee.prop("checked") ? ` at range` : ""}` : null,
@@ -3116,7 +3234,7 @@ export class CreatureBuilder extends BuilderBase {
 									return {
 										name: iptName.vee.val().trim() || "Unarmed Strike",
 										entries: [
-											`${ptAtk} ${ptHit}, ${ptRange}, one target. {@h}${ptDamageFull}.`,
+											`${ptAtk} ${ptHit}, ${ptRange}${ptTarget}. {@h}${ptDamageFull}.`,
 										],
 									};
 								};
@@ -3182,13 +3300,13 @@ export class CreatureBuilder extends BuilderBase {
 								veT`<div class="ve-flex-col">
 								<div class="ve-flex-v-center ve-mb-2">
 									${iptName}
-									<label class="ve-flex-v-center ve-mr-2"><span class="ve-mr-2">Melee</span>${cbMelee}</label>
-									<label class="ve-flex-v-center"><span class="ve-mr-2">Ranged</span>${cbRanged}</label>
+									<label class="ve-flex-v-center ve-mr-2">${cbMelee}<span class="ve-ml-2">Melee</span></label>
+									<label class="ve-flex-v-center">${cbRanged}<span class="ve-ml-2">Ranged</span></label>
 								</div>
 								<div class="ve-flex-v-center">
-									<label class="ve-flex-v-center ve-mr-2"><span class="ve-mr-2">Finesse</span>${cbFinesse}</label>
-									<label class="ve-flex-v-center ve-mr-2"><span class="ve-mr-2">Versatile</span>${cbVersatile}</label>
-									<label class="ve-flex-v-center"><span class="ve-mr-2">Bonus Damage</span>${cbBonusDamage}</label>
+									<label class="ve-flex-v-center ve-mr-2">${cbFinesse}<span class="ve-ml-2">Finesse</span></label>
+									<label class="ve-flex-v-center ve-mr-2">${cbVersatile}<span class="ve-ml-2">Versatile</span></label>
+									<label class="ve-flex-v-center">${cbBonusDamage}<span class="ve-ml-2">Bonus Damage</span></label>
 								</div>
 								${stageMelee}
 								${stageRanged}
@@ -3227,6 +3345,10 @@ export class CreatureBuilder extends BuilderBase {
 										searchWidget.getWrpSearch().vee.detach();
 										if (!isDataEntered) return resolve(null);
 										const action = MiscUtil.copyFast(this._jsonCreatureActions[actionIndex]);
+
+										action.name = action._nameAction || action.name;
+										delete action._nameAction;
+
 										const isFinesse = action.entriesFinesse && this._state.dex > this._state.str;
 										action.entries = DataUtil.generic.variableResolver.resolve({
 											obj: isFinesse ? action.entriesFinesse : action.entries,

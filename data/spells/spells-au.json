@@ -40,7 +40,8 @@
 				"dexterity"
 			],
 			"miscTags": [
-				"ADV"
+				"ADV",
+				"ALT"
 			],
 			"areaTags": [
 				"E"
@@ -170,7 +171,8 @@
 			],
 			"miscTags": [
 				"SCT",
-				"SGT"
+				"SGT",
+				"WLT"
 			],
 			"areaTags": [
 				"MT"
@@ -400,7 +402,8 @@
 			],
 			"miscTags": [
 				"SCT",
-				"TP"
+				"TP",
+				"WLT"
 			],
 			"areaTags": [
 				"S"
@@ -451,7 +454,7 @@
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
 					"entries": [
-						"The initial damage increases by {@dice 1d8} for each spell slot level above 5."
+						"The initial damage increases by {@damage 1d8} for each spell slot level above 5."
 					]
 				}
 			],
@@ -566,7 +569,7 @@
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
 					"entries": [
-						"The initial damage increases by {@dice 1d10} for each spell slot level above 4."
+						"The initial damage increases by {@damage 1d10} for each spell slot level above 4."
 					]
 				}
 			],
@@ -677,7 +680,7 @@
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
 					"entries": [
-						"The damage increases by {@dice 1d6} for each spell slot level above 5."
+						"The damage increases by {@damage 1d6} for each spell slot level above 5."
 					]
 				}
 			],
@@ -895,7 +898,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 1
+						"amount": 10
 					},
 					"concentration": true
 				}
@@ -972,6 +975,9 @@
 				"paralyzed",
 				"petrified",
 				"poisoned"
+			],
+			"miscTags": [
+				"WLT"
 			],
 			"areaTags": [
 				"ST"
@@ -1143,7 +1149,7 @@
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
 					"entries": [
-						"The damage increases by {@dice 1d10} for each spell slot level above 5."
+						"The damage increases by {@damage 1d10} for each spell slot level above 5."
 					]
 				}
 			],
@@ -1365,7 +1371,7 @@
 				}
 			],
 			"entries": [
-				"You call forth the spirit of a primeval dinosaur. It manifests in an unoccupied space that you can see within range and uses the {@creature Dinosaur Spirit|AU} stat block. When you cast the spell, choose Ankylosaur, {@creature Triceratops|XMM}, or Tyrannosaur. The creature resembles a dinosaur of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
+				"You call forth the spirit of a primeval dinosaur. It manifests in an unoccupied space that you can see within range and uses the {@creature Dinosaur Spirit|AU} stat block. When you cast the spell, choose Ankylosaur, Triceratops, or Tyrannosaur. The creature resembles a dinosaur of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, the creature takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
 			"entriesHigherLevel": [
@@ -1480,7 +1486,7 @@
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
 					"entries": [
-						"The damage increases by {@dice 1d8} for each spell slot level above 7."
+						"The damage increases by {@damage 1d8} for each spell slot level above 7."
 					]
 				}
 			],
@@ -1732,9 +1738,9 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "Using a Higher-Level Spell Slot",
 					"entries": [
-						"The damage increases by {@dice 1d6} for each spell slot level above 2. The number of {@variantrule Hit Point Dice|XPHB} that can be rolled and expended increases by one for each spell slot level above 2. You add your spellcasting modifier to the number of {@variantrule Hit Points|XPHB} regained by this spell only once, regardless of the number of {@variantrule Hit Point Dice|XPHB} rolled and expended."
+						"The damage increases by {@damage 1d6} for each spell slot level above 2. The number of {@variantrule Hit Point Dice|XPHB} that can be rolled and expended increases by one for each spell slot level above 2. You add your spellcasting modifier to the number of {@variantrule Hit Points|XPHB} regained by this spell only once, regardless of the number of {@variantrule Hit Point Dice|XPHB} rolled and expended."
 					]
 				}
 			],

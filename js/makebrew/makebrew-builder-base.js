@@ -17,7 +17,7 @@ class _ManageExistingEntitiesUi extends BaseComponent {
 	_getSelectedUniqueIds () {
 		return this._list.items
 			.filter(li => li.data.cbSel.checked)
-			.map(li => li.ix);
+			.map(li => li.getId());
 	}
 
 	_getMassContextMenu () {
@@ -39,7 +39,7 @@ class _ManageExistingEntitiesUi extends BaseComponent {
 				async () => {
 					const uniqueIds = this._getSelectedUniqueIds();
 					await this._parent.pHandleClick_deleteUniqueIds(uniqueIds, {isConfirm: true});
-					this._list.removeItemsByFilter(li => uniqueIds.includes(li.ix));
+					this._list.removeItemsByFilter(li => uniqueIds.includes(li.getId()));
 					this._list.update();
 				},
 			),
@@ -140,16 +140,15 @@ class _ManageExistingEntitiesUi extends BaseComponent {
 			</label>
 		</div>`;
 
-		const listItem = new ListItem(
-			ent.uniqueId,
-			eleLi,
-			ent.name,
-			{
-			},
-			{
+		const listItem = new ListItem({
+			id: ent.uniqueId,
+			ele: eleLi,
+			name: ent.name,
+			values: {},
+			data: {
 				cbSel,
 			},
-		);
+		});
 
 		eleLi.addEventListener("click", evt => this._listSelectClickHandler.handleSelectClick(listItem, evt));
 
@@ -347,6 +346,7 @@ export class BuilderBase extends ProxyBase {
 			ents: entities,
 			prop: this._prop,
 			pFnGetFluff: this._pFnGetFluff,
+			isIncludeFluff: !!this._pFnGetFluff,
 		});
 		DataUtil.userDownloadText(`${DataUtil.getCleanFilename(BrewUtil2.sourceJsonToFull(this._ui.source))}.md`, mdOut);
 	}
@@ -405,8 +405,8 @@ export class BuilderBase extends ProxyBase {
 			entries: [
 				{
 					type: "statblockInline",
-					dataType: this._prop,
-					data: entry,
+					statblockType: this._prop,
+					statblockData: entry,
 				},
 			],
 		});
@@ -495,7 +495,13 @@ export class BuilderBase extends ProxyBase {
 		const out = this._ui._getJsonOutputTemplate();
 		out[this._prop] = entities
 			.map(entry => PropOrder.getOrdered(DataUtil.cleanJson(MiscUtil.copy(entry)), this._prop));
-		DataUtil.userDownload(DataUtil.getCleanFilename(BrewUtil2.sourceJsonToFull(this._ui.source)), out);
+		DataUtil.userDownload(
+			DataUtil.getCleanFilename(BrewUtil2.sourceJsonToFull(this._ui.source)),
+			out,
+			{
+				isSkipAdditionalMetadata: true,
+			},
+		);
 	}
 
 	reset ({isResetAllMeta = false} = {}) {
@@ -569,7 +575,7 @@ export class BuilderBase extends ProxyBase {
 	}
 
 	_getAsMarkdown (ent) {
-		return RendererMarkdown.get().render({entries: [{type: "statblockInline", dataType: this._prop, data: ent}]});
+		return RendererMarkdown.get().render({entries: [{type: "statblockInline", statblockType: this._prop, statblockData: ent}]});
 	}
 
 	// TODO use this in creature builder

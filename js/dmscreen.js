@@ -21,7 +21,6 @@ import {DmScreenMigrator} from "./dmscreen/dmscreen-migrator.js";
 import {DmScreenSettings} from "./dmscreen/dmscreen-settings.js";
 import {DmScreenElementCache} from "./dmscreen/dmscreen-elementcache.js";
 import {Panel} from "./dmscreen/dmscreen-panel.js";
-import {adventureLoader, bookLoader} from "./dmscreen/dmscreen-corpusloader.js";
 
 class Board {
 	constructor () {
@@ -186,8 +185,6 @@ class Board {
 		await Promise.all([
 			TimerTrackerMoonSpriteLoader.pInit(),
 			this._pInitSearchAndMenu(),
-			adventureLoader.pInit(),
-			bookLoader.pInit(),
 		]);
 		if (this.hasSavedStateUrl()) {
 			await this.pDoLoadUrlState();
@@ -296,7 +293,7 @@ class Board {
 				this.addField("h");
 				this.setRef("id");
 			});
-			SearchUtil.removeStemmer(this.availRules.ALL);
+			SearchUtil.initSearchIndex(this.availRules.ALL);
 
 			data.data.forEach(d => {
 				d.n = data._meta.name[d.b];
@@ -378,7 +375,7 @@ class Board {
 			this.addField("o");
 			this.setRef("id");
 		});
-		SearchUtil.removeStemmer(indexStorage.ALL);
+		SearchUtil.initSearchIndex(indexStorage.ALL);
 
 		let bookOrAdventureId = 0;
 		const handleAdventureOrBook = (adventureOrBook, isBrew) => {
@@ -394,7 +391,7 @@ class Board {
 				this.addField("o");
 				this.setRef("id");
 			});
-			SearchUtil.removeStemmer(indexStorage[adventureOrBook.id]);
+			SearchUtil.initSearchIndex(indexStorage[adventureOrBook.id]);
 
 			adventureOrBook.contents.forEach((chap, i) => {
 				const chapDoc = {
@@ -1613,7 +1610,7 @@ class AddMenuSearchTab extends AddMenuTab {
 			case "content": return veT`
 				<div class="ve-ui-search__row" tabindex="0">
 					<span><span class="ve-muted">${r.doc.cf}</span> ${r.doc.n}</span>
-					<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
+					<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s).qq()}">${Parser.sourceJsonToAbv(r.doc.s).qq()}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 				</div>
 			`;
 			case "rule": return veT`

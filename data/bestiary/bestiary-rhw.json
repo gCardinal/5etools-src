@@ -1,6 +1,6 @@
 {
 	"_meta": {
-		"referenceSources": {
+		"otherSources": {
 			"monster": {
 				"XMM": "RHW"
 			}
@@ -289,6 +289,9 @@
 			"miscTags": [
 				"MA",
 				"RA"
+			],
+			"conditionInflictLegendary": [
+				"charmed"
 			],
 			"conditionInflictSpell": [
 				"blinded",
@@ -754,6 +757,9 @@
 			"name": "Boneless",
 			"source": "RHW",
 			"page": 238,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"M"
 			],
@@ -847,8 +853,10 @@
 				"MA"
 			],
 			"conditionInflict": [
+				"blinded",
 				"frightened",
-				"grappled"
+				"grappled",
+				"restrained"
 			],
 			"savingThrowForced": [
 				"wisdom"
@@ -1602,6 +1610,9 @@
 			"name": "Death's Head",
 			"source": "RHW",
 			"page": 242,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"T"
 			],
@@ -1682,6 +1693,9 @@
 			"name": "Death's Head Tree",
 			"source": "RHW",
 			"page": 243,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"H"
 			],
@@ -2257,6 +2271,7 @@
 			],
 			"conditionInflict": [
 				"charmed",
+				"exhaustion",
 				"stunned"
 			],
 			"conditionInflictSpell": [
@@ -3104,6 +3119,7 @@
 			],
 			"conditionInflict": [
 				"grappled",
+				"prone",
 				"restrained"
 			],
 			"savingThrowForced": [
@@ -3303,6 +3319,10 @@
 			"conditionInflict": [
 				"charmed",
 				"prone"
+			],
+			"conditionInflictLegendary": [
+				"charmed",
+				"unconscious"
 			],
 			"savingThrowForced": [
 				"constitution",
@@ -3560,6 +3580,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"conditionInflictLegendary": [
+				"restrained"
 			],
 			"conditionInflictSpell": [
 				"invisible"
@@ -5758,6 +5781,10 @@
 				"MA",
 				"RA"
 			],
+			"conditionInflict": [
+				"blinded",
+				"deafened"
+			],
 			"conditionInflictSpell": [
 				"paralyzed"
 			],
@@ -6528,6 +6555,9 @@
 			"name": "Priest of Osybus",
 			"source": "RHW",
 			"page": 261,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"S",
 				"M"
@@ -6967,7 +6997,7 @@
 				{
 					"name": "Dreadful Swipe",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@dice 1d4} plus your Intelligence modifier Necrotic damage, and the target can't take {@action Opportunity Attack|XPHB|Opportunity Attacks} until the start of its next turn."
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d4} plus your Intelligence modifier Necrotic damage, and the target can't take {@action Opportunity Attack|XPHB|Opportunity Attacks} until the start of its next turn."
 					]
 				}
 			],
@@ -7266,6 +7296,7 @@
 				"THW"
 			],
 			"conditionInflict": [
+				"exhaustion",
 				"unconscious"
 			],
 			"savingThrowForced": [
@@ -7746,6 +7777,9 @@
 				"HPR",
 				"MA"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"savingThrowForced": [
 				"constitution"
 			],
@@ -7891,7 +7925,9 @@
 				"RCH"
 			],
 			"conditionInflict": [
-				"grappled"
+				"deafened",
+				"grappled",
+				"stunned"
 			],
 			"savingThrowForced": [
 				"strength"
@@ -8318,6 +8354,9 @@
 			"name": "Strigoi",
 			"source": "RHW",
 			"page": 270,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"M"
 			],
@@ -8547,6 +8586,9 @@
 			"name": "Swarm of Infesting Insects",
 			"source": "RHW",
 			"page": 271,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"M"
 			],
@@ -8630,6 +8672,7 @@
 			],
 			"conditionInflict": [
 				"blinded",
+				"exhaustion",
 				"poisoned"
 			],
 			"savingThrowForced": [
@@ -8743,6 +8786,9 @@
 			],
 			"source": "RHW",
 			"page": 282,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"M"
 			],
@@ -8957,6 +9003,9 @@
 			"name": "Vampire Mind Flayer",
 			"source": "RHW",
 			"page": 276,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"M"
 			],
@@ -9091,6 +9140,7 @@
 				"MA"
 			],
 			"conditionInflict": [
+				"exhaustion",
 				"grappled",
 				"incapacitated"
 			],
@@ -9782,6 +9832,9 @@
 			"name": "Wereraven",
 			"source": "RHW",
 			"page": 280,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"S",
 				"M"
@@ -10081,6 +10134,9 @@
 			"conditionInflict": [
 				"charmed"
 			],
+			"conditionInflictLegendary": [
+				"deafened"
+			],
 			"savingThrowForced": [
 				"charisma",
 				"dexterity"
@@ -10265,6 +10321,9 @@
 			],
 			"source": "RHW",
 			"page": 283,
+			"referenceSources": [
+				"SoS"
+			],
 			"size": [
 				"H"
 			],

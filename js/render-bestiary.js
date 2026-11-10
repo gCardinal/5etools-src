@@ -56,7 +56,7 @@ class _RenderBestiaryImplBase {
 	}
 
 	_getBtnPronounceHtml ({mon}) {
-		return `<button class="ve-btn ve-btn-xs ve-btn-default ve-stats__btn-name-pronounce ve-lst-is-exporting-image__hidden no-print ve-ml-2 ve-mb-2 ve-self-flex-end">
+		return `<button class="ve-btn ve-btn-xs ve-btn-default ve-stats__btn-name-pronounce ve-lst-is-exporting-image__hidden ve-print__hidden ve-ml-2 ve-mb-2 ve-self-flex-end">
 			<span class="glyphicon glyphicon-volume-up ve-stats__icn-pronounce-name"></span>
 			<audio class="ve-hidden" preload="none" data-name="aud-pronounce">
 			   <source src="${Renderer.utils.getEntryMediaUrl(mon, "soundClip", "audio")}" type="audio/mpeg">
@@ -214,8 +214,9 @@ class _RenderBestiaryImplBase {
 	/* ----- */
 
 	_getCommonHtmlParts_hitPoints ({mon, isInlinedToken}) {
-		const label = this._style === "classic" ? "Hit Points" : "HP";
-		const ptTitle = this._style === "classic" ? "" : `title="Hit Points"`;
+		const labelFull = mon.hp?.isTemporary ? "Temporary Hit Points" : "Hit Points";
+		const label = this._style === "classic" ? labelFull : mon.hp?.isTemporary ? "Temp HP" : "HP";
+		const ptTitle = this._style === "classic" ? "" : `title="${labelFull}"`;
 		const rendered = mon.hp == null ? "\u2014" : Renderer.monster.getRenderedHp(mon.hp);
 		return `<tr><td colspan="6"><div ${isInlinedToken ? `class="ve-stats__wrp-avoid-token"` : ""}><strong ${ptTitle}>${label}</strong> ${rendered}</div></td></tr>`;
 	}

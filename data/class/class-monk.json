@@ -1,6 +1,7 @@
 {
 	"_meta": {
 		"internalCopies": [
+			"class",
 			"subclass"
 		]
 	},
@@ -1008,6 +1009,22 @@
 			"subclassTitle": "Monk Subclass",
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Monk",
+			"source": "WoW",
+			"reskinOf": [
+				"Monk|XPHB"
+			],
+			"_copy": {
+				"name": "Monk",
+				"source": "XPHB"
+			},
+			"includeSubclassesFrom": [
+				"Monk|XPHB"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -1233,6 +1250,9 @@
 			"className": "Monk",
 			"classSource": "PHB",
 			"page": 33,
+			"reprintedAs": [
+				"Mystic Brews|Monk|XPHB|WoW"
+			],
 			"edition": "classic",
 			"subclassFeatures": [
 				"Way of the Drunken Master|Monk||Drunken Master|XGE|3",
@@ -1609,6 +1629,7 @@
 			"source": "AU",
 			"className": "Monk",
 			"classSource": "XPHB",
+			"page": 11,
 			"edition": "one",
 			"spellcastingAbility": "wis",
 			"casterProgression": "1/3",
@@ -1769,10 +1790,10 @@
 						}
 					],
 					"colLabels": [
-						"{@filter 1st|spells|level=1|subclass=Monk: Warrior of the Mystic Arts}",
-						"{@filter 2nd|spells|level=2|subclass=Monk: Warrior of the Mystic Arts}",
-						"{@filter 3rd|spells|level=3|subclass=Monk: Warrior of the Mystic Arts}",
-						"{@filter 4th|spells|level=4|subclass=Monk: Warrior of the Mystic Arts}"
+						"{@filter 1|spells|level=1|subclass=Monk: Warrior of the Mystic Arts}",
+						"{@filter 2|spells|level=2|subclass=Monk: Warrior of the Mystic Arts}",
+						"{@filter 3|spells|level=3|subclass=Monk: Warrior of the Mystic Arts}",
+						"{@filter 4|spells|level=4|subclass=Monk: Warrior of the Mystic Arts}"
 					],
 					"rowsSpellProgression": [
 						[
@@ -1907,6 +1928,67 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Warrior of Mercy",
+			"shortName": "Mercy",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "WoW",
+			"_copy": {
+				"name": "Warrior of Mercy",
+				"source": "XPHB",
+				"shortName": "Mercy",
+				"className": "Monk",
+				"classSource": "XPHB"
+			}
+		},
+		{
+			"name": "Warrior of Mystic Brews",
+			"shortName": "Mystic Brews",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "WoW",
+			"_copy": {
+				"name": "Warrior of Mystic Brews",
+				"source": "WoW",
+				"shortName": "Mystic Brews",
+				"className": "Monk",
+				"classSource": "XPHB",
+				"_preserve": {
+					"*": true
+				}
+			}
+		},
+		{
+			"name": "Warrior of Mystic Brews",
+			"shortName": "Mystic Brews",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"edition": "one",
+			"subclassFeatures": [
+				"Warrior of Mystic Brews|Monk|XPHB|Mystic Brews|WoW|3",
+				"Tipsy Sway|Monk|XPHB|Mystic Brews|WoW|6",
+				"Mystic Brew|Monk|XPHB|Mystic Brews|WoW|6",
+				"Wizened Brewer|Monk|XPHB|Mystic Brews|WoW|11",
+				"Master Brewer|Monk|XPHB|Mystic Brews|WoW|17",
+				"Intoxicated Frenzy|Monk|XPHB|Mystic Brews|WoW|17"
+			]
+		},
+		{
+			"name": "Warrior of the Open Hand",
+			"shortName": "Open Hand",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "WoW",
+			"_copy": {
+				"name": "Warrior of the Open Hand",
+				"source": "XPHB",
+				"shortName": "Open Hand",
+				"className": "Monk",
+				"classSource": "XPHB"
+			}
 		}
 	],
 	"classFeature": [
@@ -1925,7 +2007,7 @@
 					"type": "list",
 					"items": [
 						"You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
-						"You can roll a {@dice d4} in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
+						"You can roll a {@damage d4} in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
 						"When you use the {@action Attack} action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the {@action Attack} action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn."
 					]
 				},
@@ -3246,13 +3328,13 @@
 					"entries": [
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Breath of Winter",
-							"name": "Breath of Winter (17th Level Required)"
+							"name": "Breath of Winter (17th Level Required)",
+							"optionalfeature": "Breath of Winter"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Clench of the North Wind",
-							"name": "Clench of the North Wind (6th Level Required)"
+							"name": "Clench of the North Wind (6th Level Required)",
+							"optionalfeature": "Clench of the North Wind"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -3263,8 +3345,8 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Eternal Mountain Defense",
-							"name": "Eternal Mountain Defense (17th Level Required)"
+							"name": "Eternal Mountain Defense (17th Level Required)",
+							"optionalfeature": "Eternal Mountain Defense"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -3280,28 +3362,28 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Flames of the Phoenix",
-							"name": "Flames of the Phoenix (11th Level Required)"
+							"name": "Flames of the Phoenix (11th Level Required)",
+							"optionalfeature": "Flames of the Phoenix"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Gong of the Summit",
-							"name": "Gong of the Summit (6th Level Required)"
+							"name": "Gong of the Summit (6th Level Required)",
+							"optionalfeature": "Gong of the Summit"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Mist Stance",
-							"name": "Mist Stance (11th Level Required)"
+							"name": "Mist Stance (11th Level Required)",
+							"optionalfeature": "Mist Stance"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Ride the Wind",
-							"name": "Ride the Wind (11th Level Required)"
+							"name": "Ride the Wind (11th Level Required)",
+							"optionalfeature": "Ride the Wind"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "River of Hungry Flame",
-							"name": "River of Hungry Flame (17th Level Required)"
+							"name": "River of Hungry Flame (17th Level Required)",
+							"optionalfeature": "River of Hungry Flame"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -3321,8 +3403,8 @@
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Wave of Rolling Earth",
-							"name": "Wave of Rolling Earth (17th Level Required)"
+							"name": "Wave of Rolling Earth (17th Level Required)",
+							"optionalfeature": "Wave of Rolling Earth"
 						}
 					]
 				}
@@ -4331,6 +4413,7 @@
 		{
 			"name": "Warrior of the Mystic Arts",
 			"source": "AU",
+			"page": 11,
 			"className": "Monk",
 			"classSource": "XPHB",
 			"subclassShortName": "Mystic Arts",
@@ -4348,6 +4431,7 @@
 		{
 			"name": "Spellcasting",
 			"source": "AU",
+			"page": 11,
 			"className": "Monk",
 			"classSource": "XPHB",
 			"subclassShortName": "Mystic Arts",
@@ -4359,6 +4443,7 @@
 				{
 					"type": "entries",
 					"name": "Cantrips",
+					"page": 11,
 					"entries": [
 						"You know two cantrips of your choice from the {@filter Sorcerer spell list|spells|class=Sorcerer}. {@spell Blade Ward|XPHB} and {@spell Thunderclap|XPHB} are recommended. Whenever you gain a Monk level, you can replace one of these cantrips with another cantrip of your choice from the {@filter Sorcerer spell list|spells|class=Sorcerer}.",
 						"When you reach Monk level 10, you learn another {@filter Sorcerer cantrip|spells|level=0|class=Sorcerer} of your choice."
@@ -4367,6 +4452,7 @@
 				{
 					"type": "entries",
 					"name": "Spell Slots",
+					"page": 11,
 					"entries": [
 						"The Warrior of the Mystic Arts Spellcasting table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a {@variantrule Long Rest|XPHB}."
 					]
@@ -4374,6 +4460,7 @@
 				{
 					"type": "entries",
 					"name": "Prepared Spells of Level 1+",
+					"page": 11,
 					"entries": [
 						"You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose three level 1 spells from the {@filter Sorcerer spell list|spells|class=Sorcerer}. {@spell Jump|XPHB}, {@spell Magic Missile|XPHB}, and {@spell Shield|XPHB} are recommended.",
 						"The number of spells on your list increases as you gain Monk levels, as shown in the Prepared Spells column of the Warrior of the Mystic Arts Spellcasting table. Whenever that number increases, choose additional spells from the {@filter Sorcerer spell list|spells|class=Sorcerer} until the number of spells on your list matches the number on the table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 7 Monk, your list of prepared spells can include five Sorcerer spells of levels 1 and 2 in any combination."
@@ -4382,6 +4469,7 @@
 				{
 					"type": "entries",
 					"name": "Changing Your Prepared Spells",
+					"page": 12,
 					"entries": [
 						"Whenever you gain a Monk level, you can replace one spell on your list with another {@filter Sorcerer spell|spells|class=Sorcerer} for which you have spell slots."
 					]
@@ -4389,6 +4477,7 @@
 				{
 					"type": "entries",
 					"name": "Spellcasting Ability",
+					"page": 12,
 					"entries": [
 						"Wisdom is your spellcasting ability for your Sorcerer spells."
 					]
@@ -4396,6 +4485,7 @@
 				{
 					"type": "entries",
 					"name": "Spellcasting Focus",
+					"page": 12,
 					"entries": [
 						"You can use an {@item Arcane Focus|XPHB} as a {@variantrule Spellcasting Focus|XPHB} for your Sorcerer spells."
 					]
@@ -4403,6 +4493,7 @@
 				{
 					"type": "entries",
 					"name": "Multiclassing",
+					"page": 12,
 					"entries": [
 						"If you multiclass and have the Spellcasting feature from more than one class, add one third of your Monk levels (round down) to determine your available spell slots."
 					]
@@ -4412,6 +4503,7 @@
 		{
 			"name": "Mystic Fighting Style",
 			"source": "AU",
+			"page": 12,
 			"className": "Monk",
 			"classSource": "XPHB",
 			"subclassShortName": "Mystic Arts",
@@ -4425,6 +4517,7 @@
 		{
 			"name": "Mystic Focus",
 			"source": "AU",
+			"page": 12,
 			"className": "Monk",
 			"classSource": "XPHB",
 			"subclassShortName": "Mystic Arts",
@@ -4436,6 +4529,7 @@
 				{
 					"type": "entries",
 					"name": "Converting Spell Slots to Focus Points",
+					"page": 12,
 					"entries": [
 						"You can expend a spell slot to regain a number of expended Focus Points equal to the slot's level (no action required)."
 					]
@@ -4443,11 +4537,13 @@
 				{
 					"type": "entries",
 					"name": "Recovering Spell Slots",
+					"page": 12,
 					"entries": [
 						"When you finish a {@variantrule Short Rest|XPHB} or use Uncanny Metabolism, you can transform unexpended Focus Points to recover one expended spell slot. The Recovering Spell Slots table shows the cost of recovering a spell slot of a given level, and it lists the minimum Monk level you must be to recover a slot. You can recover a spell slot no higher than level 4.",
 						{
 							"type": "table",
 							"caption": "Recovering Spell Slots",
+							"page": 12,
 							"colLabels": [
 								"Spell Slot Level",
 								"Focus Point Cost",
@@ -4488,6 +4584,7 @@
 		{
 			"name": "Focused Strike",
 			"source": "AU",
+			"page": 13,
 			"className": "Monk",
 			"classSource": "XPHB",
 			"subclassShortName": "Mystic Arts",
@@ -4501,6 +4598,7 @@
 		{
 			"name": "Improved Mystic Fighting Style",
 			"source": "AU",
+			"page": 13,
 			"className": "Monk",
 			"classSource": "XPHB",
 			"subclassShortName": "Mystic Arts",
@@ -4509,6 +4607,226 @@
 			"header": 2,
 			"entries": [
 				"When you use Flurry of Blows, you can replace two of the {@variantrule Unarmed Strike|XPHB|Unarmed Strikes} with a casting of one of your level 1 or 2 Sorcerer spells that has a casting time of an action, and you cast it as part of the same {@variantrule Bonus Action|XPHB} you use to activate Flurry of Blows."
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 3,
+			"entries": [
+				"You gain proficiency in the {@skill Performance|XPHB} skill, or if you already have it, you gain proficiency in one skill of your choice from the skills available to Monks at level 1. You also gain proficiency with {@item Brewer's Supplies|XPHB} if you don't already have it."
+			]
+		},
+		{
+			"name": "Drunken Technique",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 3,
+			"entries": [
+				"You twist and turn quickly as you move. Whenever you expend a {@classFeature Monk's Focus|Monk|XPHB|2|XPHB|Focus Point} using {@classFeature Patient Defense|Monk|XPHB|2|XPHB}, your {@variantrule Speed|XPHB} increases by 10 feet until the end of the current turn, and you can make one {@variantrule Unarmed Strike|XPHB} immediately after the {@variantrule Bonus Action|XPHB}."
+			]
+		},
+		{
+			"name": "Warrior of Mystic Brews",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 3,
+			"entries": [
+				"{@i Drink Mystic Brews to Overwhelm and Confound Foes}",
+				"Warriors of Mystic Brews move with the jerky, unpredictable movements typical of someone who is intoxicated. Their apparently erratic stumbles conceal a carefully executed dance of blocks, parries, advances, attacks, and retreats. Warriors of Mystic Brews frequent bars and taverns to gather information or spy on potential threats. These warriors drink magical concoctions that enhance their martial arts.",
+				"Warriors of Mystic Brews often enjoy playing the fool to bring gladness to the downtrodden or to teach humility to the arrogant, but these Monks are maddening, masterful foes in battle.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Monk|XPHB|Mystic Brews|WoW|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Drunken Technique|Monk|XPHB|Mystic Brews|WoW|3"
+				}
+			]
+		},
+		{
+			"name": "Enhancing a Magical Beverage",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 6,
+			"consumes": {
+				"name": "Focus Point"
+			},
+			"entries": [
+				"When you create a magical beverage, you can expend 1 {@classFeature Monk's Focus|Monk|XPHB|2|XPHB|Focus Point} to extend the benefits' duration to 8 hours."
+			]
+		},
+		{
+			"name": "Leap to Your Feet",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 6,
+			"entries": [
+				"When you have the {@condition Prone|XPHB} condition, you can stand up by spending 5 feet of movement."
+			]
+		},
+		{
+			"name": "Redirect Attack",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 6,
+			"consumes": {
+				"name": "Focus Point"
+			},
+			"entries": [
+				"When an enemy misses you with a melee attack roll, you can take a {@variantrule Reaction|XPHB} and spend 1 {@classFeature Monk's Focus|Monk|XPHB|2|XPHB|Focus Point} to cause that attack to hit one creature of your choice, other than the attacker, that you can see within 5 feet of yourself."
+			]
+		},
+		{
+			"name": "Mystic Brew",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Whenever you finish a {@variantrule Short Rest|XPHB|Short} or {@variantrule Long Rest|XPHB} while holding {@item Brewer's Supplies|XPHB}, you can use that tool to magically produce one magical beverage, chosen from the following options: Cinnamon Dragon, Heavenly Spirit, or Refreshing Dip. A pint of the beverage appears in a bottle or flask you are holding or carrying; otherwise, the beverage spills out on the ground and then vanishes. If any beverage remains when you finish a {@variantrule Short Rest|XPHB|Short} or {@variantrule Long Rest|XPHB}, the beverage vanishes.",
+				{
+					"type": "entries",
+					"name": "Drinking a Magical Beverage",
+					"entries": [
+						"Only you can gain the benefits of drinking the beverage. You must drink the full pint of the beverage before gaining its benefit. You can spend 1 minute drinking the beverage. You then gain the benefits of the beverage for 1 hour or until you drink another magical beverage, as described below:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Cinnamon Dragon",
+									"entry": "You can take a {@action Magic|XPHB} action to exhale toxic flames in a 30-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. Each creature in the {@variantrule Cone [Area of Effect]|XPHB|Cone} makes a Dexterity saving throw ({@dc 8} plus your Wisdom modifier and {@variantrule Proficiency|XPHB|Proficiency Bonus}). On a failed save, a creature takes Fire damage equal to four rolls of your {@classFeature Martial Arts|Monk|XPHB|1|XPHB} die and has the {@condition Poisoned|XPHB} condition until the end of its next turn. On a successful save, a creature takes half as much damage only."
+								},
+								{
+									"type": "item",
+									"name": "Heavenly Spirit",
+									"entry": "You gain {@variantrule Resistance|XPHB} to two of the following damage types of your choice: Cold, Necrotic, Psychic, or Radiant damage."
+								},
+								{
+									"type": "item",
+									"name": "Refreshing Dip",
+									"entry": "You have a pool of dice of the same type as your {@classFeature Martial Arts|Monk|XPHB|1|XPHB} die. The maximum number of dice equals your Wisdom modifier plus half your Monk level (round down). Whenever you regain {@variantrule Hit Points|XPHB}, you can expend and roll one die from this pool to regain additional {@variantrule Hit Points|XPHB} equal to the number rolled."
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Enhancing a Magical Beverage|Monk|XPHB|Mystic Brews|WoW|6"
+				}
+			]
+		},
+		{
+			"name": "Tipsy Sway",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"You can move in sudden, swaying ways. You gain the following benefits.",
+				{
+					"type": "options",
+					"style": "list-hang-notitle",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Leap to Your Feet|Monk|XPHB|Mystic Brews|WoW|6"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Redirect Attack|Monk|XPHB|Mystic Brews|WoW|6"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Wizened Brewer",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"You learn more complex flavors. The following beverages are added to your {@subclassFeature Mystic Brew|Monk|XPHB|Mystic Brews|WoW|6|WoW} options:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Blue Lightning",
+							"entry": "Whenever you take a {@variantrule Reaction|XPHB} that isn't making an {@action Opportunity Attack|XPHB} or casting a spell, you can make one {@variantrule Unarmed Strike|XPHB} as part of that {@variantrule Reaction|XPHB}."
+						},
+						{
+							"type": "item",
+							"name": "Drunkard's Luck",
+							"entry": "You gain {@variantrule Heroic Inspiration|XPHB} if you don't already have it. In addition, you can give yourself {@variantrule Heroic Inspiration|XPHB} when you make an ability check or saving throw without it."
+						},
+						{
+							"type": "item",
+							"name": "Stumbling Monk",
+							"entry": "When you take a {@variantrule Bonus Action|XPHB} other than {@classFeature Patient Defense|Monk|XPHB|2|XPHB}, you can also use {@classFeature Patient Defense|Monk|XPHB|2|XPHB} immediately after that {@variantrule Bonus Action|XPHB}."
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Intoxicated Frenzy",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"Immediately after you use your {@classFeature Patient Defense|Monk|XPHB|2|XPHB}, you can move up to your {@variantrule Speed|XPHB}. During this movement, whenever you enter a space within 5 feet of a creature, you can make an {@variantrule Unarmed Strike|XPHB} targeting that creature. In addition, when you hit a creature with an {@variantrule Unarmed Strike|XPHB} granted by this feature, the creature must succeed on a Dexterity saving throw or have the {@condition Prone|XPHB} condition. A creature can be targeted by an {@variantrule Unarmed Strike|XPHB} granted by this feature only once per turn."
+			]
+		},
+		{
+			"name": "Master Brewer",
+			"source": "WoW",
+			"className": "Monk",
+			"classSource": "XPHB",
+			"subclassShortName": "Mystic Brews",
+			"subclassSource": "WoW",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"When you create a magical beverage using your {@subclassFeature Mystic Brew|Monk|XPHB|Mystic Brews|WoW|6|WoW} feature, you can choose two different options and produce one magical beverage. Drinking the beverage provides the effects of both options for the duration."
 			]
 		},
 		{
