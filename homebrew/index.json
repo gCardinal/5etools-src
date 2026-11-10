@@ -30,6 +30,7 @@
 		"laserllama_compendium_of_beasts.json",
 		"alternate_barbarian.json",
 		"shifter.json",
-		"psion.json"
+		"psion.json",
+		"spell_compendium.json"
 	]
 }
