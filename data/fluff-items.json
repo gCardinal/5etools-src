@@ -761,22 +761,6 @@
 			]
 		},
 		{
-			"name": "Amulet of the Inferno",
-			"source": "CoA",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/CoA/Amulet of the Inferno.webp"
-					},
-					"width": 706,
-					"height": 399,
-					"credit": "Aaron Sims"
-				}
-			]
-		},
-		{
 			"name": "Amulet of the Planes",
 			"source": "DMG",
 			"images": [
@@ -2655,22 +2639,6 @@
 			}
 		},
 		{
-			"name": "Cartographer's Map Case",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/cartographers-map-case.webp"
-					},
-					"width": 1164,
-					"height": 1000,
-					"credit": "Chris Walton"
-				}
-			]
-		},
-		{
 			"name": "Cast-Off Armor",
 			"source": "XDMG",
 			"images": [
@@ -3154,22 +3122,6 @@
 					"width": 107,
 					"height": 561,
 					"credit": "Polar Engine"
-				}
-			]
-		},
-		{
-			"name": "Coin of Decisionry",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/coin-of-decisionry.webp"
-					},
-					"width": 1218,
-					"height": 1000,
-					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -4104,22 +4056,6 @@
 					"height": 1338,
 					"title": "A Docent",
 					"credit": "CoupleofKooks"
-				}
-			]
-		},
-		{
-			"name": "Documancy Satchel",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/documancy-satchel.webp"
-					},
-					"width": 934,
-					"height": 1000,
-					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -6817,21 +6753,6 @@
 			]
 		},
 		{
-			"name": "Helm of Disjunction",
-			"source": "HAT-LMI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/HAT-LMI/Helm of Disjunction.webp"
-					},
-					"width": 722,
-					"height": 1000
-				}
-			]
-		},
-		{
 			"name": "Helm of Perfect Potential",
 			"source": "BGG",
 			"images": [
@@ -6969,21 +6890,6 @@
 			]
 		},
 		{
-			"name": "Hither-Thither Staff",
-			"source": "HAT-LMI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/HAT-LMI/Hither-Thither Staff.webp"
-					},
-					"width": 758,
-					"height": 1000
-				}
-			]
-		},
-		{
 			"name": "Holly's Handy Haversack",
 			"source": "WttHC",
 			"images": [
@@ -7058,21 +6964,6 @@
 					"width": 850,
 					"height": 1164,
 					"credit": "Crystal Sully"
-				}
-			]
-		},
-		{
-			"name": "Horn of Beckoning Death",
-			"source": "HAT-LMI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/HAT-LMI/Horn of Beckoning Death.webp"
-					},
-					"width": 860,
-					"height": 1000
 				}
 			]
 		},
@@ -8652,22 +8543,6 @@
 			]
 		},
 		{
-			"name": "Living Loot Satchel",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/living-loot-satchel.webp"
-					},
-					"width": 904,
-					"height": 1000,
-					"credit": "Chris Walton"
-				}
-			]
-		},
-		{
 			"name": "Lock of Trickery",
 			"source": "XDMG",
 			"images": [
@@ -10207,22 +10082,6 @@
 			]
 		},
 		{
-			"name": "Occultant Abacus",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/occultant-abacus.webp"
-					},
-					"width": 858,
-					"height": 1000,
-					"credit": "Chris Walton"
-				}
-			]
-		},
-		{
 			"name": "Oil of Etherealness",
 			"source": "DMG",
 			"images": [
@@ -10425,22 +10284,6 @@
 					"width": 850,
 					"height": 1133,
 					"credit": "Matt Stewart"
-				}
-			]
-		},
-		{
-			"name": "Orrery of the Wanderer",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/Orrery of the Wanderer.webp"
-					},
-					"width": 792,
-					"height": 1000,
-					"credit": "Nicholas Kay"
 				}
 			]
 		},
@@ -12355,22 +12198,6 @@
 			]
 		},
 		{
-			"name": "Ranseur of Torture",
-			"source": "CoA",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/CoA/Ranseur of Torture.webp"
-					},
-					"width": 1568,
-					"height": 450,
-					"credit": "Aaron Sims"
-				}
-			]
-		},
-		{
 			"name": "Rapier",
 			"source": "XPHB",
 			"images": [
@@ -12393,21 +12220,6 @@
 				"name": "Dragon Scale Mail",
 				"source": "XDMG"
 			}
-		},
-		{
-			"name": "Red Wizard Blade",
-			"source": "HAT-LMI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/HAT-LMI/Red Wizard Blade.webp"
-					},
-					"width": 700,
-					"height": 1000
-				}
-			]
 		},
 		{
 			"name": "Ring Mail",
@@ -13727,23 +13539,6 @@
 			]
 		},
 		{
-			"name": "Ruby Rod of Asmodeus",
-			"source": "CoA",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/CoA/Ruby Rod of Asmodeus and Scourge of Shadow.webp"
-					},
-					"width": 943,
-					"height": 1211,
-					"title": "Scourge of Shadow (left) and Ruby Rod of Asmodeus (right)",
-					"credit": "Aaron Sims"
-				}
-			]
-		},
-		{
 			"name": "Ruidium Shield",
 			"source": "CRCotN",
 			"images": [
@@ -14003,23 +13798,6 @@
 			]
 		},
 		{
-			"name": "Scourge of Shadow",
-			"source": "CoA",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/CoA/Ruby Rod of Asmodeus and Scourge of Shadow.webp"
-					},
-					"width": 943,
-					"height": 1211,
-					"title": "Scourge of Shadow (left) and Ruby Rod of Asmodeus (right)",
-					"credit": "Aaron Sims"
-				}
-			]
-		},
-		{
 			"name": "Scroll of Protection",
 			"source": "XDMG",
 			"images": [
@@ -14192,22 +13970,6 @@
 					"width": 620,
 					"height": 453,
 					"credit": "Daniel Ljunggren"
-				}
-			]
-		},
-		{
-			"name": "Sending Stone",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/sending-stone.webp"
-					},
-					"width": 916,
-					"height": 1000,
-					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -16056,21 +15818,6 @@
 			]
 		},
 		{
-			"name": "Tablet of Reawakening",
-			"source": "HAT-LMI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/HAT-LMI/Tablet of Reawakening.webp"
-					},
-					"width": 1000,
-					"height": 1000
-				}
-			]
-		},
-		{
 			"name": "Talisman of the Sphere",
 			"source": "DMG",
 			"images": [
@@ -16545,22 +16292,6 @@
 			]
 		},
 		{
-			"name": "Travel Alchemical Kit",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/travel-alchemical-kit.webp"
-					},
-					"width": 1070,
-					"height": 1000,
-					"credit": "Chris Walton"
-				}
-			]
-		},
-		{
 			"name": "Trident",
 			"source": "XPHB",
 			"images": [
@@ -16603,42 +16334,6 @@
 					},
 					"width": 1700,
 					"height": 306
-				}
-			]
-		},
-		{
-			"name": "Trinket",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/Trinket.webp"
-					},
-					"width": 1000,
-					"height": 1000,
-					"credit": "Kris Straub"
-				},
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/Trinket-2.webp"
-					},
-					"width": 1000,
-					"height": 1000,
-					"credit": "Kris Straub"
-				},
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/Trinket-3.webp"
-					},
-					"width": 1000,
-					"height": 1000,
-					"credit": "Kris Straub"
 				}
 			]
 		},
@@ -17520,22 +17215,6 @@
 			]
 		},
 		{
-			"name": "Whisper Jar",
-			"source": "AI",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/AI/whisper-jar.webp"
-					},
-					"width": 988,
-					"height": 1000,
-					"credit": "Chris Walton"
-				}
-			]
-		},
-		{
 			"name": "White Dragon Scale Mail",
 			"source": "XDMG",
 			"_copy": {
@@ -17756,22 +17435,6 @@
 				"name": "Wreath of the Prism",
 				"source": "EGW"
 			}
-		},
-		{
-			"name": "Wrought-Iron Tower",
-			"source": "CoA",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/CoA/Wrought-Iron Tower.webp"
-					},
-					"width": 1517,
-					"height": 574,
-					"credit": "Aaron Sims"
-				}
-			]
 		},
 		{
 			"name": "Wyrmskull Throne",

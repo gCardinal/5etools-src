@@ -307,23 +307,6 @@
 			]
 		},
 		{
-			"name": "Ancient Deep Crow",
-			"source": "AI",
-			"page": 211,
-			"regionalEffects": [
-				"The region containing an ancient deep crow's lair is transformed by the creature's presence, which creates one or more of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"Supernatural shadow turns all bright light to dim light in underground regions within 6 miles of the lair.",
-						"Intermittent, echoing caws can be heard coming from all directions within 6 miles of the lair.",
-						"Subterranean beasts within 1 mile of the ancient deep crow's lair serve as the creature's eyes and ears, alerting it to the presence of intruders and making it all but impossible to surprise the ancient deep crow."
-					]
-				},
-				"If the ancient deep crow dies, these effects fade immediately."
-			]
-		},
-		{
 			"name": "Ancient Dragon Turtle",
 			"source": "FTD",
 			"page": 191,
@@ -511,122 +494,6 @@
 			]
 		},
 		{
-			"name": "Archdevil",
-			"source": "CoA",
-			"page": 235,
-			"lairActions": [
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Attack",
-							"entries": [
-								"The archdevil uses one of their available melee or ranged attacks against a single foe."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Cast a Spell",
-							"entries": [
-								"The archdevil uses their Spellcasting feature to cast an available spell. If the spell normally requires {@status concentration}, it lasts for the full duration instead."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Deceitful Whispers",
-							"entries": [
-								"The archdevil whispers to a creature they can see within 30 feet. The target must make a {@dc 22} Wisdom saving throw. On a failed save, the target has the charmed condition until the start of their next turn and must use their reaction immediately to make an attack against one of the archdevil's enemies, chosen by the archdevil."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Fiendish Fortitude",
-							"entries": [
-								"The archdevil recharges one of their expended abilities."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Frenzy",
-							"entries": [
-								"The archdevil casts {@spell Haste} on themself. The effect ends at initiative count 20 of the next round."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Summon Underlings",
-							"entries": [
-								"The archdevil summons allied devils. The devils summoned depends on the archdevil using this feature. The summoned devils appear in unoccupied spaces which the archdevil can see. The {@table Archdevil Lair Action List; Summoned Underlings|CoA|Summoned Underlings} table shows which devils each archdevil can summon."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Teleport",
-							"entries": [
-								"The archdevil teleports themself to an area they can see within 120 feet."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Trap",
-							"entries": [
-								"The archdevil casts the {@spell Hold Monster} spell."
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Asmodeus",
-			"source": "CoA",
-			"page": 216,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Asmodeus can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); he can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Cleansing Flame",
-										"entries": [
-											"Asmodeus selects one spell effect on himself or a creature of his choice within 60 feet. That spell effect is removed."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Asmodeus's lair is corrupted by his presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "The Devil's Greeting",
-							"entries": [
-								"Within 500 miles of his lair, an illusory version of Asmodeus (as if he has cast the {@spell Project Image} spell) appears. Asmodeus attempts to communicate with any characters and decipher their intentions. If they're hostile, Asmodeus pretends to prepare himself for combat, in an effort to make the character's waste their resources."
-							]
-						}
-					]
-				},
-				"If Asmodeus dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
 			"name": "Aurnozci",
 			"source": "BMT",
 			"lairActions": [
@@ -696,80 +563,6 @@
 					]
 				},
 				"If Azalin dies, these effects end immediately."
-			]
-		},
-		{
-			"name": "Baalzebul",
-			"source": "CoA",
-			"page": 218,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Baalzebul can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); he can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Protective Burrow",
-										"entries": [
-											"Baalzebul uses his burrow speed to dig into the ground. He gains half-cover when buried 10 feet and {@quickref Cover||3||three-quarters cover} at 20 feet."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Baalzebul's lair is corrupted by his presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Filth",
-							"entries": [
-								"Within 1 mile of the lair, stinking piles of filth accumulate as if from nowhere. The entire area is covered with garbage and feces and is treated as {@quickref difficult terrain||3}."
-							]
-						}
-					]
-				},
-				"If Baalzebul dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
-			"name": "Baalzebul",
-			"source": "MaBJoV",
-			"page": 91,
-			"lairActions": [
-				"On initiative count 20 (losing initiative ties), Baalzebul can take one lair action to cause one of the following effects; Baalzebul can't use the same effect two rounds in a row:",
-				{
-					"type": "list",
-					"items": [
-						"Baalzebul casts his innate hold monster.",
-						"Baalzebul emits slime in a 5-foot radius centered on him. Any creature that starts their turn standing in this slime is considered {@condition grappled} and must use their action to succeed on {@dc 17} Strength ({@skill Athletics}) check to break free.",
-						"Baalzebul uses half his burrow speed to dig into the ground. He gains half-cover when buried 10 feet and {@quickref Cover||3||three-quarters cover} when at 20 feet."
-					]
-				}
-			],
-			"regionalEffects": [
-				"The region containing Baalzebul's lair is corrupted by his presence, which creates one or more of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"Within 1 mile of Baalzebul's lair, stinking piles of filth accumulate as if from nowhere. The entire area is covered with garbage and feces and is treated as {@quickref difficult terrain||3}.",
-						"Within 2 miles of the lair, the air is filled with buzzing flies. Any creature that finishes a short or long rest in this area must succeed on a {@dc 22} Wisdom saving throw or derive no benefit from the rest."
-					]
-				},
-				"If Baalzebul dies, the effects fade over the course of {@dice 1d10} days."
 			]
 		},
 		{
@@ -1128,53 +921,6 @@
 			]
 		},
 		{
-			"name": "Bel",
-			"source": "CoA",
-			"page": 234,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Bel can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); he can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Transmute",
-										"entries": [
-											"If Bel has cast {@spell Wall of Fire}, that wall becomes a permanent Wall of Stone instead (doesn't require {@status concentration})."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Bel's lair is corrupted by his presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Lava",
-							"entries": [
-								"There are numerous rivers of lava within 3 miles of the lair. Anyone who enters the lava for the first time or starts their turn in it takes 33 ({@damage 6d10}) fire damage."
-							]
-						}
-					]
-				},
-				"If Bel dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
 			"name": "Belashyrra",
 			"source": "ERLW",
 			"page": 286,
@@ -1200,53 +946,6 @@
 					]
 				},
 				"If Belashyrra dies, these effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
-			"name": "Belial",
-			"source": "CoA",
-			"page": 220,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Belial can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); he can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Slow Torture",
-										"entries": [
-											"Every creature within 100 feet whose movement is currently reduced because of the Ranseur of Torture, takes 11 ({@damage 2d10}) fire damage and 11 ({@damage 2d10}) piercing damage."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Belial's lair is corrupted by his presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Smoke-cloud",
-							"entries": [
-								"A vast fog rises 3 feet above ground within 1 mile of the lair, completely obscuring the ground. Any creature having the prone condition at the start of their turn must succeed on a {@dc 22} Constitution saving throw or take 7 ({@damage 2d12}) necrotic damage from choking on the noxious fumes."
-							]
-						}
-					]
-				},
-				"If Belial dies, the effects fade over the course of {@dice 1d10} days."
 			]
 		},
 		{
@@ -1969,34 +1668,6 @@
 			]
 		},
 		{
-			"name": "Cryonax",
-			"source": "MaBJoV",
-			"page": 97,
-			"lairActions": [
-				"When Cryonax occupies Frostfell, or any area that he has corrupted by inhabiting it for at least a week, he can command the snow and ice around him to take lair actions. On initiative count 20 (losing initiative ties), Cryonax can take a lair action to cause one of the following effects; Cryonax can't use the same effect two rounds in a row:",
-				{
-					"type": "list",
-					"items": [
-						"Ice and snow explode in radius of 60 feet around Cryonax. This creates a freezing mist full of hail and larger chunks of ice that will heavily obscure the area and last until initiative count 20 of the next round. All creatures within the area of effect take 13 ({@damage 3d8}) cold damage and must make a {@dc 20} Wisdom saving throw or be {@condition blinded} until initiative count 20 of the next round.",
-						"The air freezes in a 120 feet wide (and tall) hemisphere centered around Cryonax. This effect forms hundreds of sharp icicles. These immediately crash to the ground causing 14 ({@damage 4d6}) slashing damage to everyone in the area of effect (the damage is halved if a {@dc 22} Dexterity saving throw is successful). Afterwards the terrain becomes difficult and anyone falling {@condition prone} within it takes the damage again (no saving throw).",
-						"The frozen ground buckles, driving massive chunks of rock and ice into the air. {@dice 1d8} thirty-foot-tall stalagmites will rise into the air and all creatures in a 30-foot radius around Cryonax must make a {@dc 24} Dexterity saving throw or take 9 ({@damage 2d8}) bludgeoning damage and be knocked {@condition prone}."
-					]
-				}
-			],
-			"regionalEffects": [
-				"The region containing Cryonax's lair is warped by his presence, which creates one or more of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"Within ten miles of the lair all water has frozen and any precipitation becomes thick snow and hail instead.",
-						"The ground beneath the lair is freezing, causing the earth to buckle and rise. Tremors become common within 5 miles of the lair. After five days any wooden structure or weaker has collapsed; within 10 days stone buildings are destroyed. For every hour in the area there is a 1 in 10 chance that a tremor strikes forcing everyone other than Cryonax to make a {@dc 22} Dexterity saving throw or be knocked {@condition prone} and suffer 9 ({@damage 2d8}) bludgeoning damage.",
-						"Within 1 mile of Cryonax's location inside the lair the air becomes bitterly cold and difficult to breath. Each hour while within this area every living creature must make a {@dc 15} Constitution saving throw or suffer a level of {@condition exhaustion}."
-					]
-				},
-				"If Cryonax is destroyed or banished back to his home plane, the regional effects fade over the next {@dice 1d10} weeks."
-			]
-		},
-		{
 			"name": "Crystal Dragon",
 			"source": "FTD",
 			"page": 171,
@@ -2472,53 +2143,6 @@
 			]
 		},
 		{
-			"name": "Dispater",
-			"source": "CoA",
-			"page": 222,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Dispater can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); he can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Buckle",
-										"entries": [
-											"The area in a 120-foot-radius around Dispater bends and twists, becoming {@quickref difficult terrain||3}. Dispater's Superheat Metal ability is recharged."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Dispater's lair is corrupted by his presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Din",
-							"entries": [
-								"Within 6 miles of the lair, the sound of metal working is near inescapable. Any creature attempting a short or long rest may do so, but must make a {@dc 21} Constitution saving throw afterwards. Failure negates any benefits of the rest."
-							]
-						}
-					]
-				},
-				"If Dispater dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
 			"name": "Dracolich",
 			"source": "XMM",
 			"page": 102,
@@ -2925,53 +2549,6 @@
 			]
 		},
 		{
-			"name": "Fierna",
-			"source": "CoA",
-			"page": 225,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Fierna can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); she can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Fiery Reversal",
-										"entries": [
-											"Fierna exchanges places with a creature she can see within 30 feet of her. Both her old location and her new location erupt into flames that persist for 1 minute. Anyone entering either flame must succeed on a {@dc 21} Constitution saving throw or take 28 ({@damage 8d6}) fire damage."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Fierna's lair is corrupted by her presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Smoke-cloud",
-							"entries": [
-								"A vast fog rises 3 feet above ground within 1 mile of the lair, completely obscuring the ground. Any creature having the prone condition at the start of their turn must succeed on a {@dc 22} Constitution saving throw or take 7 ({@damage 2d12}) necrotic damage from choking on the noxious fumes."
-							]
-						}
-					]
-				},
-				"If Fierna dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
 			"name": "Fraz-Urb'luu",
 			"source": "MPMM",
 			"page": 129,
@@ -3147,23 +2724,6 @@
 					]
 				},
 				"If the froghemoth elder dies, these effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
-			"name": "Gar Shatterkeel",
-			"source": "LR",
-			"page": 18,
-			"lairActions": [
-				"Gar can employ lair actions while he's within the coral mountain.",
-				"On initiative count 20 (losing initiative ties), Gar Shatterkeel takes a lair action to cause one of the following effects; Gar can't use the same effect two rounds in a row.",
-				{
-					"type": "list",
-					"items": [
-						"Gar may teleport anywhere within the coral mountain, bringing up to five willing creatures with him.",
-						"The coral in a 60-foot radius grows rapidly around creatures inside the coral mountain. Each creature must succeed on a {@dc 18} Strength saving throw or become {@condition restrained}. Restrained creatures can take an action on their turn to make a {@dc 18} Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check to free themselves. This effect lasts for 1 minute unless dispelled (it counts as a 6th level spell), and doesn't require Gar to maintain {@status concentration}. Gar Shatterkeel and any creatures he designates are immune to this effect.",
-						"Up to five corpses that Gar can see within 60 feet rise up as {@creature drowned blade|GoS|drowned blades} and attack anyone Gar directs them to on his turn."
-					]
-				}
 			]
 		},
 		{
@@ -3353,53 +2913,6 @@
 					]
 				},
 				"If the anarch dies, these effects end after {@dice 1d6} rounds. All formed substance becomes a chaotic churn of energy and matter, unraveling into unformed substance that dissipates {@dice 1d6} rounds later."
-			]
-		},
-		{
-			"name": "Glasya",
-			"source": "CoA",
-			"page": 226,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Glasya can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); she can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Change Appearance",
-										"entries": [
-											"Glasya polymorphs into a Small or Medium Humanoid she has seen, or back into her true form. Her statistics, other than her size, are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Glasya's lair is corrupted by her presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Hag's Gaze",
-							"entries": [
-								"Every hour that a good creature travels within 1 mile of the lair, a blast of fire erupts from one of the eye sockets of the lair. If the target fails a {@dc 23} Dexterity saving throw, they take 42 ({@damage 12d6}) fire damage, half on a successful save. If the creature was flying and fails the saving throw, it falls. Only one such creature is targeted each hour."
-							]
-						}
-					]
-				},
-				"If Glasya dies, the effects fade over the course of {@dice 1d10} days."
 			]
 		},
 		{
@@ -3648,34 +3161,6 @@
 									"91\u201300",
 									"\"Anything that can bring me happiness should be enjoyed immediately. There is no point to saving anything pleasurable for later.\""
 								]
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Greater Tyrant Shadow",
-			"source": "CoA",
-			"page": 254,
-			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the greater tyrant shadow can take one lair action to cause the following effect; it can't take the same lair action two rounds in a row:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Despair",
-							"entries": [
-								"One creature within 300 feet of the shadow must succeed on a {@dc 22} Charisma saving throw or be overcome with despair and self-doubt. The creature has the stunned condition for 1 minute. At the end of each of its turns, the creature can repeat the saving throw, ending the effect on a success."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Renewal",
-							"entries": [
-								"The shadow recharges its Shadows of Death ability."
 							]
 						}
 					]
@@ -4464,80 +3949,6 @@
 			]
 		},
 		{
-			"name": "Kyrilla, Accursed Gorgon",
-			"source": "AitFR-DN",
-			"page": 12,
-			"lairActions": [
-				"When fighting inside her lair, Kyrilla can invoke the ambient magic there to take lair actions. On initiative count 20 (losing initiative ties), she takes a lair action to cause one of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"Kyrilla casts {@spell moonbeam} (no components required). While maintaining {@status concentration} on this effect, she can't take other lair actions.",
-						"Kyrilla casts {@spell cloud of daggers} (no components required), except the daggers are flying snakes and the spell deals piercing damage. While maintaining {@status concentration} on this effect, she can't take other lair actions.",
-						"Pools of liquid within 60 feet of Kyrilla surge and froth, splashing and soaking any creature on the ground within 5 feet of such pools. Creatures that succeed on a {@dc 14} Dexterity saving throw avoid getting liquid in their eyes and mouths. Kyrilla can't use this lair action again until she has used a different one."
-					]
-				}
-			],
-			"regionalEffects": [
-				"The region containing Kyrilla's lair is warped by her accursed nature and the meteoric stone around her, which together create the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"Water sources within the lair are supernaturally fouled and poisonous. Creatures that drink these waters must make a {@dc 14} Constitution saving throw or be {@condition poisoned} for 1 minute. Afflicted creatures can make a new saving throw at the end of each of their turns, ending the condition on a success.",
-						"Plants within 1 mile of the lair suffer from a calcifying mold that dries and hardens leaves, killing many otherwise hearty thistles and heather.",
-						"Fog lightly obscures the land within 3 miles of the lair."
-					]
-				}
-			]
-		},
-		{
-			"name": "Levistus",
-			"source": "CoA",
-			"page": 228,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Levistus can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); he can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Icemaw",
-										"entries": [
-											"One creature within 60 feet of Levistus, that he can see, must make a {@dc 23} Dexterity saving throw. If a creature fails the saving throw, they sink half of their height into the ice and have the grappled condition (escape {@dc 21}) and their movement becomes 0. If a creature already affected by Icemaw is affected by it a second time, they sink completely into the ice and begin suffocating."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The icy regions containing Levistus' lair is corrupted by his presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Frozen Landscape",
-							"entries": [
-								"Any creature that has the prone or unconscious conditions within 1 mile of the lair, takes 21 ({@damage 6d6}) cold damage at the start of their turn."
-							]
-						}
-					]
-				},
-				"If Levistus dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
 			"name": "Lich",
 			"source": "MM",
 			"page": 202,
@@ -4728,132 +4139,12 @@
 			]
 		},
 		{
-			"name": "Mammon",
-			"source": "CoA",
-			"page": 230,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Mammon can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); he can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Greedy",
-										"entries": [
-											"A creature of Mammon's choice automatically fails their next saving throw."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Mammon's lair is corrupted by his presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Rotting Vegetation",
-							"entries": [
-								"Within 3 miles of the lair, the plant life is even more sickly and decayed, and the water is polluted and toxic. A creature that isn't a Fiend that eats or drinks from these sources must succeed on a {@dc 19} Constitution saving throw or die."
-							]
-						}
-					]
-				},
-				"If Mammon dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
 			"name": "Marlos Urnrayle",
 			"source": "PotA",
 			"page": 199,
 			"lairActions": [
 				"If Marlos is in the earth node while {@creature Ogrémoch|PotA} isn't, the medusa can take lair actions. On initiative count 20 (losing initiative ties), Marlos uses a lair action to cast {@spell earthquake} without using components. As long as he maintains {@status concentration} on {@spell earthquake}, initiative count 20 is the start of Marlos's turn for the purpose of the spell. He can take no other lair actions while {@status concentration||concentrating} on {@spell earthquake}.",
 				"Marlos's second option for a lair action is to draw power from the earth node to heal. When he does so, he regains 30 ({@dice 6d8 + 3}) hit points."
-			]
-		},
-		{
-			"name": "Mephistopheles",
-			"source": "CoA",
-			"page": 232,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Mephistopheles can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); he can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Conjure Hellfire",
-										"entries": [
-											"Mephistopheles covers a 5-foot square with Hellfire. Any creature that starts their turn in the Hellfire takes 27 ({@damage 6d8}) fire damage. The Hellfire remains until Mephistopheles dismisses it."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Mephistopheles' lair is corrupted by his presence, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Geysers",
-							"entries": [
-								"Within 1 mile of Mephistopheles' lair, every 100 feet of movement results in a flame geyser erupting. Creatures within 10 feet of a geyser when it erupts must succeed on a {@dc 22} Dexterity saving throw or take 10 ({@damage 3d6}) fire damage. The geyser continues erupting for 24 hours."
-							]
-						}
-					]
-				},
-				"If Mephistopheles dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
-			"name": "Mephistopheles",
-			"source": "MaBJoV",
-			"page": 99,
-			"lairActions": [
-				"On initiative count 20 (losing initiative ties), Mephistopheles can take one lair action to cause one of the following effects; Mephistopheles can't use the same effect two rounds in a row:",
-				{
-					"type": "list",
-					"items": [
-						"Mephistopheles casts any spell from his wizard list and if it normally requires {@status concentration}, it lasts for the full duration instead.",
-						"Mephistopheles covers a 5-foot area with Hellfire. Any creature that starts their turn on that area suffers 27 ({@damage 6d8}) fire damage. The Hellfire remains until Mephistopheles dismisses it or he uses this ability again."
-					]
-				}
-			],
-			"regionalEffects": [
-				"The region containing Mephistopheles's lair is corrupted by his presence, which creates one or more of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"Flaming winds scour the area within 2 miles of Mephistopheles's lair. Any creature with vulnerability to fire damage suffers 1 level of {@condition exhaustion} for every hour spent this close to the lair.",
-						"Within 2 miles of Mephistopheles's lair, every 60 feet of movement results in a flame geyser erupting. When a geyser appears, the creature that triggered its appearance and fails a Dexterity 22 saving throw suffers 10 ({@damage 3d6}) fire damage. Damage is halved if the saving throw is successful. The geyser remains for a day."
-					]
-				},
-				"If Mephistopheles dies, the effects fade over the course of {@dice 1d10} days."
 			]
 		},
 		{
@@ -5540,33 +4831,6 @@
 			]
 		},
 		{
-			"name": "Pazuzu",
-			"source": "MaBJoV",
-			"page": 103,
-			"lairActions": [
-				"On initiative count 20 (losing initiative ties), Pazuzu can take a lair action to cause one of the following effects; Pazuzu can't use the same effect two rounds in a row:",
-				{
-					"type": "list",
-					"items": [
-						"Pazuzu opens a portal and summons forth {@dice 1d4} {@creature peryton||perytons} or {@creature gargoyle||gargoyles}.",
-						"Pazuzu casts {@spell insect plague} but does not need to concentrate to maintain it. The insects inflict 33 ({@damage 6d10}) piercing damage.",
-						"Pazuzu telepathically speaks to all creatures within 120 ft. of him and offers each what they most desire. Each target must succeed on a {@dc 21} Charisma saving throw or forfeit their next action as they contemplate the decision. A good-aligned target may voluntarily fail the saving throw and forfeit their action to agree to Pazuzu's terms. If so, and if he has the {@spell wish} spell available, he will cast it as long as he sees no immediate negative consequence to his doing so. Pazuzu does not suffer any of the negative effects of casting the {@spell wish} spell."
-					]
-				}
-			],
-			"regionalEffects": [
-				"The region containing Pazuzu's lair is warped by his presence, which creates one or more of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"A warm, sickly sweet wind blows briskly within one mile of Pazuzu. Each day, upon first encountering this wind, every creature must make a {@dc 21} Constitution saving throw or immediately vomit, suffering 14 ({@damage 4d6}) necrotic damage. Those that failed the saving throw are also {@condition poisoned} for one hour.",
-						"Any flying creature of CR 2 or less becomes twisted after a day spent within 6 miles of Pazuzu. If not already evil-aligned, they become so. Flying insects, birds, and other flying creatures will harass any other creatures moving through the region, slowing movement by one half."
-					]
-				},
-				"If Pazuzu dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
 			"name": "Ragnaros",
 			"source": "WoW",
 			"page": 248,
@@ -5871,45 +5135,6 @@
 				{
 					"name": "Shadow Dragon (Sapphire Dragon)",
 					"source": "FTD",
-					"_templates": [
-						{
-							"name": "Shadow Dragon",
-							"source": "FTD"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Sapphire Dragon",
-			"source": "SADS",
-			"page": 215,
-			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
-				{
-					"type": "list",
-					"items": [
-						"The dragon targets a creature within 120 feet of it that can hear and understand it. The creature must succeed on a {@dc 15} Wisdom saving throw or be {@condition charmed} by the dragon until initiative count 20 on the following round. A creature {@condition charmed} in this way obeys to the best of its ability any command the dragon issues that isn't directly harmful to itself.",
-						"The dragon touches a section of stone up to 10 feet in any dimension. The dragon can form the stone into any shape that suits its purpose.",
-						"A wall of stone springs into existence on a solid surface within 120 feet of the dragon. The wall is up to 60 feet long, 10 feet high, and 1 foot thick. When the wall appears, each creature in its space is pushed to either side of the wall the creature wants. Each 5-foot section of wall has AC 17, 20 hit points, vulnerability to thunder damage, and immunity to poison and psychic damage. The wall vanishes when the dragon uses this lair action again or when the dragon dies."
-					]
-				}
-			],
-			"regionalEffects": [
-				"The region surrounding a legendary sapphire dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"{@creature Giant spider||Giant spiders} are attracted to the area within 6 miles of the lair and settle there in large numbers.",
-						"Natural stone within 6 miles of the lair grows plentiful crystal formations and sapphire gemstone veins, particularly underground.",
-						"Natural stone within 6 miles of the lair becomes a conduit for the dragon's psionic presence. As an action, the dragon can cast the {@spell clairvoyance} spell, requiring no components, targeting any natural stone formation in that region."
-					]
-				}
-			],
-			"_versions": [
-				{
-					"name": "Shadow Dragon (Sapphire Dragon)",
-					"source": "SADS",
 					"_templates": [
 						{
 							"name": "Shadow Dragon",
@@ -6446,32 +5671,6 @@
 			]
 		},
 		{
-			"name": "Ssendam, Lord of Madness",
-			"source": "MaBJoV",
-			"page": 105,
-			"lairActions": [
-				"On initiative count 20 (losing initiative ties), Ssendam can take one lair action to cause one of the following effects; Ssendam can't use the same effect two rounds in a row:",
-				{
-					"type": "list",
-					"items": [
-						"All creatures within 30 ft. of Ssendam must succeed on a {@dc 20} Wisdom saving throw or come under the effects of the {@spell confusion} spell until the end of its next turn.",
-						"Until the end of Ssendam's next turn, any creature that casts a spell within 60 ft. of Ssendam must roll on the sorcerer's wild surge table in the PHB."
-					]
-				}
-			],
-			"regionalEffects": [
-				"The region containing Ssendam's lair is corrupted by the chaos phage, which creates one or more of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"Within 1 mile of Ssendam's lair, there is a 1 in 20 chance that any creature that casts a spell must roll on the sorcerer's wild surge table in the PHB.",
-						"Within 10 miles of the lair, any creature that takes a long or short rest must succeed on a {@dc 20} Wisdom saving throw or be inflicted with a random {@table short-term madness|DMG}."
-					]
-				},
-				"If Ssendam dies, the effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
 			"name": "Star Spawn Emissary",
 			"source": "RHW",
 			"regionalEffects": [
@@ -6726,22 +5925,6 @@
 							"name": "Time",
 							"entry": "Time passes slower in the Eternal Garden relative to other planes. For each day spent in the garden, one year passes on the Material Plane."
 						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Thessalkraken",
-			"source": "IMR",
-			"page": 87,
-			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the thessalkraken takes a lair action to cause one of the following magical effects:",
-				{
-					"type": "list",
-					"items": [
-						"A strong current moves through the thessalkraken's lair. Each creature within 60 feet of the thessalkraken must succeed on a {@dc 18} Strength saving throw or be pushed up to 60 feet away from the thessalkraken. On a success, the creature is pushed 10 feet away from the thessalkraken.",
-						"Creatures in the water within 60 feet of the thessalkraken have vulnerability to acid damage until initiative count 20 on the next round.",
-						"The alluring gleam of treasure beneath the water in the thessalkraken's lair compels potential victims to draw near. Each creature within 120 feet of the thessalkraken must succeed on a {@dc 18} Wisdom saving throw or move 10 feet closer to the thessalkraken if able to do so."
 					]
 				}
 			]
@@ -7556,53 +6739,6 @@
 					]
 				},
 				"If Zargon dies, these effects fade over the course of {@dice 1d10} days."
-			]
-		},
-		{
-			"name": "Zariel",
-			"source": "CoA",
-			"page": 235,
-			"_copy": {
-				"name": "Archdevil",
-				"source": "CoA",
-				"_mod": {
-					"lairActions": {
-						"mode": "prependArr",
-						"items": [
-							"On initiative count 20 (losing initiative ties), Zariel can take one lair action to cause the following effect or one from the archdevil lair action list (page 214); she can't take the same lair action two rounds in a row:",
-							{
-								"type": "list",
-								"style": "list-hang-notitle",
-								"items": [
-									{
-										"type": "item",
-										"name": "Infernal Illusions",
-										"entries": [
-											"Zariel casts the {@spell Major Image} spell four times, targeting different areas with it. Zariel prefers to create images of intruders' loved ones being burned alive. Zariel doesn't need to concentrate on the spells, which end on initiative count 20 of the next round. Each creature that can see these illusions must succeed on a {@dc 26} Wisdom saving throw or have the frightened condition for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
-										]
-									}
-								]
-							}
-						]
-					}
-				}
-			},
-			"regionalEffects": [
-				"The region containing Zariel's lair is warped by her magic, which creates the following effect:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Hellscape",
-							"entries": [
-								"The area within 9 miles of the lair is filled with screaming voices and the stench of burning meat."
-							]
-						}
-					]
-				},
-				"If Zariel dies, these effects fade over the course of {@dice 1d10} days."
 			]
 		},
 		{

@@ -1,7 +1,5 @@
 {
 	"AAG": "spells-aag.json",
-	"AI": "spells-ai.json",
-	"AitFR-AVT": "spells-aitfr-avt.json",
 	"AU": "spells-au.json",
 	"BMT": "spells-bmt.json",
 	"EFA": "spells-efa.json",
@@ -10,7 +8,6 @@
 	"FRHoF": "spells-frhof.json",
 	"GGR": "spells-ggr.json",
 	"IDRotF": "spells-idrotf.json",
-	"LLK": "spells-llk.json",
 	"PHB": "spells-phb.json",
 	"SatO": "spells-sato.json",
 	"SCC": "spells-scc.json",

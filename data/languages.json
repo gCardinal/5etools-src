@@ -489,14 +489,6 @@
 			"origin": "Night elves"
 		},
 		{
-			"name": "Deep Crow",
-			"source": "AI",
-			"page": 210,
-			"typicalSpeakers": [
-				"{@creature Deep Crow|AI|deep crows}"
-			]
-		},
-		{
 			"name": "Deep Speech",
 			"source": "PHB",
 			"page": 123,
